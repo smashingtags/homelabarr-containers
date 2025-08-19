@@ -2,14 +2,14 @@
 ####################################
 # All rights reserved.              #
 # started from Zero                 #
-# Docker owned dockserver           #
-# Docker Maintainer dockserver      #
+# HomelabARR Container Bot           #
+# Maintainer HomelabARR CLI          #
 #####################################
 #####################################
-# THIS DOCKER IS UNDER LICENSE      #
-# NO CUSTOMIZING IS ALLOWED         #
-# NO REBRANDING IS ALLOWED          #
-# NO CODE MIRRORING IS ALLOWED      #
+# MIT LICENSE                       #
+# CUSTOMIZING IS ALLOWED             #
+# REBRANDING IS ALLOWED              #
+# CODE MIRRORING IS ALLOWED          #
 #####################################
 # shellcheck disable=SC2086
 # shellcheck disable=SC2046
@@ -32,8 +32,10 @@ folder=$(ls -1p ./ | grep '/$' | sed 's/\/$//' | sed '/docs/d' | sed '/dead/d' |
 for i in ${folder[@]}; do
    find ./$i -maxdepth 1 -mindepth 1 -type d -exec basename {} \; | sort | while read app; do
      ## hardcoded files inside
-     if [ -d "./$i/${app}/root/" ] && [ ! -f "./$i/${app}/root/dockserver.txt" ]; then
-        cp -r "./.templates/ci/dockserver.txt" "./$i/${app}/root/donate.txt"
+     if [ -d "./$i/${app}/root/" ] && [ ! -f "./$i/${app}/root/homelabarr.txt" ]; then
+        if [ -f "./.templates/ci/homelabarr.txt" ]; then
+           cp -r "./.templates/ci/homelabarr.txt" "./$i/${app}/root/homelabarr.txt"
+        fi
      fi
      unset app
    done
@@ -42,16 +44,20 @@ done
 unset token username
 
 ## add container.json
-rm -f ./container.json ./wiki/docs/install/container.json
+rm -f ./container.json ./wiki/docs/install/container.json 2>/dev/null || true
+
+# Ensure wiki directory exists
+mkdir -p ./wiki/docs/install
+
 folder=$(ls -1p ./ | grep '/$' | sed 's/\/$//' | sed '/docs/d' | sed '/dead/d' | sed '/images/d' )
 for i in ${folder[@]}; do
    find ./$i -maxdepth 1 -mindepth 1 -type d -exec basename {} \; | sort | while read app; do
       if test -f "./$i/${app}/release.json"; then
-         ## FOR METRCIS
+         ## FOR METRICS
          echo "$i" "${app}" >> container.json && \
          cat "./$i/${app}/release.json" >> container.json && \
          echo "" >> container.json
-         ## FOR DOCKERSERVER
+         ## FOR HOMELABARR
          cat "./$i/${app}/release.json" >> ./wiki/docs/install/container.json
       fi
    done
@@ -59,14 +65,17 @@ done
 
 #### END FILE ####
 
-sleep 5
-if [[ -n $(git status --porcelain) ]]; then
-   git config --global user.name 'dockserver-bot[bot]'
-   git config --global user.email '145536302+dockserver-bot[bot]@users.noreply.github.com'
-   git add -A
-   LOG=$(git status --porcelain | sed s/^...//)
-   git commit -sam "[Auto Generation] Changes : $LOG" || exit 0
-   git push --force
+sleep 2
+
+# Log what was processed
+echo "Version update script completed successfully"
+echo "Files updated:"
+if [ -f "./container.json" ]; then
+   echo "- container.json ($(wc -l < ./container.json) lines)"
+fi
+if [ -f "./wiki/docs/install/container.json" ]; then
+   echo "- wiki/docs/install/container.json ($(wc -l < ./wiki/docs/install/container.json) lines)"
 fi
 
+# Let the workflow handle git operations
 exit 0

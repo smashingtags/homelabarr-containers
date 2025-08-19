@@ -1,0 +1,58 @@
+name: Update Container Versions
+
+on:
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-versions:
+    runs-on: self-hosted
+    permissions:
+      contents: write
+      packages: read
+      actions: read
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Set up Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+      - name: Create required directories
+        run: |
+          mkdir -p wiki/docs/install
+          
+      - name: Run version update script
+        env:
+          username: ${{ github.actor }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          export username="${username}"
+          export token="${token}"
+          
+          if [ -f ".templates/ci/version.sh" ]; then
+            chmod +x .templates/ci/version.sh
+            bash .templates/ci/version.sh
+          else
+            echo "Version script not found at .templates/ci/version.sh"
+            exit 1
+          fi
+
+      - name: Push changes
+        run: |
+          if [[ -n $(git status --porcelain) ]]; then
+            git add -A
+            LOG=$(git status --porcelain | sed s/^...//)
+            git commit -m "[Auto Generation] Version Updates: $LOG" || exit 0
+            git push origin HEAD:${{ github.ref_name }}
+          else
+            echo "No changes to commit"
+          fi
