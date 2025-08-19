@@ -173,6 +173,7 @@ jobs:
           - docker-dockserver
           - docker-ubuntu-focal
           - docker-ubuntu-jammy
+          - docker-ubuntu-noble
           - docker-ui
           - dockserver-ui
           - dockserver-ui/root
@@ -183,6 +184,7 @@ jobs:
           - homelabarr-dockserver
           - homelabarr-ubuntu-focal
           - homelabarr-ubuntu-jammy
+          - homelabarr-ubuntu-noble
           - homelabarr-ui
           - ubuntu
     
