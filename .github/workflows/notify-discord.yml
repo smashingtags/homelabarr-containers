@@ -1,0 +1,98 @@
+name: Discord Notifications
+
+on:
+  workflow_run:
+    workflows: ["Build and Publish All HomelabARR Containers"]
+    types:
+      - completed
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    
+    steps:
+    - name: Send Discord notification
+      env:
+        DISCORD_WEBHOOK: "https://discord.com/api/webhooks/1407409778791284926/_W2XG786rdAhgWj_TjBKV7_6hIGegAwYhaDivH3bIm6ysBfqoYnBXBeYLlzPx3tX1psy"
+      run: |
+        json='{
+          "username": "HomelabARR Container Bot",
+          "avatar_url": "https://github.com/smashingtags/homelabarr-cli/raw/master/wiki/overrides/img/profile.png",
+          "embeds": [
+            {
+              "title": "Container Build Successful",
+              "url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.event.workflow_run.id }}",
+              "color": 3066993,
+              "fields": [
+                {
+                  "name": "Repository",
+                  "value": "${{ github.repository }}"
+                },
+                {
+                  "name": "Status",
+                  "value": "✅ All containers built successfully"
+                },
+                {
+                  "name": "Branch",
+                  "value": "${{ github.event.workflow_run.head_branch }}"
+                },
+                {
+                  "name": "Registry",
+                  "value": "ghcr.io/smashingtags"
+                }
+              ],
+              "footer": {
+                "text": "Powered by GitHub Actions",
+                "icon_url": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+              },
+              "timestamp": "'$(date -u +'%FT%T.%3NZ')'"
+            }
+          ]
+        }'
+        curl -fsSL -H "Content-Type: application/json" -X POST -d "${json}" "${DISCORD_WEBHOOK}"
+
+  notify-failure:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    
+    steps:
+    - name: Send Discord failure notification
+      env:
+        DISCORD_WEBHOOK: "https://discord.com/api/webhooks/1407409778791284926/_W2XG786rdAhgWj_TjBKV7_6hIGegAwYhaDivH3bIm6ysBfqoYnBXBeYLlzPx3tX1psy"
+      run: |
+        json='{
+          "username": "HomelabARR Container Bot",
+          "avatar_url": "https://github.com/smashingtags/homelabarr-cli/raw/master/wiki/overrides/img/profile.png",
+          "embeds": [
+            {
+              "title": "Container Build Failed",
+              "url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.event.workflow_run.id }}",
+              "color": 15158332,
+              "fields": [
+                {
+                  "name": "Repository",
+                  "value": "${{ github.repository }}"
+                },
+                {
+                  "name": "Status",
+                  "value": "❌ Container build failed"
+                },
+                {
+                  "name": "Branch",
+                  "value": "${{ github.event.workflow_run.head_branch }}"
+                },
+                {
+                  "name": "Action Required",
+                  "value": "Please check the workflow logs for details"
+                }
+              ],
+              "footer": {
+                "text": "Powered by GitHub Actions",
+                "icon_url": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+              },
+              "timestamp": "'$(date -u +'%FT%T.%3NZ')'"
+            }
+          ]
+        }'
+        curl -fsSL -H "Content-Type: application/json" -X POST -d "${json}" "${DISCORD_WEBHOOK}"
