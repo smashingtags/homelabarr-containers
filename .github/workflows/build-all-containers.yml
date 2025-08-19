@@ -93,6 +93,7 @@ jobs:
             org.opencontainers.image.licenses=MIT
       
       - name: Build and push Docker image
+        id: build
         uses: docker/build-push-action@v5
         with:
           context: .
@@ -103,6 +104,50 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+      
+      - name: Send Discord notification
+        if: always()
+        env:
+          DISCORD_WEBHOOK: "https://discord.com/api/webhooks/1407409778791284926/_W2XG786rdAhgWj_TjBKV7_6hIGegAwYhaDivH3bIm6ysBfqoYnBXBeYLlzPx3tX1psy"
+          CONTAINER: ${{ matrix.container }}
+          STATUS: ${{ steps.build.outcome }}
+        run: |
+          if [ "$STATUS" == "success" ]; then
+            COLOR="3066993"
+            EMOJI="✅"
+            STATUS_TEXT="Successfully built"
+          else
+            COLOR="15158332"
+            EMOJI="❌"
+            STATUS_TEXT="Failed to build"
+          fi
+          
+          json="{
+            \"username\": \"HomelabARR Container Bot\",
+            \"embeds\": [{
+              \"title\": \"${EMOJI} ${CONTAINER}\",
+              \"color\": ${COLOR},
+              \"fields\": [
+                {
+                  \"name\": \"Status\",
+                  \"value\": \"${STATUS_TEXT}\"
+                },
+                {
+                  \"name\": \"Type\",
+                  \"value\": \"Application Container\"
+                },
+                {
+                  \"name\": \"Registry\",
+                  \"value\": \"ghcr.io/smashingtags/${CONTAINER}:latest\"
+                }
+              ],
+              \"footer\": {
+                \"text\": \"GitHub Actions\",
+                \"icon_url\": \"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png\"
+              }
+            }]
+          }"
+          curl -fsSL -H "Content-Type: application/json" -X POST -d "${json}" "${DISCORD_WEBHOOK}" || true
 
   build-base:
     runs-on: self-hosted
@@ -167,6 +212,7 @@ jobs:
             org.opencontainers.image.licenses=MIT
       
       - name: Build and push Docker image
+        id: build
         uses: docker/build-push-action@v5
         with:
           context: .
@@ -179,6 +225,50 @@ jobs:
           cache-to: type=gha,mode=max
           build-args: |
             VERSION=22.04
+      
+      - name: Send Discord notification
+        if: always()
+        env:
+          DISCORD_WEBHOOK: "https://discord.com/api/webhooks/1407409778791284926/_W2XG786rdAhgWj_TjBKV7_6hIGegAwYhaDivH3bIm6ysBfqoYnBXBeYLlzPx3tX1psy"
+          CONTAINER: ${{ matrix.container }}
+          STATUS: ${{ steps.build.outcome }}
+        run: |
+          if [ "$STATUS" == "success" ]; then
+            COLOR="3066993"
+            EMOJI="✅"
+            STATUS_TEXT="Successfully built"
+          else
+            COLOR="15158332"
+            EMOJI="❌"
+            STATUS_TEXT="Failed to build"
+          fi
+          
+          json="{
+            \"username\": \"HomelabARR Container Bot\",
+            \"embeds\": [{
+              \"title\": \"${EMOJI} ${CONTAINER}\",
+              \"color\": ${COLOR},
+              \"fields\": [
+                {
+                  \"name\": \"Status\",
+                  \"value\": \"${STATUS_TEXT}\"
+                },
+                {
+                  \"name\": \"Type\",
+                  \"value\": \"Base Image\"
+                },
+                {
+                  \"name\": \"Registry\",
+                  \"value\": \"ghcr.io/smashingtags/${CONTAINER}:latest\"
+                }
+              ],
+              \"footer\": {
+                \"text\": \"GitHub Actions\",
+                \"icon_url\": \"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png\"
+              }
+            }]
+          }"
+          curl -fsSL -H "Content-Type: application/json" -X POST -d "${json}" "${DISCORD_WEBHOOK}" || true
 
   build-mods:
     runs-on: self-hosted
@@ -237,6 +327,7 @@ jobs:
             org.opencontainers.image.licenses=MIT
       
       - name: Build and push Docker image
+        id: build
         uses: docker/build-push-action@v5
         with:
           context: .
@@ -247,6 +338,50 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+      
+      - name: Send Discord notification
+        if: always()
+        env:
+          DISCORD_WEBHOOK: "https://discord.com/api/webhooks/1407409778791284926/_W2XG786rdAhgWj_TjBKV7_6hIGegAwYhaDivH3bIm6ysBfqoYnBXBeYLlzPx3tX1psy"
+          CONTAINER: ${{ matrix.container }}
+          STATUS: ${{ steps.build.outcome }}
+        run: |
+          if [ "$STATUS" == "success" ]; then
+            COLOR="3066993"
+            EMOJI="✅"
+            STATUS_TEXT="Successfully built"
+          else
+            COLOR="15158332"
+            EMOJI="❌"
+            STATUS_TEXT="Failed to build"
+          fi
+          
+          json="{
+            \"username\": \"HomelabARR Container Bot\",
+            \"embeds\": [{
+              \"title\": \"${EMOJI} ${CONTAINER}\",
+              \"color\": ${COLOR},
+              \"fields\": [
+                {
+                  \"name\": \"Status\",
+                  \"value\": \"${STATUS_TEXT}\"
+                },
+                {
+                  \"name\": \"Type\",
+                  \"value\": \"Docker Mod\"
+                },
+                {
+                  \"name\": \"Registry\",
+                  \"value\": \"ghcr.io/smashingtags/${CONTAINER}:latest\"
+                }
+              ],
+              \"footer\": {
+                \"text\": \"GitHub Actions\",
+                \"icon_url\": \"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png\"
+              }
+            }]
+          }"
+          curl -fsSL -H "Content-Type: application/json" -X POST -d "${json}" "${DISCORD_WEBHOOK}" || true
 
   build-nightly:
     runs-on: self-hosted
@@ -293,6 +428,7 @@ jobs:
             org.opencontainers.image.licenses=MIT
       
       - name: Build and push Docker image
+        id: build
         uses: docker/build-push-action@v5
         with:
           context: .
@@ -303,3 +439,47 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+      
+      - name: Send Discord notification
+        if: always()
+        env:
+          DISCORD_WEBHOOK: "https://discord.com/api/webhooks/1407409778791284926/_W2XG786rdAhgWj_TjBKV7_6hIGegAwYhaDivH3bIm6ysBfqoYnBXBeYLlzPx3tX1psy"
+          CONTAINER: ${{ matrix.container }}
+          STATUS: ${{ steps.build.outcome }}
+        run: |
+          if [ "$STATUS" == "success" ]; then
+            COLOR="3066993"
+            EMOJI="✅"
+            STATUS_TEXT="Successfully built"
+          else
+            COLOR="15158332"
+            EMOJI="❌"
+            STATUS_TEXT="Failed to build"
+          fi
+          
+          json="{
+            \"username\": \"HomelabARR Container Bot\",
+            \"embeds\": [{
+              \"title\": \"${EMOJI} ${CONTAINER}\",
+              \"color\": ${COLOR},
+              \"fields\": [
+                {
+                  \"name\": \"Status\",
+                  \"value\": \"${STATUS_TEXT}\"
+                },
+                {
+                  \"name\": \"Type\",
+                  \"value\": \"Nightly Build\"
+                },
+                {
+                  \"name\": \"Registry\",
+                  \"value\": \"ghcr.io/smashingtags/${CONTAINER}:nightly\"
+                }
+              ],
+              \"footer\": {
+                \"text\": \"GitHub Actions\",
+                \"icon_url\": \"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png\"
+              }
+            }]
+          }"
+          curl -fsSL -H "Content-Type: application/json" -X POST -d "${json}" "${DISCORD_WEBHOOK}" || true
