@@ -1,7 +1,7 @@
 ARG VERSION
-FROM ghcr.io/dockserver/docker-alpine:latest as guacbuilder
+FROM ghcr.io/smashingtags/docker-alpine:latest as guacbuilder
 
-ARG GUACD_VERSION=1.1.0
+ARG GUACD_VERSION=1.4.0
 
 RUN \
  echo "**** install build deps ****" && \
@@ -27,7 +27,7 @@ RUN \
  mkdir /tmp/guac && \
  cd /tmp/guac && \
  wget \
-	http://apache.org/dyn/closer.cgi?action=download\&filename=guacamole/${GUACD_VERSION}/source/guacamole-server-${GUACD_VERSION}.tar.gz \
+	https://archive.apache.org/dist/guacamole/${GUACD_VERSION}/source/guacamole-server-${GUACD_VERSION}.tar.gz \
 	-O guac.tar.gz && \
  tar -xf guac.tar.gz && \
  cd guacamole-server-${GUACD_VERSION} && \
@@ -59,7 +59,7 @@ RUN \
  make DESTDIR=/buildout install
 
 ARG VERSION
-FROM ghcr.io/dockserver/docker-alpine:latest as nodebuilder
+FROM ghcr.io/smashingtags/docker-alpine:latest as nodebuilder
 ARG GCLIENT_RELEASE
 
 RUN \
@@ -119,7 +119,7 @@ RUN \
         /tm
 
 # add local files
-COPY ./apps/docker-gui/root/ /
+COPY ./apps/homelabarr-gui/root/ /
 
 # ports and volumes
 EXPOSE 3000

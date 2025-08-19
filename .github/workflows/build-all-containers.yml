@@ -177,6 +177,8 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+          build-args: |
+            VERSION=22.04
 
   build-mods:
     runs-on: self-hosted

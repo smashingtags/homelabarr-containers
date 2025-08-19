@@ -22,12 +22,21 @@ COPY --from=rootfs-stage /root-out/ /
 ARG VERSION
 
 # set version for s6 overlay
-ARG OVERLAY_VERSION="v2.2.0.3"
-ARG OVERLAY_ARCH="amd64"
+ARG OVERLAY_VERSION="v3.1.5.0"
+ARG TARGETPLATFORM
 
-# add s6 overlay
-ADD https://github.com/just-containers/s6-overlay/releases/download/${OVERLAY_VERSION}/s6-overlay-${OVERLAY_ARCH}-installer /tmp/
-RUN chmod +x /tmp/s6-overlay-${OVERLAY_ARCH}-installer && /tmp/s6-overlay-${OVERLAY_ARCH}-installer / && rm /tmp/s6-overlay-${OVERLAY_ARCH}-installer
+# add s6 overlay - use ADD to download directly
+ADD https://github.com/just-containers/s6-overlay/releases/download/${OVERLAY_VERSION}/s6-overlay-noarch.tar.xz /tmp/
+ADD https://github.com/just-containers/s6-overlay/releases/download/${OVERLAY_VERSION}/s6-overlay-x86_64.tar.xz /tmp/s6-overlay-amd64.tar.xz
+ADD https://github.com/just-containers/s6-overlay/releases/download/${OVERLAY_VERSION}/s6-overlay-aarch64.tar.xz /tmp/s6-overlay-arm64.tar.xz
+RUN \
+  tar -C / -Jxpf /tmp/s6-overlay-noarch.tar.xz && \
+  if [ "${TARGETPLATFORM}" = "linux/arm64" ]; then \
+    tar -C / -Jxpf /tmp/s6-overlay-arm64.tar.xz; \
+  else \
+    tar -C / -Jxpf /tmp/s6-overlay-amd64.tar.xz; \
+  fi && \
+  rm /tmp/s6-overlay-*.tar.xz
 COPY ./base/docker-ubuntu-focal/patch/ /tmp/patch
 
 # set environment variables

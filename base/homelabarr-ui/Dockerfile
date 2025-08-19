@@ -3,7 +3,7 @@
 # ORIGINAL_MAINTAINER Naoyuki Sano <nsano@ae.em-net.ne.jp>
 # MODDED_FROM dockserver[bot]@dockserver.io
 
-FROM python:alpine3.15 AS builder
+FROM python:3.10-alpine AS builder
 RUN pip install virtualenv && \
     apk add -U --no-cache --virtual=build-dependencies cargo \
        git \
@@ -12,9 +12,10 @@ RUN pip install virtualenv && \
        make \
        musl-dev \
        openssl \
-       openssl-dev
+       openssl-dev \
+       rust
 
-ADD ./base/docker-ui/root/app/requirements.txt /tmp/requirements.txt
+ADD ./base/homelabarr-ui/root/app/requirements.txt /tmp/requirements.txt
 RUN virtualenv /env && \
     /env/bin/python -m pip install --no-warn-script-location --upgrade pip setuptools && \
     /env/bin/pip install --no-warn-script-location --no-cache-dir cryptography && \
@@ -24,12 +25,12 @@ RUN virtualenv /env && \
     rm -rf /var/cache/apk/* /tmp/* 
 
 ## FINAL IMAGE
-FROM python:alpine3.15
+FROM python:3.10-alpine
 RUN apk add -U --no-cache git bash rsync && \
     rm -rf /var/cache/apk/* /tmp/* 
 COPY --from=builder /env /env
-COPY ./base/docker-ui/root/app/ /app
-ADD ./base/docker-ui/root/entrypoint.sh /app/entrypoint.sh
+COPY ./base/homelabarr-ui/root/app/ /app
+ADD ./base/homelabarr-ui/root/entrypoint.sh /app/entrypoint.sh
 
 EXPOSE 5000
 CMD []
