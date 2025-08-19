@@ -1,0 +1,303 @@
+name: Build and Publish All HomelabARR Containers
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'apps/**'
+      - 'base/**'
+      - 'mod/**'
+      - 'nightly/**'
+      - '.github/workflows/build-all-containers.yml'
+  workflow_dispatch:
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_PREFIX: smashingtags
+
+jobs:
+  build-apps:
+    runs-on: self-hosted
+    permissions:
+      contents: read
+      packages: write
+    strategy:
+      fail-fast: false
+      matrix:
+        container:
+          - docker-auto-replyarr
+          - docker-backup
+          - docker-crunchy
+          - docker-crunchydl
+          - docker-dockupdate
+          - docker-gdsa
+          - docker-gui
+          - docker-local-persist
+          - docker-mount
+          - docker-newznab
+          - docker-restic
+          - docker-rollarr
+          - docker-spotweb
+          - docker-traktarr
+          - docker-uploader
+          - docker-vnstat
+          - docker-wiki
+          - homelabarr-auto-replyarr
+          - homelabarr-backup
+          - homelabarr-crunchy
+          - homelabarr-crunchydl
+          - homelabarr-dockupdate
+          - homelabarr-gdsa
+          - homelabarr-gui
+          - homelabarr-local-persist
+          - homelabarr-mount
+          - homelabarr-newznab
+          - homelabarr-restic
+          - homelabarr-rollarr
+          - homelabarr-spotweb
+          - homelabarr-traktarr
+          - homelabarr-uploader
+          - homelabarr-vnstat
+          - homelabarr-wiki
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}/${{ matrix.container }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=raw,value=v1.0.0,enable={{is_default_branch}}
+          labels: |
+            org.opencontainers.image.title=${{ matrix.container }}
+            org.opencontainers.image.description=HomelabARR Application - ${{ matrix.container }}
+            org.opencontainers.image.vendor=HomelabARR CLI
+            org.opencontainers.image.licenses=MIT
+      
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./apps/${{ matrix.container }}/Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  build-base:
+    runs-on: self-hosted
+    permissions:
+      contents: read
+      packages: write
+    strategy:
+      fail-fast: false
+      matrix:
+        container:
+          - alpine
+          - docker-alpine
+          - docker-alpine-v3
+          - docker-config
+          - docker-create
+          - docker-dockserver
+          - docker-ubuntu-focal
+          - docker-ubuntu-jammy
+          - docker-ui
+          - dockserver-ui
+          - dockserver-ui/root
+          - homelabarr-alpine
+          - homelabarr-alpine-v3
+          - homelabarr-config
+          - homelabarr-create
+          - homelabarr-dockserver
+          - homelabarr-ubuntu-focal
+          - homelabarr-ubuntu-jammy
+          - homelabarr-ui
+          - ubuntu
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}/${{ matrix.container }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=raw,value=v1.0.0,enable={{is_default_branch}}
+          labels: |
+            org.opencontainers.image.title=${{ matrix.container }}
+            org.opencontainers.image.description=HomelabARR Base Image - ${{ matrix.container }}
+            org.opencontainers.image.vendor=HomelabARR CLI
+            org.opencontainers.image.licenses=MIT
+      
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./base/${{ matrix.container }}/Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  build-mods:
+    runs-on: self-hosted
+    permissions:
+      contents: read
+      packages: write
+    strategy:
+      fail-fast: false
+      matrix:
+        container:
+          - docker-mod-healthcheck
+          - docker-mod-nzbget
+          - docker-mod-qbittorrent
+          - docker-mod-rclone
+          - docker-mod-sabnzbd
+          - docker-mod-storagecheck
+          - docker-mod-tautulli
+          - homelabarr-mod-healthcheck
+          - homelabarr-mod-nzbget
+          - homelabarr-mod-qbittorrent
+          - homelabarr-mod-rclone
+          - homelabarr-mod-sabnzbd
+          - homelabarr-mod-storagecheck
+          - homelabarr-mod-tautulli
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}/${{ matrix.container }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=raw,value=v1.0.0,enable={{is_default_branch}}
+          labels: |
+            org.opencontainers.image.title=${{ matrix.container }}
+            org.opencontainers.image.description=HomelabARR Docker Mod - ${{ matrix.container }}
+            org.opencontainers.image.vendor=HomelabARR CLI
+            org.opencontainers.image.licenses=MIT
+      
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./mod/${{ matrix.container }}/Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  build-nightly:
+    runs-on: self-hosted
+    permissions:
+      contents: read
+      packages: write
+    strategy:
+      fail-fast: false
+      matrix:
+        container:
+          - docker-whisparr-nightly
+          - homelabarr-whisparr-nightly
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}/${{ matrix.container }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=raw,value=nightly,enable={{is_default_branch}}
+            type=raw,value=latest,enable={{is_default_branch}}
+          labels: |
+            org.opencontainers.image.title=${{ matrix.container }}
+            org.opencontainers.image.description=HomelabARR Nightly Build - ${{ matrix.container }}
+            org.opencontainers.image.vendor=HomelabARR CLI
+            org.opencontainers.image.licenses=MIT
+      
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./nightly/${{ matrix.container }}/Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
