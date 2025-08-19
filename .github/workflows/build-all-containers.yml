@@ -106,48 +106,55 @@ jobs:
           cache-to: type=gha,mode=max
       
       - name: Send Discord notification
-        if: always()
+        if: always() && (steps.build.outcome == 'success')
         env:
-          DISCORD_WEBHOOK: "https://discord.com/api/webhooks/1407409778791284926/_W2XG786rdAhgWj_TjBKV7_6hIGegAwYhaDivH3bIm6ysBfqoYnBXBeYLlzPx3tX1psy"
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           CONTAINER: ${{ matrix.container }}
-          STATUS: ${{ steps.build.outcome }}
         run: |
-          if [ "$STATUS" == "success" ]; then
-            COLOR="3066993"
-            EMOJI="✅"
-            STATUS_TEXT="Successfully built"
-          else
-            COLOR="15158332"
-            EMOJI="❌"
-            STATUS_TEXT="Failed to build"
-          fi
-          
-          json="{
-            \"username\": \"HomelabARR Container Bot\",
-            \"embeds\": [{
-              \"title\": \"${EMOJI} ${CONTAINER}\",
-              \"color\": ${COLOR},
-              \"fields\": [
+          TIMESTAMP=$(date -u +'%FT%T.%3NZ')
+          json='{
+            "username": "HomelabARR Container Bot",
+            "avatar_url": "https://raw.githubusercontent.com/smashingtags/homelabarr-cli/master/wiki/overrides/img/profile.png",
+            "embeds": [{
+              "author": {
+                "name": "smashingtags",
+                "icon_url": "https://avatars.githubusercontent.com/u/45863998"
+              },
+              "title": "'"${CONTAINER}"'",
+              "url": "https://github.com/smashingtags/homelabarr-containers/pkgs/container/'"${CONTAINER}"'",
+              "color": 3066993,
+              "fields": [
                 {
-                  \"name\": \"Status\",
-                  \"value\": \"${STATUS_TEXT}\"
+                  "name": "Container Info",
+                  "value": "We published a new container image `'"${CONTAINER}"'`"
                 },
                 {
-                  \"name\": \"Type\",
-                  \"value\": \"Application Container\"
+                  "name": "Description",
+                  "value": "HomelabARR Application Container"
                 },
                 {
-                  \"name\": \"Registry\",
-                  \"value\": \"ghcr.io/smashingtags/${CONTAINER}:latest\"
+                  "name": "Version",
+                  "value": "latest • '"${GITHUB_SHA:0:7}"'"
+                },
+                {
+                  "name": "Docker Tags",
+                  "value": "`ghcr.io/smashingtags/'"${CONTAINER}"':latest`\n`ghcr.io/smashingtags/'"${CONTAINER}"':v1.0.0`"
+                },
+                {
+                  "name": "Thanks!",
+                  "value": "Thanks to all Contributors"
                 }
               ],
-              \"footer\": {
-                \"text\": \"GitHub Actions\",
-                \"icon_url\": \"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png\"
-              }
+              "footer": {
+                "text": "Powered by GitHub Actions",
+                "icon_url": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+              },
+              "timestamp": "'"${TIMESTAMP}"'"
             }]
-          }"
-          curl -fsSL -H "Content-Type: application/json" -X POST -d "${json}" "${DISCORD_WEBHOOK}" || true
+          }'
+          if [ -n "${DISCORD_WEBHOOK}" ]; then
+            curl -fsSL -H "Content-Type: application/json" -X POST -d "${json}" "${DISCORD_WEBHOOK}" || true
+          fi
 
   build-base:
     runs-on: self-hosted
@@ -227,48 +234,55 @@ jobs:
             VERSION=22.04
       
       - name: Send Discord notification
-        if: always()
+        if: always() && (steps.build.outcome == 'success')
         env:
-          DISCORD_WEBHOOK: "https://discord.com/api/webhooks/1407409778791284926/_W2XG786rdAhgWj_TjBKV7_6hIGegAwYhaDivH3bIm6ysBfqoYnBXBeYLlzPx3tX1psy"
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           CONTAINER: ${{ matrix.container }}
-          STATUS: ${{ steps.build.outcome }}
         run: |
-          if [ "$STATUS" == "success" ]; then
-            COLOR="3066993"
-            EMOJI="✅"
-            STATUS_TEXT="Successfully built"
-          else
-            COLOR="15158332"
-            EMOJI="❌"
-            STATUS_TEXT="Failed to build"
-          fi
-          
-          json="{
-            \"username\": \"HomelabARR Container Bot\",
-            \"embeds\": [{
-              \"title\": \"${EMOJI} ${CONTAINER}\",
-              \"color\": ${COLOR},
-              \"fields\": [
+          TIMESTAMP=$(date -u +'%FT%T.%3NZ')
+          json='{
+            "username": "HomelabARR Container Bot",
+            "avatar_url": "https://raw.githubusercontent.com/smashingtags/homelabarr-cli/master/wiki/overrides/img/profile.png",
+            "embeds": [{
+              "author": {
+                "name": "smashingtags",
+                "icon_url": "https://avatars.githubusercontent.com/u/45863998"
+              },
+              "title": "'"${CONTAINER}"'",
+              "url": "https://github.com/smashingtags/homelabarr-containers/pkgs/container/'"${CONTAINER}"'",
+              "color": 3066993,
+              "fields": [
                 {
-                  \"name\": \"Status\",
-                  \"value\": \"${STATUS_TEXT}\"
+                  "name": "Container Info",
+                  "value": "We published a new base image `'"${CONTAINER}"'`"
                 },
                 {
-                  \"name\": \"Type\",
-                  \"value\": \"Base Image\"
+                  "name": "Description",
+                  "value": "HomelabARR Base Image"
                 },
                 {
-                  \"name\": \"Registry\",
-                  \"value\": \"ghcr.io/smashingtags/${CONTAINER}:latest\"
+                  "name": "Version",
+                  "value": "latest • '"${GITHUB_SHA:0:7}"'"
+                },
+                {
+                  "name": "Docker Tags",
+                  "value": "`ghcr.io/smashingtags/'"${CONTAINER}"':latest`\n`ghcr.io/smashingtags/'"${CONTAINER}"':v1.0.0`"
+                },
+                {
+                  "name": "Thanks!",
+                  "value": "Thanks to all Contributors"
                 }
               ],
-              \"footer\": {
-                \"text\": \"GitHub Actions\",
-                \"icon_url\": \"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png\"
-              }
+              "footer": {
+                "text": "Powered by GitHub Actions",
+                "icon_url": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+              },
+              "timestamp": "'"${TIMESTAMP}"'"
             }]
-          }"
-          curl -fsSL -H "Content-Type: application/json" -X POST -d "${json}" "${DISCORD_WEBHOOK}" || true
+          }'
+          if [ -n "${DISCORD_WEBHOOK}" ]; then
+            curl -fsSL -H "Content-Type: application/json" -X POST -d "${json}" "${DISCORD_WEBHOOK}" || true
+          fi
 
   build-mods:
     runs-on: self-hosted
@@ -340,48 +354,55 @@ jobs:
           cache-to: type=gha,mode=max
       
       - name: Send Discord notification
-        if: always()
+        if: always() && (steps.build.outcome == 'success')
         env:
-          DISCORD_WEBHOOK: "https://discord.com/api/webhooks/1407409778791284926/_W2XG786rdAhgWj_TjBKV7_6hIGegAwYhaDivH3bIm6ysBfqoYnBXBeYLlzPx3tX1psy"
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           CONTAINER: ${{ matrix.container }}
-          STATUS: ${{ steps.build.outcome }}
         run: |
-          if [ "$STATUS" == "success" ]; then
-            COLOR="3066993"
-            EMOJI="✅"
-            STATUS_TEXT="Successfully built"
-          else
-            COLOR="15158332"
-            EMOJI="❌"
-            STATUS_TEXT="Failed to build"
-          fi
-          
-          json="{
-            \"username\": \"HomelabARR Container Bot\",
-            \"embeds\": [{
-              \"title\": \"${EMOJI} ${CONTAINER}\",
-              \"color\": ${COLOR},
-              \"fields\": [
+          TIMESTAMP=$(date -u +'%FT%T.%3NZ')
+          json='{
+            "username": "HomelabARR Container Bot",
+            "avatar_url": "https://raw.githubusercontent.com/smashingtags/homelabarr-cli/master/wiki/overrides/img/profile.png",
+            "embeds": [{
+              "author": {
+                "name": "smashingtags",
+                "icon_url": "https://avatars.githubusercontent.com/u/45863998"
+              },
+              "title": "'"${CONTAINER}"'",
+              "url": "https://github.com/smashingtags/homelabarr-containers/pkgs/container/'"${CONTAINER}"'",
+              "color": 3066993,
+              "fields": [
                 {
-                  \"name\": \"Status\",
-                  \"value\": \"${STATUS_TEXT}\"
+                  "name": "Container Info",
+                  "value": "We published a new Docker mod `'"${CONTAINER}"'`"
                 },
                 {
-                  \"name\": \"Type\",
-                  \"value\": \"Docker Mod\"
+                  "name": "Description",
+                  "value": "HomelabARR Docker Modification"
                 },
                 {
-                  \"name\": \"Registry\",
-                  \"value\": \"ghcr.io/smashingtags/${CONTAINER}:latest\"
+                  "name": "Version",
+                  "value": "latest • '"${GITHUB_SHA:0:7}"'"
+                },
+                {
+                  "name": "Docker Tags",
+                  "value": "`ghcr.io/smashingtags/'"${CONTAINER}"':latest`\n`ghcr.io/smashingtags/'"${CONTAINER}"':v1.0.0`"
+                },
+                {
+                  "name": "Thanks!",
+                  "value": "Thanks to all Contributors"
                 }
               ],
-              \"footer\": {
-                \"text\": \"GitHub Actions\",
-                \"icon_url\": \"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png\"
-              }
+              "footer": {
+                "text": "Powered by GitHub Actions",
+                "icon_url": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+              },
+              "timestamp": "'"${TIMESTAMP}"'"
             }]
-          }"
-          curl -fsSL -H "Content-Type: application/json" -X POST -d "${json}" "${DISCORD_WEBHOOK}" || true
+          }'
+          if [ -n "${DISCORD_WEBHOOK}" ]; then
+            curl -fsSL -H "Content-Type: application/json" -X POST -d "${json}" "${DISCORD_WEBHOOK}" || true
+          fi
 
   build-nightly:
     runs-on: self-hosted
@@ -441,45 +462,52 @@ jobs:
           cache-to: type=gha,mode=max
       
       - name: Send Discord notification
-        if: always()
+        if: always() && (steps.build.outcome == 'success')
         env:
-          DISCORD_WEBHOOK: "https://discord.com/api/webhooks/1407409778791284926/_W2XG786rdAhgWj_TjBKV7_6hIGegAwYhaDivH3bIm6ysBfqoYnBXBeYLlzPx3tX1psy"
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           CONTAINER: ${{ matrix.container }}
-          STATUS: ${{ steps.build.outcome }}
         run: |
-          if [ "$STATUS" == "success" ]; then
-            COLOR="3066993"
-            EMOJI="✅"
-            STATUS_TEXT="Successfully built"
-          else
-            COLOR="15158332"
-            EMOJI="❌"
-            STATUS_TEXT="Failed to build"
-          fi
-          
-          json="{
-            \"username\": \"HomelabARR Container Bot\",
-            \"embeds\": [{
-              \"title\": \"${EMOJI} ${CONTAINER}\",
-              \"color\": ${COLOR},
-              \"fields\": [
+          TIMESTAMP=$(date -u +'%FT%T.%3NZ')
+          json='{
+            "username": "HomelabARR Container Bot",
+            "avatar_url": "https://raw.githubusercontent.com/smashingtags/homelabarr-cli/master/wiki/overrides/img/profile.png",
+            "embeds": [{
+              "author": {
+                "name": "smashingtags",
+                "icon_url": "https://avatars.githubusercontent.com/u/45863998"
+              },
+              "title": "'"${CONTAINER}"'",
+              "url": "https://github.com/smashingtags/homelabarr-containers/pkgs/container/'"${CONTAINER}"'",
+              "color": 3066993,
+              "fields": [
                 {
-                  \"name\": \"Status\",
-                  \"value\": \"${STATUS_TEXT}\"
+                  "name": "Container Info",
+                  "value": "We published a new nightly build `'"${CONTAINER}"'`"
                 },
                 {
-                  \"name\": \"Type\",
-                  \"value\": \"Nightly Build\"
+                  "name": "Description",
+                  "value": "HomelabARR Nightly Build"
                 },
                 {
-                  \"name\": \"Registry\",
-                  \"value\": \"ghcr.io/smashingtags/${CONTAINER}:nightly\"
+                  "name": "Version",
+                  "value": "nightly • '"${GITHUB_SHA:0:7}"'"
+                },
+                {
+                  "name": "Docker Tags",
+                  "value": "`ghcr.io/smashingtags/'"${CONTAINER}"':nightly`\n`ghcr.io/smashingtags/'"${CONTAINER}"':latest`"
+                },
+                {
+                  "name": "Thanks!",
+                  "value": "Thanks to all Contributors"
                 }
               ],
-              \"footer\": {
-                \"text\": \"GitHub Actions\",
-                \"icon_url\": \"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png\"
-              }
+              "footer": {
+                "text": "Powered by GitHub Actions",
+                "icon_url": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+              },
+              "timestamp": "'"${TIMESTAMP}"'"
             }]
-          }"
-          curl -fsSL -H "Content-Type: application/json" -X POST -d "${json}" "${DISCORD_WEBHOOK}" || true
+          }'
+          if [ -n "${DISCORD_WEBHOOK}" ]; then
+            curl -fsSL -H "Content-Type: application/json" -X POST -d "${json}" "${DISCORD_WEBHOOK}" || true
+          fi
