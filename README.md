@@ -1,80 +1,107 @@
-# Container Images
+# HomelabARR Container Images
 
 <p align="center">
-    <a href="https://discord.gg/FYSvu83caM">
-        <img src="https://discord.com/api/guilds/830478558995415100/widget.png?label=Discord%20Server&logo=discord" alt="Join DockServer on Discord">
+    <a href="https://github.com/smashingtags/homelabarr-cli">
+        <img src="https://img.shields.io/badge/HomelabARR-CLI-blue?logo=github" alt="HomelabARR CLI">
     </a><br />
-    <a href="https://github.com/dockserver/dockserver/releases/latest">
-        <img src="https://img.shields.io/github/v/release/dockserver/dockserver?include_prereleases&label=Latest%20Release&logo=github" alt="Latest Official Release on GitHub">
+    <a href="https://github.com/smashingtags/homelabarr-containers/releases/latest">
+        <img src="https://img.shields.io/github/v/release/smashingtags/homelabarr-containers?include_prereleases&label=Latest%20Release&logo=github" alt="Latest Official Release on GitHub">
     </a></br >
-    <a href="https://github.com/dockserver/dockserver/blob/master/LICENSE">
-        <img src="https://img.shields.io/github/license/dockserver/dockserver?label=License&logo=mit" alt="MIT License">
+    <a href="https://github.com/smashingtags/homelabarr-containers/blob/master/LICENSE">
+        <img src="https://img.shields.io/github/license/smashingtags/homelabarr-containers?label=License&logo=mit" alt="MIT License">
     </a><br />
-    <noscript>
-      <a href="https://www.patreon.com/DockServer">
-      <img alt="Donate using Patreon" src="https://i.imgur.com/yuTmnOj.png"></a>
-    </noscript>
+    <a href="https://github.com/smashingtags/homelabarr-containers/actions">
+        <img src="https://img.shields.io/github/actions/workflow/status/smashingtags/homelabarr-containers/build-all-containers.yml?branch=master&label=Container%20Builds&logo=github-actions" alt="Build Status">
+    </a>
 </p>
 
 ---
-> **Note**:
-> All Dockefiles are automatically generated
 
-> **Warning**:
-> Please don't use the images / dockers on other projects it could break things on those systems.
+## 📦 About
 
---- 
+This repository contains all Docker container images used by the [HomelabARR CLI](https://github.com/smashingtags/homelabarr-cli) project. These containers are specifically optimized and configured for the HomelabARR ecosystem, providing a comprehensive media server and homelab infrastructure.
 
-## Ideas and Code
+## 🚀 Container Categories
 
-This repository is heavily based on 
+- **Base Images** - Ubuntu (Focal/Jammy), Alpine, and specialized base containers
+- **Applications** - Media automation tools, backup solutions, and utilities
+- **Docker Mods** - Modifications for existing containers (healthchecks, rclone, etc.)
+- **Nightly Builds** - Bleeding-edge versions of select applications
 
-[Linuxserver.io](https://linuxserver.io) images and [k8s-at-home](https://k8s-at-home.com/) idea
+## 📋 Available Containers
 
-All Containers have some additional edits just for dockserver.io
+All containers are published to GitHub Container Registry:
+```
+ghcr.io/smashingtags/<container-name>:latest
+```
 
-Please check before you run it on other systems
+### Key Containers Include:
+- Media server applications (GUI, Wiki, etc.)
+- Download clients and automation tools
+- Backup and sync solutions (Restic, GDSA, etc.)
+- Monitoring and health check modifications
+- And many more...
 
----
+## 🛠️ Usage
 
-## Contributors ✨
+These containers are designed to work seamlessly with HomelabARR CLI. To use them:
 
-Thanks goes to these wonderful people
+1. Install [HomelabARR CLI](https://github.com/smashingtags/homelabarr-cli)
+2. Deploy applications using the CLI's Docker Compose templates
+3. Containers will be automatically pulled from `ghcr.io/smashingtags/`
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
+## ⚠️ Important Notes
 
-### Contributors
+> **Note**: These containers are optimized specifically for HomelabARR CLI and may have custom configurations that differ from upstream images.
+
+> **Warning**: While these images are public, they're tailored for the HomelabARR ecosystem. Using them in other environments may require adjustments.
+
+## 🏗️ Build Process
+
+- Containers are automatically built using GitHub Actions
+- Multi-architecture support (linux/amd64, linux/arm64)
+- Automated testing and quality checks
+- Discord notifications for build status
+
+## 🤝 Contributing
+
+Contributions are welcome! Please:
+1. Fork the repository
+2. Create a feature branch
+3. Submit a pull request with your improvements
+
+## 📖 Documentation
+
+For detailed documentation on using these containers with HomelabARR CLI, visit:
+- [HomelabARR CLI Documentation](https://github.com/smashingtags/homelabarr-cli/wiki)
+- [Container Configuration Guide](https://github.com/smashingtags/homelabarr-cli/wiki/containers)
+
+## 🙏 Acknowledgments
+
+This repository builds upon ideas and code from:
+- [LinuxServer.io](https://linuxserver.io) - Base image concepts and S6 overlay
+- Original DockServer project - Initial container structure
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👥 Contributors
 
 <table>
 <tr>
     <td align="center" style="word-wrap: break-word; width: 75.0; height: 75.0">
-        <a href=https://github.com/doob187>
-            <img src=https://avatars.githubusercontent.com/u/60312740?v=4 width="50;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=doob187/>
+        <a href="https://github.com/smashingtags">
+            <img src="https://avatars.githubusercontent.com/u/45863998?v=4" width="50;" style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt="smashingtags"/>
             <br />
-            <sub style="font-size:14px"><b>doob187</b></sub>
-        </a>
-    </td>
-    <td align="center" style="word-wrap: break-word; width: 75.0; height: 75.0">
-        <a href=https://github.com/fscorrupt>
-            <img src=https://avatars.githubusercontent.com/u/45659314?v=4 width="50;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=FSCorrupt/>
-            <br />
-            <sub style="font-size:14px"><b>FSCorrupt</b></sub>
-        </a>
-    </td>
-    <td align="center" style="word-wrap: break-word; width: 75.0; height: 75.0">
-        <a href=https://github.com/drag0n141>
-            <img src=https://avatars.githubusercontent.com/u/44865095?v=4 width="50;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=DrAg0n141/>
-            <br />
-            <sub style="font-size:14px"><b>DrAg0n141</b></sub>
+            <sub style="font-size:14px"><b>smashingtags</b></sub>
         </a>
     </td>
 </tr>
 </table>
 
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+---
+
+*Part of the HomelabARR ecosystem - Simplifying self-hosted media automation*
 
 
