@@ -27,6 +27,7 @@ jobs:
       matrix:
         container:
           - homelabarr-auto-replyarr
+          # Build all other containers first
           - homelabarr-backup
           - homelabarr-crunchy
           - homelabarr-crunchydl
@@ -37,12 +38,13 @@ jobs:
           - homelabarr-mount
           - homelabarr-newznab
           - homelabarr-restic
-          - homelabarr-rollarr
           - homelabarr-spotweb
           - homelabarr-traktarr
           - homelabarr-uploader
           - homelabarr-vnstat
           - homelabarr-wiki
+          # Rollarr last due to potential build issues
+          - homelabarr-rollarr
     
     steps:
       - name: Checkout repository
