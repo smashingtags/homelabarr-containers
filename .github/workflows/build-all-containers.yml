@@ -25,23 +25,6 @@ jobs:
       fail-fast: false
       matrix:
         container:
-          - docker-auto-replyarr
-          - docker-backup
-          - docker-crunchy
-          - docker-crunchydl
-          - docker-dockupdate
-          - docker-gdsa
-          - docker-gui
-          - docker-local-persist
-          - docker-mount
-          - docker-newznab
-          - docker-restic
-          - docker-rollarr
-          - docker-spotweb
-          - docker-traktarr
-          - docker-uploader
-          - docker-vnstat
-          - docker-wiki
           - homelabarr-auto-replyarr
           - homelabarr-backup
           - homelabarr-crunchy
@@ -176,15 +159,6 @@ jobs:
       matrix:
         container:
           - alpine
-          - docker-alpine
-          - docker-alpine-v3
-          - docker-config
-          - docker-create
-          - docker-dockserver
-          - docker-ubuntu-focal
-          - docker-ubuntu-jammy
-          - docker-ubuntu-noble
-          - docker-ui
           - homelabarr-ui-legacy
           - homelabarr-alpine
           - homelabarr-alpine-v3
