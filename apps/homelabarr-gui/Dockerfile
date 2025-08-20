@@ -1,5 +1,5 @@
 ARG VERSION
-FROM ghcr.io/smashingtags/docker-alpine:latest as guacbuilder
+FROM ghcr.io/smashingtags/homelabarr-alpine:latest as guacbuilder
 
 ARG GUACD_VERSION=1.4.0
 
@@ -59,7 +59,7 @@ RUN \
  make DESTDIR=/buildout install
 
 ARG VERSION
-FROM ghcr.io/smashingtags/docker-alpine:latest as nodebuilder
+FROM ghcr.io/smashingtags/homelabarr-alpine:latest as nodebuilder
 ARG GCLIENT_RELEASE
 
 RUN \
