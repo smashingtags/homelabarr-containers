@@ -105,8 +105,6 @@ RUN \
 	freerdp-libs \
 	nodejs \
 	openbox && \
- apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community \
-	websocat && \
  echo "**** openbox tweaks ****" && \
  sed -i \
 	's/NLIMC/NLMC/g' \
