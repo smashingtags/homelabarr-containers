@@ -1,16 +1,23 @@
 FROM alpine:3.15 as rootfs-stage
 
+# Add ARG for TARGETPLATFORM
+ARG TARGETPLATFORM
+
 # environment
 ENV REL=jammy
-ENV ARCH=amd64
 
 # install packages
 RUN \
  apk add --no-cache bash curl tzdata xz
 
-# grab base tarball
+# grab base tarball - dynamically set ARCH based on TARGETPLATFORM
 RUN \
  mkdir /root-out && \
+ if [ "${TARGETPLATFORM}" = "linux/arm64" ]; then \
+   ARCH="arm64"; \
+ else \
+   ARCH="amd64"; \
+ fi && \
  curl -o /rootfs.tar.gz -L https://partner-images.canonical.com/core/${REL}/current/ubuntu-${REL}-core-cloudimg-${ARCH}-root.tar.gz && \
  tar xf /rootfs.tar.gz -C /root-out
 
