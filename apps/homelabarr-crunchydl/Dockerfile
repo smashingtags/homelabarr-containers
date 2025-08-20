@@ -21,7 +21,7 @@ LABEL org.opencontainers.image.source="https://github.com/dockserver/container"
 
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
-ARG VERSION=v1.17.6
+ARG VERSION=v5.5.1
 
 RUN apk --quiet --no-cache --no-progress update && \
     apk --quiet --no-cache --no-progress upgrade && \
@@ -30,13 +30,10 @@ RUN apk --quiet --no-cache --no-progress update && \
     apk add -U --update --no-cache --no-progress \
       p7zip bash ca-certificates shadow musl \
       findutils linux-headers coreutils apk-tools busybox && \
-    wget https://github.com/dockserver/multi-downloader-nx/releases/download/$VERSION/multi-downloader-nx-ubuntu-cli.7z -O /app/crunchy.7z && \
+    wget https://github.com/anidl/multi-downloader-nx/releases/download/$VERSION/multi-downloader-nx-linux-cli.7z -O /app/crunchy.7z && \
     cd /app && \
     7z e crunchy.7z && \
-    rm -rf \
-       /app/crunchy.7z \
-       /app/multi-downloader-nx-ubuntu64-cli \
-       /app/config/cli-defaults.yml
+    rm -rf /app/crunchy.7z
 
 FROM debian:bullseye-slim
 

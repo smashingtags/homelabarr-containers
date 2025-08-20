@@ -5,9 +5,8 @@ ARG GUACD_VERSION=1.4.0
 
 RUN \
  echo "**** install build deps ****" && \
- apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing \
-	ossp-uuid-dev && \
  apk add --no-cache \
+	util-linux-dev \
 	cairo-dev \
 	libjpeg-turbo-dev \
 	libpng-dev \
@@ -105,9 +104,8 @@ RUN \
 	font-noto \
 	freerdp-libs \
 	nodejs \
-	openbox && \
- apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing \
-	ossp-uuid && \
+	openbox \
+	libuuid && \
  apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community \
 	websocat && \
  echo "**** openbox tweaks ****" && \
