@@ -39,7 +39,7 @@ RUN \
     tar -C / -Jxpf /tmp/s6-overlay-amd64.tar.xz; \
   fi && \
   rm /tmp/s6-overlay-*.tar.xz
-COPY ./base/docker-ubuntu-focal/patch/ /tmp/patch
+COPY ./base/homelabarr-ubuntu-focal/patch/ /tmp/patch
 
 # set environment variables
 ARG DEBIAN_FRONTEND="noninteractive"
@@ -49,7 +49,7 @@ ENV HOME="/root" \
    TERM="xterm"
 
 # copy sources
-COPY ./base/docker-ubuntu-focal/sources.list /etc/apt/
+COPY ./base/homelabarr-ubuntu-focal/sources.list /etc/apt/
 
 RUN \
  echo "**** Ripped from Ubuntu Docker Logic ****" && \
@@ -104,6 +104,6 @@ RUN \
  rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 
 # add local files
-COPY ./base/docker-ubuntu-focal/root/ /
+COPY ./base/homelabarr-ubuntu-focal/root/ /
 
 ENTRYPOINT ["/init"]
