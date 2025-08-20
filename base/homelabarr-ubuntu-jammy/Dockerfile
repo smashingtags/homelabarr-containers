@@ -21,17 +21,12 @@ RUN \
     tar -C / -Jxpf /tmp/s6-overlay-amd64.tar.xz; \
   fi && \
   rm /tmp/s6-overlay-*.tar.xz
-COPY ./base/homelabarr-ubuntu-jammy/patch/ /tmp/patch
-
 # set environment variables
 ARG DEBIAN_FRONTEND="noninteractive"
 ENV HOME="/root" \
     LANGUAGE="en_US.UTF-8" \
     LANG="en_US.UTF-8" \
    TERM="xterm"
-
-# copy sources
-COPY ./base/homelabarr-ubuntu-jammy/sources.list /etc/apt/
 
 RUN \
  echo "**** install apt-utils and locales ****" && \
