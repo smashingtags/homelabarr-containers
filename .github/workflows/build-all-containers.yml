@@ -2,7 +2,7 @@ name: Build and Publish All HomelabARR Containers
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main ]
     paths:
       - 'apps/**'
       - 'base/**'
@@ -124,7 +124,7 @@ jobs:
           TIMESTAMP=$(date -u +'%FT%T.%3NZ')
           json='{
             "username": "HomelabARR Container Bot",
-            "avatar_url": "https://raw.githubusercontent.com/smashingtags/homelabarr-cli/master/wiki/overrides/img/profile.png",
+            "avatar_url": "https://raw.githubusercontent.com/smashingtags/homelabarr-cli/main/wiki/overrides/img/profile.png",
             "embeds": [{
               "author": {
                 "name": "smashingtags",
@@ -264,7 +264,7 @@ jobs:
           TIMESTAMP=$(date -u +'%FT%T.%3NZ')
           json='{
             "username": "HomelabARR Container Bot",
-            "avatar_url": "https://raw.githubusercontent.com/smashingtags/homelabarr-cli/master/wiki/overrides/img/profile.png",
+            "avatar_url": "https://raw.githubusercontent.com/smashingtags/homelabarr-cli/main/wiki/overrides/img/profile.png",
             "embeds": [{
               "author": {
                 "name": "smashingtags",
@@ -394,7 +394,7 @@ jobs:
           TIMESTAMP=$(date -u +'%FT%T.%3NZ')
           json='{
             "username": "HomelabARR Container Bot",
-            "avatar_url": "https://raw.githubusercontent.com/smashingtags/homelabarr-cli/master/wiki/overrides/img/profile.png",
+            "avatar_url": "https://raw.githubusercontent.com/smashingtags/homelabarr-cli/main/wiki/overrides/img/profile.png",
             "embeds": [{
               "author": {
                 "name": "smashingtags",
@@ -512,7 +512,7 @@ jobs:
           TIMESTAMP=$(date -u +'%FT%T.%3NZ')
           json='{
             "username": "HomelabARR Container Bot",
-            "avatar_url": "https://raw.githubusercontent.com/smashingtags/homelabarr-cli/master/wiki/overrides/img/profile.png",
+            "avatar_url": "https://raw.githubusercontent.com/smashingtags/homelabarr-cli/main/wiki/overrides/img/profile.png",
             "embeds": [{
               "author": {
                 "name": "smashingtags",
