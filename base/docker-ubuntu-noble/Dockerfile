@@ -55,7 +55,7 @@ RUN \
     /var/tmp/*
 
 # Add local files
-COPY root/ /
+COPY base/docker-ubuntu-noble/root/ /
 
 # Environment variables
 ENV DEBIAN_FRONTEND="noninteractive" \

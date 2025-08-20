@@ -65,7 +65,7 @@ RUN \
     /var/tmp/*
 
 # Add local files
-COPY root/ /
+COPY base/homelabarr-ubuntu-noble/root/ /
 
 # Environment variables
 ENV DEBIAN_FRONTEND="noninteractive" \
