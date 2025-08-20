@@ -31,10 +31,19 @@ ENV LANG=C.UTF-8 \
     PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 CMD [ "bash" ]
-COPY ./apps/docker-rollarr/root/ /
-RUN \
+COPY ./apps/homelabarr-rollarr/root/ /
+
+# Skip the massive install.sh since python:3.10-slim already has Python
+# Just install the required packages and pip dependencies
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        git \
+        curl \
+        ca-certificates \
+        cron && \
+    rm -rf /var/lib/apt/lists/* && \
     chmod -R 755 /rollarr/* && \
-    bash /rollarr/install.sh
+    pip install --no-cache-dir -r /rollarr/requirements.txt || true
 
 RUN crontab /crontab
 
