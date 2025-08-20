@@ -20,7 +20,7 @@ USERNAME=$3
 TOKEN=$4
 
 ### APP SETTINGS ###
-APPLINK="https://api.github.com/repos/dockserver/dockserver"
+APPLINK="https://api.github.com/repos/smashingtags/homelabarr-cli"
 BUILDVERSION=20.04
 BUILDVERSION="${BUILDVERSION#*v}"
 BUILDVERSION="${BUILDVERSION#*release-}"
@@ -41,6 +41,6 @@ echo '{
    "baseimage": "'${BUILDIMAGE}'",
    "description": "Docker image  for '${APP}'",
    "body": "Upgrading '${APP}' to baseimage: '${BUILDIMAGE}':'${BUILDVERSION}'",
-   "user": "dockserver image update[bot]"
+   "user": "homelabarr image update[bot]"
 }' > "./$FOLDER/$APP/release.json"
 

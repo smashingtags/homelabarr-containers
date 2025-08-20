@@ -8,10 +8,10 @@
     ":automergeBranch"
   ],
   "platform": "github",
-  "username": "dockserver-bot[bot]",
+  "username": "homelabarr-bot[bot]",
   "onboarding": false,
   "requireConfig": "optional",
-  "gitAuthor": "dockserver-bot <145536302+dockserver-bot[bot]@users.noreply.github.com>",
+  "gitAuthor": "homelabarr-bot <145536302+homelabarr-bot[bot]@users.noreply.github.com>",
   "dependencyDashboardTitle": "Renovate Dashboard 🤖",
   "suppressNotifications": ["prIgnoreNotification"],
   "includePaths": ["**/.github/**"],
