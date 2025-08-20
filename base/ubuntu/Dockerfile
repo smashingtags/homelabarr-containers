@@ -56,8 +56,7 @@ RUN \
     'linux/arm64') export MICRO_ARCH='linux-arm64' ;; \
     'linux/arm/v7') export MICRO_ARCH='linux-arm' ;; \
   esac \
-  && MICRO_VERSION=$(curl -s "https://api.github.com/repos/zyedidia/micro/releases" | jq --raw-output '.[0].tag_name') \
-  && MICRO_VERSION="${MICRO_VERSION#?}" \
+  && MICRO_VERSION="2.0.11" \
   && curl -fsSL "https://github.com/zyedidia/micro/releases/download/v${MICRO_VERSION}/micro-${MICRO_VERSION}-${MICRO_ARCH}.tar.gz" | tar xzf - -C /tmp --strip-components=1 \
   && mv /tmp/micro /usr/local/bin/micro \
   && ln -s /usr/local/bin/micro /usr/local/bin/vi \
