@@ -117,6 +117,8 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           CONTAINER: ${{ matrix.container }}
         run: |
+          # Get the latest version tag
+          LATEST_VERSION=$(git describe --tags --abbrev=0 2>/dev/null || echo "v1.0.0")
           TIMESTAMP=$(date -u +'%FT%T.%3NZ')
           json='{
             "username": "HomelabARR Container Bot",
@@ -140,11 +142,11 @@ jobs:
                 },
                 {
                   "name": "Version",
-                  "value": "latest • '"${GITHUB_SHA:0:7}"'"
+                  "value": "'"${LATEST_VERSION}"' • latest • '"${GITHUB_SHA:0:7}"'"
                 },
                 {
                   "name": "Docker Tags",
-                  "value": "`ghcr.io/smashingtags/'"${CONTAINER}"':latest`\n`ghcr.io/smashingtags/'"${CONTAINER}"':v1.0.0`"
+                  "value": "`ghcr.io/smashingtags/'"${CONTAINER}"':latest`\n`ghcr.io/smashingtags/'"${CONTAINER}"':'"${LATEST_VERSION}"'`"
                 },
                 {
                   "name": "Thanks!",
@@ -249,6 +251,8 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           CONTAINER: ${{ matrix.container }}
         run: |
+          # Get the latest version tag
+          LATEST_VERSION=$(git describe --tags --abbrev=0 2>/dev/null || echo "v1.0.0")
           TIMESTAMP=$(date -u +'%FT%T.%3NZ')
           json='{
             "username": "HomelabARR Container Bot",
@@ -272,11 +276,11 @@ jobs:
                 },
                 {
                   "name": "Version",
-                  "value": "latest • '"${GITHUB_SHA:0:7}"'"
+                  "value": "'"${LATEST_VERSION}"' • latest • '"${GITHUB_SHA:0:7}"'"
                 },
                 {
                   "name": "Docker Tags",
-                  "value": "`ghcr.io/smashingtags/'"${CONTAINER}"':latest`\n`ghcr.io/smashingtags/'"${CONTAINER}"':v1.0.0`"
+                  "value": "`ghcr.io/smashingtags/'"${CONTAINER}"':latest`\n`ghcr.io/smashingtags/'"${CONTAINER}"':'"${LATEST_VERSION}"'`"
                 },
                 {
                   "name": "Thanks!",
@@ -373,6 +377,8 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           CONTAINER: ${{ matrix.container }}
         run: |
+          # Get the latest version tag
+          LATEST_VERSION=$(git describe --tags --abbrev=0 2>/dev/null || echo "v1.0.0")
           TIMESTAMP=$(date -u +'%FT%T.%3NZ')
           json='{
             "username": "HomelabARR Container Bot",
@@ -396,11 +402,11 @@ jobs:
                 },
                 {
                   "name": "Version",
-                  "value": "latest • '"${GITHUB_SHA:0:7}"'"
+                  "value": "'"${LATEST_VERSION}"' • latest • '"${GITHUB_SHA:0:7}"'"
                 },
                 {
                   "name": "Docker Tags",
-                  "value": "`ghcr.io/smashingtags/'"${CONTAINER}"':latest`\n`ghcr.io/smashingtags/'"${CONTAINER}"':v1.0.0`"
+                  "value": "`ghcr.io/smashingtags/'"${CONTAINER}"':latest`\n`ghcr.io/smashingtags/'"${CONTAINER}"':'"${LATEST_VERSION}"'`"
                 },
                 {
                   "name": "Thanks!",
@@ -491,6 +497,8 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           CONTAINER: ${{ matrix.container }}
         run: |
+          # Get the latest version tag
+          LATEST_VERSION=$(git describe --tags --abbrev=0 2>/dev/null || echo "v1.0.0")
           TIMESTAMP=$(date -u +'%FT%T.%3NZ')
           json='{
             "username": "HomelabARR Container Bot",
