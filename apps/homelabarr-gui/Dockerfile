@@ -104,7 +104,8 @@ RUN \
 	font-noto \
 	freerdp-libs \
 	nodejs \
-	openbox && \
+	openbox \
+	websocat && \
  echo "**** openbox tweaks ****" && \
  sed -i \
 	's/NLIMC/NLMC/g' \
