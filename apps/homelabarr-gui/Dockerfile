@@ -104,8 +104,7 @@ RUN \
 	font-noto \
 	freerdp-libs \
 	nodejs \
-	openbox \
-	libuuid && \
+	openbox && \
  apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community \
 	websocat && \
  echo "**** openbox tweaks ****" && \
