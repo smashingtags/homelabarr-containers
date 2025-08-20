@@ -27,7 +27,7 @@ RUN  \
   echo "**** install packages ****" && \
     apk add -U --update --no-cache bash ca-certificates shadow
 
-COPY ./base/docker-dockserver/root/start.sh /start.sh
+COPY ./base/homelabarr-legacy-base/root/start.sh /start.sh
 
 ENTRYPOINT ["/bin/bash", "/start.sh"]
 ##EOF
