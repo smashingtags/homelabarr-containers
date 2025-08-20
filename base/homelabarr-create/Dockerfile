@@ -34,7 +34,7 @@ RUN \
     apk del --quiet --clean-protected --no-progress && \
   rm -f /var/cache/apk/*
 
-COPY ./base/docker-create/root/ /
+COPY ./base/homelabarr-create/root/ /
 
 ENTRYPOINT ["/bin/bash", "/start.sh"]
 ##EOF

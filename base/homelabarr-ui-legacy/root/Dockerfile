@@ -4,7 +4,7 @@ FROM python:alpine3.15 AS builder
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-COPY ./base/dockserver-ui/root/ .
+COPY ./base/homelabarr-ui/root/ .
 
 # install python dependencies
 RUN pip install virtualenv && \
@@ -37,7 +37,7 @@ RUN apk add -U --no-cache git bash rsync && \
     rm -rf /var/cache/apk/* /tmp/*
 
 COPY --from=builder /env /env
-COPY ./base/docker-ui/root/ .
+COPY ./base/homelabarr-ui/root/ .
 
 # gunicorn
 CMD ["gunicorn", "--config", "gunicorn-cfg.py", "run:app"]
