@@ -102,8 +102,8 @@ RUN \
  useradd -u 911 -U -d /config -s /bin/false abc && \
  usermod -G users abc && \
  mkdir -p /app /config /defaults && \
- mv /usr/bin/with-contenv /usr/bin/with-contenvb && \
- patch -u /etc/s6/init/init-stage2 -i /tmp/patch/etc/s6/init/init-stage2.patch && \
+ if [ -f /usr/bin/with-contenv ]; then mv /usr/bin/with-contenv /usr/bin/with-contenvb; fi && \
+ if [ -f /tmp/patch/etc/s6/init/init-stage2.patch ]; then patch -u /etc/s6/init/init-stage2 -i /tmp/patch/etc/s6/init/init-stage2.patch; fi && \
  echo "**** cleanup ****" && \
  apt-get remove -y patch && \
  apt-get autoremove && \

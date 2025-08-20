@@ -159,6 +159,11 @@ jobs:
       fail-fast: false
       matrix:
         container:
+          # Build problematic containers first for easier debugging
+          - homelabarr-ubuntu-focal
+          - homelabarr-ubuntu-jammy
+          - homelabarr-ui
+          # Then the rest
           - alpine
           - homelabarr-ui-legacy
           - homelabarr-alpine
@@ -166,10 +171,7 @@ jobs:
           - homelabarr-config
           - homelabarr-create
           - homelabarr-legacy-base
-          - homelabarr-ubuntu-focal
-          - homelabarr-ubuntu-jammy
           - homelabarr-ubuntu-noble
-          - homelabarr-ui
           - ubuntu
     
     steps:
