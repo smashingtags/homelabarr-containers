@@ -30,7 +30,8 @@ RUN \
     python3-venv \
     git \
     jq \
-    unzip && \
+    unzip \
+    xz-utils && \
   echo "**** generate locale ****" && \
   locale-gen en_US.UTF-8 && \
   echo "**** install s6-overlay ****" && \
