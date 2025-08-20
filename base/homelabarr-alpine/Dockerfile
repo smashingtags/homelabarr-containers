@@ -54,7 +54,7 @@ RUN apk add --no-cache --purge -uU curl && \
     tar xzf /tmp/s6-overlay.tar.gz -C / && \
     rm -rf /var/cache/apk/* /tmp/*
 
-COPY ./base/docker-alpine/patch/ /tmp/patch
+COPY ./base/homelabarr-alpine/patch/ /tmp/patch
 
 ## RUN FINALIMAGE
 
@@ -70,6 +70,6 @@ RUN \
      mkdir -p /app /config /defaults /system && \
      rm -rf /var/cache/apk/*
 
-COPY ./base/docker-alpine/root/ /
+COPY ./base/homelabarr-alpine/root/ /
 
 ENTRYPOINT ["/init"]

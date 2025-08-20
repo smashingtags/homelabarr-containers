@@ -12,8 +12,8 @@ ADD https://github.com/just-containers/s6-overlay/releases/download/${OVERLAY_VE
 ADD https://github.com/just-containers/s6-overlay/releases/download/${OVERLAY_VERSION}/s6-overlay-x86_64.tar.xz /tmp/s6-overlay-amd64.tar.xz
 ADD https://github.com/just-containers/s6-overlay/releases/download/${OVERLAY_VERSION}/s6-overlay-aarch64.tar.xz /tmp/s6-overlay-arm64.tar.xz
 RUN \
-  apt-get update && \
-  apt-get install -y --no-install-recommends xz-utils && \
+  DEBIAN_FRONTEND=noninteractive apt-get update && \
+  DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends xz-utils && \
   tar -C / -Jxpf /tmp/s6-overlay-noarch.tar.xz && \
   if [ "${TARGETPLATFORM}" = "linux/arm64" ]; then \
     tar -C / -Jxpf /tmp/s6-overlay-arm64.tar.xz; \
@@ -35,8 +35,8 @@ COPY ./base/homelabarr-ubuntu-jammy/sources.list /etc/apt/
 
 RUN \
  echo "**** install apt-utils and locales ****" && \
- apt-get update && \
- apt-get install -y --no-install-recommends \
+ DEBIAN_FRONTEND=noninteractive apt-get update && \
+ DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
    apt-utils \
    locales \
    curl \
