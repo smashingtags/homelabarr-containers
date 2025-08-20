@@ -17,6 +17,7 @@ env:
 
 jobs:
   build-apps:
+    needs: [build-base, build-mods]
     runs-on: self-hosted
     permissions:
       contents: read
@@ -280,6 +281,7 @@ jobs:
           fi
 
   build-mods:
+    needs: build-base
     runs-on: self-hosted
     permissions:
       contents: read
@@ -403,6 +405,7 @@ jobs:
           fi
 
   build-nightly:
+    needs: build-base
     runs-on: self-hosted
     permissions:
       contents: read
