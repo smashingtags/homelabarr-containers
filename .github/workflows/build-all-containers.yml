@@ -186,7 +186,6 @@ jobs:
           - docker-ubuntu-noble
           - docker-ui
           - dockserver-ui
-          - dockserver-ui/root
           - homelabarr-alpine
           - homelabarr-alpine-v3
           - homelabarr-config
