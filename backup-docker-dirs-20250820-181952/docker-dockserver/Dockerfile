@@ -17,23 +17,17 @@
 # shellcheck disable=SC2086
 # shellcheck disable=SC2046
 FROM alpine:3.22.1
-
 LABEL org.opencontainers.image.source="https://github.com/dockserver/container"
 
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
+ARG VERSION="3.22.1"
 
-RUN \
-  echo "**** update packages ****" && \
-    apk --quiet --no-cache --no-progress update && \
-  apk --quiet --no-cache --no-progress upgrade && \
-  echo "**** install build packages ****" && \
-    apk add -U --update --no-cache bash ca-certificates shadow musl findutils coreutils && \
-  echo "*** cleanup system ****" && \
-    apk del --quiet --clean-protected --no-progress && \
-  rm -f /var/cache/apk/*
+RUN  \
+  echo "**** install packages ****" && \
+    apk add -U --update --no-cache bash ca-certificates shadow
 
-COPY ./apps/homelabarr-dockupdate/root/start.sh /start.sh
+COPY ./base/docker-dockserver/root/start.sh /start.sh
 
 ENTRYPOINT ["/bin/bash", "/start.sh"]
 ##EOF

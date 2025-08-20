@@ -3,8 +3,8 @@
 #####################################
 # All rights reserved.              #
 # started from Zero                 #
-# Docker owned dockserver           #
-# Docker Maintainer dockserver      #
+# Docker owned homelabarr           #
+# Docker Maintainer homelabarr      #
 #####################################
 # CODE OWNER
 # USER : methatronc
@@ -35,7 +35,7 @@ echo "***Install done***"
 DISCORD=$1
 
 while true; do
-   echo "Starting Dock Update Bot"
+   echo "Starting HomelabARR Update Bot"
 
    docker ps --format "{{.Image}}" >images.list
    discord=https://discord.com/api/webhooks/${DISCORD}
@@ -74,10 +74,10 @@ while true; do
    done <images.list
    ## SEND DISCORD ##
    text=\""Docker Image update is available for \n$(echo $list)"\"
-   curl -H "Content-Type: application/json" -d "{\"username\": \"Dock-Update-BOT\",\"embeds\":[{\"description\": $text, \"title\":\"Docker Image Update Bot\", \"color\":2960895}]}" $discord
+   curl -H "Content-Type: application/json" -d "{\"username\": \"HomelabARR-Update-Bot\",\"embeds\":[{\"description\": $text, \"title\":\"HomelabARR Container Update Bot\", \"color\":2960895}]}" $discord
    echo "SLEEPING 10MINS"
    sleep 10m
 done
 #<">#
 
-##~# $(command -v docker) run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro ghcr.io/dockserver/dockupdate:master DS=WEBHOOKId
+##~# $(command -v docker) run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro ghcr.io/smashingtags/homelabarr-hlupdater:latest DS=WEBHOOKId
