@@ -1,6 +1,0 @@
-{
-   "appname": "docker-mod-sabnzbd",
-   "apppic": "./images/docker-mod-sabnzbd.png",
-   "appfolder": "./mod/docker-mod-sabnzbd",
-   "user": "github-actions[bot]"
-}
