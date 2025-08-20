@@ -23,7 +23,7 @@ LABEL org.opencontainers.image.source="https://github.com/dockserver/container"
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
 
-
+v3.1.5.0
 
 ENTRYPOINT [ "/init" ]
 ##EOF

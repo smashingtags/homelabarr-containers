@@ -1,4 +1,3 @@
-apps docker-auto-replyarr
 {
    "appname": "docker-auto-replyarr",
    "apppic": "",
@@ -9,8 +8,6 @@ apps docker-auto-replyarr
    "body": "Upgrading docker-auto-replyarr to 3.22.1",
    "user": "github-actions[bot]"
 }
-
-apps docker-backup
 {
    "appname": "docker-backup",
    "apppic": "./images/docker-backup.png",
@@ -21,8 +18,6 @@ apps docker-backup
    "body": "Upgrading docker-backup to 3.22.1",
    "user": "github-actions[bot]"
 }
-
-apps docker-crunchy
 {
    "appname": "docker-crunchy",
    "apppic": "./images/docker-crunchy.png",
@@ -33,8 +28,6 @@ apps docker-crunchy
    "body": "Upgrading docker-crunchy to baseimage: ubuntu:25.10",
    "user": "dockserver image update[bot]"
 }
-
-apps docker-crunchydl
 {
    "appname": "docker-crunchydl",
    "apppic": "./images/docker-crunchydl.png",
@@ -46,8 +39,6 @@ apps docker-crunchydl
    "body": "Upgrading docker-crunchydl to null",
    "user": "dockserver-image[bot]"
 }
-
-apps docker-dockupdate
 {
    "appname": "docker-dockupdate",
    "apppic": "./images/docker-dockupdate.png",
@@ -58,8 +49,6 @@ apps docker-dockupdate
    "body": "Upgrading docker-dockupdate to 3.22.1",
    "user": "github-actions[bot]"
 }
-
-apps docker-gdsa
 {
    "appname": "docker-gdsa",
    "apppic": "./images/docker-gdsa.png",
@@ -70,8 +59,6 @@ apps docker-gdsa
    "body": "Upgrading docker-gdsa to 535.0.0-alpine",
    "user": "dockserver-actions[bot]"
 }
-
-apps docker-local-persist
   {
     "appname": "docker-local-persist",
     "baseversion": "3.22-6a2f7be2-ls7",
@@ -107,8 +94,6 @@ apps docker-local-persist
   # Donate: paypal.me/dockserver      #
   #####################################
   EOF
-
-apps docker-mount
 {
    "appname": "docker-mount",
    "apppic": "./images/docker-mount.png",
@@ -125,8 +110,6 @@ apps docker-mount
    "body": "Upgrading docker-mount to baseimage: alpine:3.22-6a2f7be2-ls7 with mergerfs: 2.40.2 and rclone: v1.70.3 include s6-overlay: v3.2.1.0",
    "user": "dockserver image update[bot]"
 }
-
-apps docker-newznab
 {
    "appname": "docker-newznab",
    "apppic": "./images/docker-newznab.png",
@@ -137,8 +120,6 @@ apps docker-newznab
    "body": "Upgrading docker-newznab to baseimage: ubuntu:20.04",
    "user": "dockserver image update[bot]"
 }
-
-apps docker-restic
 {
    "appname": "docker-restic",
    "apppic": "./images/docker-restic.png",
@@ -154,8 +135,6 @@ apps docker-restic
    "body": "Upgrading docker-restic to baseimage: alpine:3.22-6a2f7be2-ls7 with rclone: v1.70.3 include s6-overlay: v3.2.1.0",
    "user": "dockserver image update[bot]"
 }
-
-apps docker-rollarr
 {
    "appname": "docker-rollarr",
    "apppic": "./images/docker-rollarr.png",
@@ -166,8 +145,6 @@ apps docker-rollarr
    "body": "Upgrading docker-rollarr to 25.10",
    "user": "github-actions[bot]"
 }
-
-apps docker-spotweb
 {
    "appname": "docker-spotweb",
    "apppic": "",
@@ -178,8 +155,6 @@ apps docker-spotweb
    "body": "Upgrading docker-spotweb to 1.5.8",
    "user": "dockserver[bot]"
 }
-
-apps docker-traktarr
 {
    "appname": "docker-traktarr",
    "apppic": "./images/docker-traktarr.png",
@@ -190,8 +165,6 @@ apps docker-traktarr
    "body": "Upgrading docker-traktarr to ",
    "user": "dockserver image update[bot]"
 }
-
-apps docker-uploader
 {
    "appname": "docker-uploader",
    "apppic": "./images/docker-uploader.png",
@@ -202,8 +175,6 @@ apps docker-uploader
    "body": "Upgrading docker-uploader to ",
    "user": "dockserver image update[bot]"
 }
-
-apps docker-vnstat
 {
    "appname": "docker-vnstat",
    "apppic": "./images/docker-vnstat.png",
@@ -214,8 +185,6 @@ apps docker-vnstat
    "body": "Upgrading docker-vnstat to baseimage: php:8-apache",
    "user": "dockserver image update[bot]"
 }
-
-apps docker-wiki
 {
    "appname": "docker-wiki",
    "apppic": "./images/docker-wiki.png",
@@ -229,8 +198,6 @@ apps docker-wiki
    "body": "Upgrading docker-wiki to 3.22.1",
    "user": "github-actions[bot]"
 }
-
-apps homelabarr-auto-replyarr
 {
    "appname": "docker-auto-replyarr",
    "apppic": "",
@@ -241,8 +208,6 @@ apps homelabarr-auto-replyarr
    "body": "Upgrading docker-auto-replyarr to 3.22.1",
    "user": "github-actions[bot]"
 }
-
-apps homelabarr-backup
 {
    "appname": "docker-backup",
    "apppic": "./images/docker-backup.png",
@@ -253,8 +218,6 @@ apps homelabarr-backup
    "body": "Upgrading docker-backup to 3.22.1",
    "user": "github-actions[bot]"
 }
-
-apps homelabarr-crunchy
 {
    "appname": "docker-crunchy",
    "apppic": "./images/docker-crunchy.png",
@@ -265,8 +228,6 @@ apps homelabarr-crunchy
    "body": "Upgrading docker-crunchy to baseimage: ubuntu:25.10",
    "user": "dockserver image update[bot]"
 }
-
-apps homelabarr-crunchydl
 {
    "appname": "docker-crunchydl",
    "apppic": "./images/docker-crunchydl.png",
@@ -278,8 +239,6 @@ apps homelabarr-crunchydl
    "body": "Upgrading docker-crunchydl to null",
    "user": "dockserver-image[bot]"
 }
-
-apps homelabarr-dockupdate
 {
    "appname": "docker-dockupdate",
    "apppic": "./images/docker-dockupdate.png",
@@ -290,8 +249,6 @@ apps homelabarr-dockupdate
    "body": "Upgrading docker-dockupdate to 3.22.1",
    "user": "github-actions[bot]"
 }
-
-apps homelabarr-gdsa
 {
    "appname": "docker-gdsa",
    "apppic": "./images/docker-gdsa.png",
@@ -302,8 +259,6 @@ apps homelabarr-gdsa
    "body": "Upgrading docker-gdsa to 534.0.0-alpine",
    "user": "dockserver-actions[bot]"
 }
-
-apps homelabarr-local-persist
 {
    "appname": "docker-local-persist",
    "apppic": "./images/docker-local-persist.png",
@@ -317,9 +272,7 @@ apps homelabarr-local-persist
    "description": "Docker volume plugin for local volumes with custom mountpoints - DockServer Edition with enhanced reliability and monitoring",
    "body": "Upgrading docker-local-persist to baseimage: alpine:3.22-6a2f7be2-ls7 with local-persist: v1.3.0 include s6-overlay: v3.2.1.0",
    "user": "dockserver image update[bot]"
-}
-apps homelabarr-mount
-{
+}{
    "appname": "docker-mount",
    "apppic": "./images/docker-mount.png",
    "appfolder": "./apps/docker-mount",
@@ -335,8 +288,6 @@ apps homelabarr-mount
    "body": "Upgrading docker-mount to baseimage: alpine:3.22-6a2f7be2-ls7 with mergerfs: 2.40.2 and rclone: v1.70.3 include s6-overlay: v3.2.1.0",
    "user": "dockserver image update[bot]"
 }
-
-apps homelabarr-newznab
 {
    "appname": "docker-newznab",
    "apppic": "./images/docker-newznab.png",
@@ -347,8 +298,6 @@ apps homelabarr-newznab
    "body": "Upgrading docker-newznab to baseimage: ubuntu:20.04",
    "user": "dockserver image update[bot]"
 }
-
-apps homelabarr-restic
 {
    "appname": "docker-restic",
    "apppic": "./images/docker-restic.png",
@@ -364,8 +313,6 @@ apps homelabarr-restic
    "body": "Upgrading docker-restic to baseimage: alpine:3.22-6a2f7be2-ls7 with rclone: v1.70.3 include s6-overlay: v3.2.1.0",
    "user": "dockserver image update[bot]"
 }
-
-apps homelabarr-rollarr
 {
    "appname": "docker-rollarr",
    "apppic": "./images/docker-rollarr.png",
@@ -376,8 +323,6 @@ apps homelabarr-rollarr
    "body": "Upgrading docker-rollarr to 25.10",
    "user": "github-actions[bot]"
 }
-
-apps homelabarr-spotweb
 {
    "appname": "docker-spotweb",
    "apppic": "",
@@ -388,8 +333,6 @@ apps homelabarr-spotweb
    "body": "Upgrading docker-spotweb to 1.5.8",
    "user": "dockserver[bot]"
 }
-
-apps homelabarr-traktarr
 {
    "appname": "docker-traktarr",
    "apppic": "./images/docker-traktarr.png",
@@ -400,8 +343,6 @@ apps homelabarr-traktarr
    "body": "Upgrading docker-traktarr to ",
    "user": "dockserver image update[bot]"
 }
-
-apps homelabarr-uploader
 {
    "appname": "docker-uploader",
    "apppic": "./images/docker-uploader.png",
@@ -412,8 +353,6 @@ apps homelabarr-uploader
    "body": "Upgrading docker-uploader to ",
    "user": "dockserver image update[bot]"
 }
-
-apps homelabarr-vnstat
 {
    "appname": "docker-vnstat",
    "apppic": "./images/docker-vnstat.png",
@@ -424,8 +363,6 @@ apps homelabarr-vnstat
    "body": "Upgrading docker-vnstat to baseimage: php:8-apache",
    "user": "dockserver image update[bot]"
 }
-
-apps homelabarr-wiki
 {
    "appname": "docker-wiki",
    "apppic": "./images/docker-wiki.png",
@@ -439,8 +376,6 @@ apps homelabarr-wiki
    "body": "Upgrading docker-wiki to 3.22.1",
    "user": "github-actions[bot]"
 }
-
-base alpine
 {
    "appname": "alpine",
    "apppic": "",
@@ -451,8 +386,6 @@ base alpine
    "body": "Upgrading alpine to 3.22.1",
    "user": "github-actions[bot]"
 }
-
-base docker-alpine
 {
    "appname": "docker-alpine",
    "apppic": "./images/docker-alpine.png",
@@ -464,8 +397,6 @@ base docker-alpine
    "body": "Upgrading docker-alpine to 3.15.0-rc.4",
    "user": "github-actions[bot]"
 }
-
-base docker-alpine-v3
 {
    "appname": "docker-alpine-v3",
    "apppic": "./images/docker-alpine-v3.png",
@@ -478,8 +409,6 @@ base docker-alpine-v3
    "body": "Upgrading docker-alpine-v3 to baseimage: alpine:3.22.1  with include s6-overlay: v3.2.1.0",
    "user": "dockserver image update[bot]"
 }
-
-base docker-config
 {
    "appname": "docker-config",
    "apppic": "./images/docker-config.png",
@@ -490,8 +419,6 @@ base docker-config
    "body": "Upgrading docker-config to 3.22.1",
    "user": "github-actions[bot]"
 }
-
-base docker-create
 {
    "appname": "docker-create",
    "apppic": "./images/docker-create.png",
@@ -502,8 +429,6 @@ base docker-create
    "body": "Upgrading docker-create to 3.22.1",
    "user": "github-actions[bot]"
 }
-
-base docker-dockserver
 {
    "appname": "docker-dockserver",
    "apppic": "",
@@ -515,8 +440,6 @@ base docker-dockserver
    "body": "Upgrading docker-dockserver to 3.22.1",
    "user": "github-actions[bot]"
 }
-
-base docker-ubuntu-focal
 {
    "appname": "docker-ubuntu-focal",
    "apppic": "./images/docker-ubuntu-focal.png",
@@ -527,8 +450,6 @@ base docker-ubuntu-focal
    "body": "Upgrading docker-ubuntu-focal to baseimage: alpine:3.22.1",
    "user": "dockserver image update[bot]"
 }
-
-base docker-ubuntu-jammy
 {
    "appname": "docker-ubuntu-jammy",
    "apppic": "./images/docker-ubuntu-jammy.png",
@@ -539,8 +460,6 @@ base docker-ubuntu-jammy
    "body": "Upgrading docker-ubuntu-jammy to baseimage: alpine:3.22.1",
    "user": "dockserver image update[bot]"
 }
-
-base docker-ui
 {
    "appname": "docker-ui",
    "apppic": "",
@@ -552,8 +471,6 @@ base docker-ui
    "body": "Upgrading docker-ui to 3.22.1",
    "user": "github-actions[bot]"
 }
-
-base dockserver-ui
 {
    "appname": "docker-ui",
    "apppic": "",
@@ -565,8 +482,6 @@ base dockserver-ui
    "body": "Upgrading dockserver-ui to 0.0.1",
    "user": "dockserver image update[bot]"
 }
-
-base homelabarr-alpine
 {
    "appname": "docker-alpine",
    "apppic": "./images/docker-alpine.png",
@@ -578,8 +493,6 @@ base homelabarr-alpine
    "body": "Upgrading docker-alpine to 3.15.0-rc.4",
    "user": "github-actions[bot]"
 }
-
-base homelabarr-alpine-v3
 {
    "appname": "docker-alpine-v3",
    "apppic": "./images/docker-alpine-v3.png",
@@ -592,8 +505,6 @@ base homelabarr-alpine-v3
    "body": "Upgrading docker-alpine-v3 to baseimage: alpine:3.22.1  with include s6-overlay: v3.2.1.0",
    "user": "dockserver image update[bot]"
 }
-
-base homelabarr-config
 {
    "appname": "docker-config",
    "apppic": "./images/docker-config.png",
@@ -604,8 +515,6 @@ base homelabarr-config
    "body": "Upgrading docker-config to 3.22.1",
    "user": "github-actions[bot]"
 }
-
-base homelabarr-create
 {
    "appname": "docker-create",
    "apppic": "./images/docker-create.png",
@@ -616,8 +525,6 @@ base homelabarr-create
    "body": "Upgrading docker-create to 3.22.1",
    "user": "github-actions[bot]"
 }
-
-base homelabarr-dockserver
 {
    "appname": "docker-dockserver",
    "apppic": "",
@@ -629,8 +536,6 @@ base homelabarr-dockserver
    "body": "Upgrading docker-dockserver to 3.22.1",
    "user": "github-actions[bot]"
 }
-
-base homelabarr-ubuntu-focal
 {
    "appname": "docker-ubuntu-focal",
    "apppic": "./images/docker-ubuntu-focal.png",
@@ -641,8 +546,6 @@ base homelabarr-ubuntu-focal
    "body": "Upgrading docker-ubuntu-focal to baseimage: alpine:3.22.1",
    "user": "dockserver image update[bot]"
 }
-
-base homelabarr-ubuntu-jammy
 {
    "appname": "docker-ubuntu-jammy",
    "apppic": "./images/docker-ubuntu-jammy.png",
@@ -653,8 +556,6 @@ base homelabarr-ubuntu-jammy
    "body": "Upgrading docker-ubuntu-jammy to baseimage: alpine:3.22.1",
    "user": "dockserver image update[bot]"
 }
-
-base homelabarr-ui
 {
    "appname": "docker-ui",
    "apppic": "",
@@ -666,8 +567,6 @@ base homelabarr-ui
    "body": "Upgrading docker-ui to 3.22.1",
    "user": "github-actions[bot]"
 }
-
-base ubuntu
 {
    "appname": "ubuntu",
    "apppic": "./images/ubuntu.png",
@@ -679,120 +578,90 @@ base ubuntu
    "body": "Upgrading ubuntu to focal-20220113",
    "user": "github-actions[bot]"
 }
-
-mod docker-mod-healthcheck
 {
    "appname": "docker-mod-healthcheck",
    "apppic": "./images/docker-mod-healthcheck.png",
    "appfolder": "./mod/docker-mod-healthcheck",
    "user": "github-actions[bot]"
 }
-
-mod docker-mod-nzbget
 {
    "appname": "docker-mod-nzbget",
    "apppic": "./images/docker-mod-nzbget.png",
    "appfolder": "./mod/docker-mod-nzbget",
    "user": "github-actions[bot]"
 }
-
-mod docker-mod-qbittorrent
 {
    "appname": "docker-mod-qbittorrent",
    "apppic": "./images/docker-mod-qbittorrent.png",
    "appfolder": "./mod/docker-mod-qbittorrent",
    "user": "github-actions[bot]"
 }
-
-mod docker-mod-rclone
 {
    "appname": "docker-mod-rclone",
    "apppic": "./images/docker-mod-rclone.png",
    "appfolder": "./mod/docker-mod-rclone",
    "user": "github-actions[bot]"
 }
-
-mod docker-mod-sabnzbd
 {
    "appname": "docker-mod-sabnzbd",
    "apppic": "./images/docker-mod-sabnzbd.png",
    "appfolder": "./mod/docker-mod-sabnzbd",
    "user": "github-actions[bot]"
 }
-
-mod docker-mod-storagecheck
 {
    "appname": "docker-mod-storagecheck",
    "apppic": "./images/docker-mod-storagecheck.png",
    "appfolder": "./mod/docker-mod-storagecheck",
    "user": "github-actions[bot]"
 }
-
-mod docker-mod-tautulli
 {
    "appname": "docker-mod-tautulli",
    "apppic": "./images/docker-mod-tautulli.png",
    "appfolder": "./mod/docker-mod-tautulli",
    "user": "github-actions[bot]"
 }
-
-mod homelabarr-mod-healthcheck
 {
    "appname": "docker-mod-healthcheck",
    "apppic": "./images/docker-mod-healthcheck.png",
    "appfolder": "./mod/docker-mod-healthcheck",
    "user": "github-actions[bot]"
 }
-
-mod homelabarr-mod-nzbget
 {
    "appname": "docker-mod-nzbget",
    "apppic": "./images/docker-mod-nzbget.png",
    "appfolder": "./mod/docker-mod-nzbget",
    "user": "github-actions[bot]"
 }
-
-mod homelabarr-mod-qbittorrent
 {
    "appname": "docker-mod-qbittorrent",
    "apppic": "./images/docker-mod-qbittorrent.png",
    "appfolder": "./mod/docker-mod-qbittorrent",
    "user": "github-actions[bot]"
 }
-
-mod homelabarr-mod-rclone
 {
    "appname": "docker-mod-rclone",
    "apppic": "./images/docker-mod-rclone.png",
    "appfolder": "./mod/docker-mod-rclone",
    "user": "github-actions[bot]"
 }
-
-mod homelabarr-mod-sabnzbd
 {
    "appname": "docker-mod-sabnzbd",
    "apppic": "./images/docker-mod-sabnzbd.png",
    "appfolder": "./mod/docker-mod-sabnzbd",
    "user": "github-actions[bot]"
 }
-
-mod homelabarr-mod-storagecheck
 {
    "appname": "docker-mod-storagecheck",
    "apppic": "./images/docker-mod-storagecheck.png",
    "appfolder": "./mod/docker-mod-storagecheck",
    "user": "github-actions[bot]"
 }
-
-mod homelabarr-mod-tautulli
 {
    "appname": "docker-mod-tautulli",
    "apppic": "./images/docker-mod-tautulli.png",
    "appfolder": "./mod/docker-mod-tautulli",
    "user": "github-actions[bot]"
 }
-
-nightly docker-whisparr-nightly
 {
    "appname": "docker-whisparr-nightly",
    "apppic": "./images/docker-whisparr-nightly.png",
@@ -805,8 +674,6 @@ nightly docker-whisparr-nightly
    "body": "Upgrading docker-whisparr-nightly to 2.0.0.1250",
    "user": "dockserver image update[bot]"
 }
-
-nightly homelabarr-whisparr-nightly
 {
    "appname": "docker-whisparr-nightly",
    "apppic": "./images/docker-whisparr-nightly.png",
@@ -819,4 +686,3 @@ nightly homelabarr-whisparr-nightly
    "body": "Upgrading docker-whisparr-nightly to 2.0.0.1250",
    "user": "dockserver image update[bot]"
 }
-
