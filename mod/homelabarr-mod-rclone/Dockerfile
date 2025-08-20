@@ -3,5 +3,5 @@
 ## Do not changes any lines here
 ##
 FROM scratch
-COPY ./mod/docker-mod-rclone/root/ /
+COPY ./mod/homelabarr-mod-rclone/root/ /
 ##EOF

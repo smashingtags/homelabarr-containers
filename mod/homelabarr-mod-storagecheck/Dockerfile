@@ -3,5 +3,5 @@
 ## Do not changes any lines here
 ##
 FROM scratch
-COPY ./mod/docker-mod-storagecheck/root/ /
+COPY ./mod/homelabarr-mod-storagecheck/root/ /
 ##EOF

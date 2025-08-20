@@ -3,5 +3,5 @@
 ## Do not changes any lines here
 ##
 FROM scratch
-COPY ./mod/docker-mod-nzbget/root/ /
+COPY ./mod/homelabarr-mod-nzbget/root/ /
 ##EOF

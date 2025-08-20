@@ -3,5 +3,5 @@
 ## Do not changes any lines here
 ##
 FROM scratch
-COPY ./mod/docker-mod-tautulli/root/ /
+COPY ./mod/homelabarr-mod-tautulli/root/ /
 ##EOF
