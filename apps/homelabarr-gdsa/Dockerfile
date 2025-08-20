@@ -28,9 +28,8 @@ RUN \
     apk --quiet --no-cache --no-progress update && \
   apk --quiet --no-cache --no-progress upgrade && \
   echo "**** install build packages ****" && \
-    apk add -U --update --no-cache bash curl shadow musl findutils coreutils ca-certificates musl && \
+    apk add -U --update --no-cache bash curl shadow findutils coreutils ca-certificates && \
   echo "*** cleanup system ****" && \
-    apk del --quiet --clean-protected --no-progress && \
   rm -f /var/cache/apk/*
 
 COPY ./apps/homelabarr-gdsa/root/ /

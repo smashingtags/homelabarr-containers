@@ -25,15 +25,8 @@ ARG BUILDPLATFORM
 
 RUN \
   echo "**** install build packages ****" && \
-  rm -rf /etc/apt/sources.list && \
-  echo "deb http://ftp.debian.org/debian experimental main" >>/etc/apt/sources.list && \
-  echo "deb http://ftp.debian.org/debian sid main" >>/etc/apt/sources.list && \
   apt-get update -yqq && \
   apt-get install -yqq git unzip apt-utils && \
-  apt-get purge libgcc-8-dev -yqq && \
-  apt-get autoremove -yqq && \
-  apt-get autoclean -yqq && \
-  apt-get -t experimental install libc6-dev -yqq && \
   apt-get autoremove -yqq && \
   apt-get autoclean -yqq
 

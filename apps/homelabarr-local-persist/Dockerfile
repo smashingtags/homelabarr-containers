@@ -78,7 +78,7 @@ RUN \
 COPY --from=builder --chown=abc --chmod=755 /usr/local/bin/local-persist /usr/local/bin/local-persist
 
 # Copy DockServer customizations
-COPY --chown=abc --chmod=755 ./root/ /
+COPY --chown=abc --chmod=755 ./apps/homelabarr-local-persist/root/ /
 
 # Create plugin socket directory with correct permissions
 RUN chown -R abc:abc /var/lib/docker/plugin-data /run/docker/plugins /opt/appdata /mnt

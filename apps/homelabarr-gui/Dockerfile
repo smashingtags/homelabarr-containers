@@ -15,7 +15,7 @@ RUN \
 	freerdp-dev \
 	openssl-dev \
 	pulseaudio-dev \
-	libvorbis-dev \	
+	libvorbis-dev \
 	libwebp-dev \
 	perl \
 	cunit-dev \
