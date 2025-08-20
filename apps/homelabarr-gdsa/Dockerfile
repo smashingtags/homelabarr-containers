@@ -33,7 +33,7 @@ RUN \
     apk del --quiet --clean-protected --no-progress && \
   rm -f /var/cache/apk/*
 
-COPY ./apps/docker-gdsa/root/ /
+COPY ./apps/homelabarr-gdsa/root/ /
 
 ENTRYPOINT ["/bin/bash", "/gdsastart.sh"]
 ##EOF

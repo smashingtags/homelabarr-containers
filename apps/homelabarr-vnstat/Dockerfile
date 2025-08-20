@@ -39,7 +39,7 @@ RUN \
 
 RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
 
-COPY ./apps/docker-vnstat/app/ /var/www/html/
+COPY ./apps/homelabarr-vnstat/app/ /var/www/html/
 
 RUN composer install --quiet && mkdir -p /var/lib/vnstat
 
