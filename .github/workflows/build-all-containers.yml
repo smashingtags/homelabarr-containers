@@ -348,12 +348,13 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          cache-from: |
-            type=gha
-            type=registry,ref=${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}/${{ matrix.container }}:buildcache
-          cache-to: |
-            type=gha,mode=max
-            type=registry,ref=${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}/${{ matrix.container }}:buildcache,mode=max
+          # Temporarily disabled cache to force rebuild after path changes
+          # cache-from: |
+          #   type=gha
+          #   type=registry,ref=${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}/${{ matrix.container }}:buildcache
+          # cache-to: |
+          #   type=gha,mode=max
+          #   type=registry,ref=${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}/${{ matrix.container }}:buildcache,mode=max
       
       - name: Send Discord notification
         if: always() && (steps.build.outcome == 'success')
