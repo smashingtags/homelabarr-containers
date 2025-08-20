@@ -1,5 +1,5 @@
 Flask==2.3.2
 docker-compose==1.29.2
 gitpython==3.1.41
-git+https://github.com/benoitc/gunicorn.git
-https://github.com/eventlet/eventlet/archive/master.zip
+gunicorn==23.0.0
+eventlet==0.36.1
