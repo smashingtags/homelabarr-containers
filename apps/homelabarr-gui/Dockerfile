@@ -114,7 +114,7 @@ RUN \
 	/etc/xdg/openbox/rc.xml && \
  echo "**** cleanup ****" && \
  rm -rf \
-        /tm
+        /tmp/*
 
 # add local files
 COPY ./apps/homelabarr-gui/root/ /
