@@ -126,6 +126,21 @@ apps docker-mount
    "user": "dockserver image update[bot]"
 }
 
+apps homelabarr-mount-enhanced
+{
+   "appname": "homelabarr-mount-enhanced",
+   "apppic": "./images/homelabarr-mount-enhanced.png",
+   "appfolder": "./apps/homelabarr-mount-enhanced",
+   "newversion": "2.0.0",
+   "baseimage": "node:18-alpine",
+   "buildimage": "node:18-alpine",
+   "finalimage": "node:18-alpine",
+   "baseversion": "18-alpine",
+   "description": "Enhanced HomelabARR mount container with multi-provider cloud storage, cost tracking, web interface, and enterprise monitoring features",
+   "body": "HomelabARR Mount Enhanced v2.0.0 with multi-provider cloud storage (Google Drive, Backblaze, OneDrive, pCloud), cost optimization, web UI, and enterprise monitoring",
+   "user": "homelabarr-enhanced[bot]"
+}
+
 apps docker-newznab
 {
    "appname": "docker-newznab",
