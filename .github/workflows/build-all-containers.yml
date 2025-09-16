@@ -18,7 +18,7 @@ env:
 jobs:
   build-apps:
     needs: [build-base, build-mods]
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
@@ -161,7 +161,7 @@ jobs:
           fi
 
   build-base:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
@@ -290,7 +290,7 @@ jobs:
 
   build-mods:
     needs: build-base
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
@@ -410,7 +410,7 @@ jobs:
 
   build-nightly:
     needs: build-base
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
