@@ -36,7 +36,6 @@ jobs:
           - homelabarr-gui
           - homelabarr-local-persist
           - homelabarr-mount
-          - homelabarr-mount-enhanced
           - homelabarr-newznab
           - homelabarr-restic
           - homelabarr-spotweb

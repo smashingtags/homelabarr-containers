@@ -3,7 +3,19 @@
     "allow": [
       "mcp__MCP_DOCKER__list_pull_requests",
       "mcp__MCP_DOCKER__list_branches",
-      "mcp__MCP_DOCKER__list_commits"
+      "mcp__MCP_DOCKER__list_commits",
+      "mcp__MCP_DOCKER__get_file_contents",
+      "mcp__MCP_DOCKER__confluence_create_page",
+      "mcp__MCP_DOCKER__jira_search",
+      "mcp__MCP_DOCKER__obsidian_list_files_in_dir",
+      "mcp__discord__discord_get_server_info",
+      "mcp__discord__discord_send",
+      "Bash(docker pull:*)",
+      "Bash(docker exec:*)",
+      "Bash(docker stop:*)",
+      "Bash(docker rm:*)",
+      "mcp__MCP_DOCKER__jira_create_issue",
+      "Bash(rm:*)"
     ],
     "deny": [],
     "ask": []
