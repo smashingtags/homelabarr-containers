@@ -1,0 +1,9 @@
+{
+   "appname": "homelabarr-rutorrent",
+   "apppic": "./images/homelabarr-rutorrent.png",
+   "appfolder": "./apps/homelabarr-rutorrent",
+   "newversion": "latest",
+   "description": "Web interface for rTorrent BitTorrent client",
+   "body": "Upgrading homelabarr-rutorrent to latest",
+   "user": "github-actions[bot]"
+}

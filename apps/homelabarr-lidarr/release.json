@@ -1,0 +1,11 @@
+{
+   "appname": "homelabarr-lidarr",
+   "apppic": "./images/homelabarr-lidarr.png",
+   "appfolder": "./apps/homelabarr-lidarr",
+   "newversion": "1.1.4.3027",
+   "appbranch": "master",
+   "baseimage": "ghcr.io/smashingtags/homelabarr-alpine:latest",
+   "description": "Looks and smells like Sonarr but made for music.",
+   "body": "Upgrading homelabarr-lidarr to 1.1.4.3027",
+   "user": "github-actions[bot]"
+}

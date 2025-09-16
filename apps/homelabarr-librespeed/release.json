@@ -1,0 +1,9 @@
+{
+   "appname": "homelabarr-librespeed",
+   "apppic": "./images/homelabarr-librespeed.png",
+   "appfolder": "./apps/homelabarr-librespeed",
+   "newversion": "latest",
+   "description": "Self-hosted network speed test tool",
+   "body": "Upgrading homelabarr-librespeed to latest",
+   "user": "github-actions[bot]"
+}

@@ -1,0 +1,5 @@
+## HomelabARR - JDownloader Container
+## Maintainer: smashingtags
+FROM lscr.io/linuxserver/jdownloader2:latest
+COPY --chown=abc ./apps/homelabarr-jdownloader/root/ /
+##EOF

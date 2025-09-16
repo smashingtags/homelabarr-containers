@@ -1,0 +1,10 @@
+{
+   "appname": "homelabarr-bazarr",
+   "apppic": "./images/homelabarr-bazarr.png",
+   "appfolder": "./apps/homelabarr-bazarr",
+   "newversion": "1.4.5-ls251",
+   "appbranch": "master",
+   "description": "Subtitle companion application for Sonarr and Radarr.",
+   "body": "Upgrading homelabarr-bazarr to 1.4.5-ls251",
+   "user": "github-actions[bot]"
+}

@@ -1,0 +1,9 @@
+{
+   "appname": "homelabarr-jdownloader",
+   "apppic": "./images/homelabarr-jdownloader.png",
+   "appfolder": "./apps/homelabarr-jdownloader",
+   "newversion": "latest",
+   "description": "Download manager for file hosting services",
+   "body": "Upgrading homelabarr-jdownloader to latest",
+   "user": "github-actions[bot]"
+}

@@ -1,0 +1,9 @@
+{
+   "appname": "homelabarr-whisparr",
+   "apppic": "./images/homelabarr-whisparr.png",
+   "appfolder": "./apps/homelabarr-whisparr",
+   "newversion": "3.0.0.560-ls46",
+   "description": "Whisparr is an adult movie collection manager for Usenet and BitTorrent users.",
+   "body": "Upgrading homelabarr-whisparr to 3.0.0.560-ls46",
+   "user": "github-actions[bot]"
+}

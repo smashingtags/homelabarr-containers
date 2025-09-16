@@ -23,7 +23,13 @@
       "Read(//mnt/f/**)",
       "mcp__discord__discord_read_messages",
       "Bash(cd:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "Read(//tmp/dockserver-analysis/apps/**)",
+      "Read(//tmp/dockserver-analysis/**)",
+      "Bash(for container in homelabarr-rutorrent homelabarr-wireguard homelabarr-xteve)",
+      "Bash(do echo \"=== $container ===\")",
+      "Bash(grep:*)",
+      "Bash(done)"
     ],
     "deny": [],
     "ask": []

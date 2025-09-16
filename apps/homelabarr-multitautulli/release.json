@@ -1,0 +1,9 @@
+{
+   "appname": "homelabarr-multitautulli",
+   "apppic": "./images/homelabarr-multitautulli.png",
+   "appfolder": "./apps/homelabarr-multitautulli",
+   "newversion": "latest",
+   "description": "Multiple Tautulli instances for monitoring multiple Plex servers",
+   "body": "Upgrading homelabarr-multitautulli to latest",
+   "user": "github-actions[bot]"
+}

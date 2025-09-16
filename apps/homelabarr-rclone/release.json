@@ -1,0 +1,9 @@
+{
+   "appname": "homelabarr-rclone",
+   "apppic": "./images/homelabarr-rclone.png",
+   "appfolder": "./apps/homelabarr-rclone",
+   "newversion": "latest",
+   "description": "Cloud storage sync and mount utility",
+   "body": "Upgrading homelabarr-rclone to latest",
+   "user": "github-actions[bot]"
+}

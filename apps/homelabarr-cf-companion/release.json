@@ -1,0 +1,9 @@
+{
+   "appname": "homelabarr-cf-companion",
+   "apppic": "./images/homelabarr-cf-companion.png",
+   "appfolder": "./apps/homelabarr-cf-companion",
+   "newversion": "latest",
+   "description": "Cloudflare companion for automatic DNS updates",
+   "body": "Upgrading homelabarr-cf-companion to latest",
+   "user": "github-actions[bot]"
+}

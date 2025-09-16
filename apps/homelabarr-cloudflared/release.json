@@ -1,0 +1,9 @@
+{
+   "appname": "homelabarr-cloudflared",
+   "apppic": "./images/homelabarr-cloudflared.png",
+   "appfolder": "./apps/homelabarr-cloudflared",
+   "newversion": "latest",
+   "description": "Cloudflare tunnel client for secure connections",
+   "body": "Upgrading homelabarr-cloudflared to latest",
+   "user": "github-actions[bot]"
+}

@@ -1,0 +1,10 @@
+{
+   "appname": "homelabarr-qbittorrent",
+   "apppic": "./images/homelabarr-qbittorrent.png",
+   "appfolder": "./apps/homelabarr-qbittorrent",
+   "newversion": "4.6.7-r0-ls318",
+   "appbranch": "master",
+   "description": "The qBittorrent BitTorrent client.",
+   "body": "Upgrading homelabarr-qbittorrent to 4.6.7-r0-ls318",
+   "user": "github-actions[bot]"
+}

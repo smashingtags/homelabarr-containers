@@ -1,0 +1,10 @@
+{
+   "appname": "homelabarr-overseerr",
+   "apppic": "./images/homelabarr-overseerr.png",
+   "appfolder": "./apps/homelabarr-overseerr",
+   "newversion": "1.33.2-ls145",
+   "appbranch": "master",
+   "description": "Request management and media discovery tool for the Plex ecosystem.",
+   "body": "Upgrading homelabarr-overseerr to 1.33.2-ls145",
+   "user": "github-actions[bot]"
+}

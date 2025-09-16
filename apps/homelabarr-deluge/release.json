@@ -1,0 +1,9 @@
+{
+   "appname": "homelabarr-deluge",
+   "apppic": "./images/homelabarr-deluge.png",
+   "appfolder": "./apps/homelabarr-deluge",
+   "newversion": "2.1.1-r6-ls130",
+   "description": "Deluge is a lightweight, Free Software, cross-platform BitTorrent client.",
+   "body": "Upgrading homelabarr-deluge to 2.1.1-r6-ls130",
+   "user": "github-actions[bot]"
+}

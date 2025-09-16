@@ -1,0 +1,9 @@
+{
+   "appname": "homelabarr-nzbget",
+   "apppic": "./images/homelabarr-nzbget.png",
+   "appfolder": "./apps/homelabarr-nzbget",
+   "newversion": "21.0-ls100",
+   "description": "NZBGet is a binary downloader, which downloads files from Usenet.",
+   "body": "Upgrading homelabarr-nzbget to 21.0-ls100",
+   "user": "github-actions[bot]"
+}

@@ -1,0 +1,10 @@
+{
+   "appname": "homelabarr-jackett",
+   "apppic": "./images/homelabarr-jackett.png",
+   "appfolder": "./apps/homelabarr-jackett",
+   "newversion": "0.21.3109-ls82",
+   "appbranch": "master",
+   "description": "API Support for your favorite torrent trackers.",
+   "body": "Upgrading homelabarr-jackett to 0.21.3109-ls82",
+   "user": "github-actions[bot]"
+}

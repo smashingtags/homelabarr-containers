@@ -1,0 +1,10 @@
+{
+   "appname": "homelabarr-sabnzbd",
+   "apppic": "./images/homelabarr-sabnzbd.png",
+   "appfolder": "./apps/homelabarr-sabnzbd",
+   "newversion": "4.3.3-ls84",
+   "appbranch": "master",
+   "description": "The automated Usenet download tool.",
+   "body": "Upgrading homelabarr-sabnzbd to 4.3.3-ls84",
+   "user": "github-actions[bot]"
+}

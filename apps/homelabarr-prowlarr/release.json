@@ -1,0 +1,11 @@
+{
+   "appname": "homelabarr-prowlarr",
+   "apppic": "./images/homelabarr-prowlarr.png",
+   "appfolder": "./apps/homelabarr-prowlarr",
+   "newversion": "1.3.3.3154",
+   "appbranch": "nightly",
+   "baseimage": "ghcr.io/smashingtags/homelabarr-alpine:latest",
+   "description": "Prowlarr is an indexer manager/proxy built on the popular *arr .net/reactjs base stack.",
+   "body": "Upgrading homelabarr-prowlarr to 1.3.3.3154",
+   "user": "github-actions[bot]"
+}

@@ -1,0 +1,9 @@
+{
+   "appname": "homelabarr-jellyseerr",
+   "apppic": "./images/homelabarr-jellyseerr.png",
+   "appfolder": "./apps/homelabarr-jellyseerr",
+   "newversion": "1.9.2-ls72",
+   "description": "Request management and media discovery tool for Jellyfin ecosystem.",
+   "body": "Upgrading homelabarr-jellyseerr to 1.9.2-ls72",
+   "user": "github-actions[bot]"
+}

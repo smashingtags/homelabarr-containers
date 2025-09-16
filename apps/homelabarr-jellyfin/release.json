@@ -1,0 +1,10 @@
+{
+   "appname": "homelabarr-jellyfin",
+   "apppic": "./images/homelabarr-jellyfin.png",
+   "appfolder": "./apps/homelabarr-jellyfin",
+   "newversion": "10.8.13-ls130",
+   "appbranch": "master",
+   "description": "The Free Software Media System.",
+   "body": "Upgrading homelabarr-jellyfin to 10.8.13-ls130",
+   "user": "github-actions[bot]"
+}

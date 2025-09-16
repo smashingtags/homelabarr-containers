@@ -1,0 +1,9 @@
+{
+   "appname": "homelabarr-fenrus",
+   "apppic": "./images/homelabarr-fenrus.png",
+   "appfolder": "./apps/homelabarr-fenrus",
+   "newversion": "latest",
+   "description": "Customizable browser home page and application dashboard",
+   "body": "Upgrading homelabarr-fenrus to latest",
+   "user": "github-actions[bot]"
+}

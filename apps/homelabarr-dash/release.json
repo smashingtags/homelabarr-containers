@@ -1,0 +1,9 @@
+{
+   "appname": "homelabarr-dash",
+   "apppic": "./images/homelabarr-dash.png",
+   "appfolder": "./apps/homelabarr-dash",
+   "newversion": "latest",
+   "description": "Modern server monitoring dashboard",
+   "body": "Upgrading homelabarr-dash to latest",
+   "user": "github-actions[bot]"
+}

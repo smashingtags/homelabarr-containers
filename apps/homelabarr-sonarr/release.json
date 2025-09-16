@@ -1,0 +1,10 @@
+{
+   "appname": "homelabarr-sonarr",
+   "apppic": "./images/homelabarr-sonarr.png",
+   "appfolder": "./apps/homelabarr-sonarr",
+   "newversion": "3.0.10.1567-ls187",
+   "appbranch": "main",
+   "description": "Smart PVR for newsgroup and bittorrent users.",
+   "body": "Upgrading homelabarr-sonarr to 3.0.10.1567-ls187",
+   "user": "github-actions[bot]"
+}

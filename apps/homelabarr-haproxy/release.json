@@ -1,0 +1,9 @@
+{
+   "appname": "homelabarr-haproxy",
+   "apppic": "./images/homelabarr-haproxy.png",
+   "appfolder": "./apps/homelabarr-haproxy",
+   "newversion": "latest",
+   "description": "High availability load balancer and proxy server",
+   "body": "Upgrading homelabarr-haproxy to latest",
+   "user": "github-actions[bot]"
+}

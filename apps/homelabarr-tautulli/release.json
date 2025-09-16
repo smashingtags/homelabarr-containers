@@ -1,0 +1,10 @@
+{
+   "appname": "homelabarr-tautulli",
+   "apppic": "./images/homelabarr-tautulli.png",
+   "appfolder": "./apps/homelabarr-tautulli",
+   "newversion": "2.14.6-ls165",
+   "appbranch": "master",
+   "description": "A Python based monitoring and tracking tool for Plex Media Server.",
+   "body": "Upgrading homelabarr-tautulli to 2.14.6-ls165",
+   "user": "github-actions[bot]"
+}

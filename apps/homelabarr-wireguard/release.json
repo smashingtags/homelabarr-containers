@@ -1,0 +1,9 @@
+{
+   "appname": "homelabarr-wireguard",
+   "apppic": "./images/homelabarr-wireguard.png",
+   "appfolder": "./apps/homelabarr-wireguard",
+   "newversion": "latest",
+   "description": "Fast and secure VPN tunnel using WireGuard protocol",
+   "body": "Upgrading homelabarr-wireguard to latest",
+   "user": "github-actions[bot]"
+}

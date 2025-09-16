@@ -27,22 +27,58 @@ jobs:
       matrix:
         container:
           - homelabarr-auto-replyarr
-          # Build all other containers first
           - homelabarr-backup
+          - homelabarr-bazarr
+          - homelabarr-cf-companion
+          - homelabarr-cloudflared
           - homelabarr-crunchy
           - homelabarr-crunchydl
+          - homelabarr-dash
+          - homelabarr-deluge
           - homelabarr-dockupdate
+          - homelabarr-duplicati
+          - homelabarr-emby
+          - homelabarr-embystat
+          - homelabarr-fenrus
           - homelabarr-gdsa
           - homelabarr-gui
+          - homelabarr-haproxy
+          - homelabarr-hyperhdr
+          - homelabarr-jackett
+          - homelabarr-jdownloader
+          - homelabarr-jellyfin
+          - homelabarr-jellyseerr
+          - homelabarr-librespeed
+          - homelabarr-lidarr
           - homelabarr-local-persist
           - homelabarr-mount
+          - homelabarr-multitautulli
           - homelabarr-newznab
+          - homelabarr-nzbget
+          - homelabarr-nzbhydra2
+          - homelabarr-overseerr
+          - homelabarr-petio
+          - homelabarr-plex
+          - homelabarr-prowlarr
+          - homelabarr-qbittorrent
+          - homelabarr-radarr
+          - homelabarr-rclone
+          - homelabarr-readarr
+          - homelabarr-requestrr
           - homelabarr-restic
+          - homelabarr-rutorrent
+          - homelabarr-sabnzbd
+          - homelabarr-sonarr
           - homelabarr-spotweb
+          - homelabarr-tautulli
           - homelabarr-traktarr
+          - homelabarr-transmission
           - homelabarr-uploader
           - homelabarr-vnstat
+          - homelabarr-whisparr
           - homelabarr-wiki
+          - homelabarr-wireguard
+          - homelabarr-xteve
           # Rollarr last due to potential build issues
           - homelabarr-rollarr
     
