@@ -22,7 +22,8 @@
       "Bash(git log:*)",
       "Read(//mnt/f/**)",
       "mcp__discord__discord_read_messages",
-      "Bash(cd:*)"
+      "Bash(cd:*)",
+      "Bash(mv:*)"
     ],
     "deny": [],
     "ask": []
