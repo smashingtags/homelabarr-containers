@@ -37,7 +37,8 @@
       "mcp__MCP_DOCKER__get_job_logs",
       "mcp__MCP_DOCKER__list_workflow_jobs",
       "WebFetch(domain:docs.linuxserver.io)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "WebFetch(domain:hub.docker.com)"
     ],
     "deny": [],
     "ask": []

@@ -1,5 +1,5 @@
 ## HomelabARR - Sonarr Container
 ## Maintainer: smashingtags
-FROM linuxserver/sonarr:latest
+FROM ghcr.io/linuxserver/sonarr:latest
 COPY --chown=abc ./apps/homelabarr-sonarr/root/ /
 ##EOF

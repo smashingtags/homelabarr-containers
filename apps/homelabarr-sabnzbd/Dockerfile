@@ -1,5 +1,5 @@
 ## HomelabARR - SABnzbd Container
 ## Maintainer: smashingtags
-FROM linuxserver/sabnzbd:latest
+FROM ghcr.io/linuxserver/sabnzbd:latest
 COPY --chown=abc ./apps/homelabarr-sabnzbd/root/ /
 ##EOF

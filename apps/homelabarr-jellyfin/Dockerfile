@@ -1,5 +1,5 @@
 ## HomelabARR - Jellyfin Container
 ## Maintainer: smashingtags
-FROM linuxserver/jellyfin:latest
+FROM ghcr.io/linuxserver/jellyfin:latest
 COPY --chown=abc ./apps/homelabarr-jellyfin/root/ /
 ##EOF
