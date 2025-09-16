@@ -172,7 +172,6 @@ jobs:
           - homelabarr-ubuntu-jammy
           # Then the rest
           - alpine
-          - homelabarr-ui-legacy
           - homelabarr-alpine
           - homelabarr-alpine-v3
           - homelabarr-config
