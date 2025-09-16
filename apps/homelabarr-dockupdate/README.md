@@ -1,4 +1,4 @@
-# homelabarr-hlupdater
+# homelabarr-dockupdate
 
 A Discord notification bot that monitors your running Docker containers for available updates and sends notifications when newer versions are available on Docker Hub.
 
@@ -14,7 +14,7 @@ A Discord notification bot that monitors your running Docker containers for avai
 ```bash
 docker run --rm \
   -v /var/run/docker.sock:/var/run/docker.sock:ro \
-  ghcr.io/smashingtags/homelabarr-hlupdater:latest \
+  ghcr.io/smashingtags/homelabarr-dockupdate:latest \
   YOUR_DISCORD_WEBHOOK_ID
 ```
 
@@ -30,7 +30,7 @@ docker run --rm \
    ```bash
    docker run --rm \
      -v /var/run/docker.sock:/var/run/docker.sock:ro \
-     ghcr.io/smashingtags/homelabarr-hlupdater:latest \
+     ghcr.io/smashingtags/homelabarr-dockupdate:latest \
      1234567890123456789
    ```
 

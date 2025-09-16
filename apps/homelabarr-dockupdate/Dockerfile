@@ -20,8 +20,8 @@ FROM alpine:3.22.1
 
 LABEL org.opencontainers.image.source="https://github.com/smashingtags/homelabarr-containers"
 LABEL org.opencontainers.image.description="Discord notification bot that monitors Docker containers for updates and sends notifications via webhook"
-LABEL org.opencontainers.image.title="homelabarr-hlupdater"
-LABEL org.opencontainers.image.documentation="https://github.com/smashingtags/homelabarr-containers/tree/main/apps/homelabarr-hlupdater"
+LABEL org.opencontainers.image.title="homelabarr-dockupdate"
+LABEL org.opencontainers.image.documentation="https://github.com/smashingtags/homelabarr-containers/tree/main/apps/homelabarr-dockupdate"
 LABEL org.opencontainers.image.authors="homelabarr"
 LABEL org.opencontainers.image.vendor="homelabarr"
 
@@ -38,7 +38,7 @@ RUN \
     apk del --quiet --clean-protected --no-progress && \
   rm -f /var/cache/apk/*
 
-COPY ./apps/homelabarr-hlupdater/root/start.sh /start.sh
+COPY ./apps/homelabarr-dockupdate/root/start.sh /start.sh
 
 ENTRYPOINT ["/bin/bash", "/start.sh"]
 ##EOF

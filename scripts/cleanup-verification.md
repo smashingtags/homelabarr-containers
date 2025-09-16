@@ -47,7 +47,7 @@ These are the old HomelabARR containers before renaming:
 - ubuntu (if it's the old HomelabARR one)
 
 ### Also delete:
-- homelabarr-dockupdate (renamed to homelabarr-hlupdater)
+- homelabarr-hlupdater (renamed back to homelabarr-dockupdate)
 
 ### For homelabarr-* packages, only delete:
 - SHA-based tags (v-xxxxxxx format)

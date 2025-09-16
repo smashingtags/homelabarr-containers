@@ -45,7 +45,7 @@ docker-wiki
 
 ### ✅ ALSO SAFE TO DELETE - Renamed Package
 ```
-homelabarr-dockupdate   (renamed to homelabarr-hlupdater)
+homelabarr-hlupdater   (renamed back to homelabarr-dockupdate)
 ```
 
 ### ⚠️ For Current homelabarr-* Packages - SELECTIVE Cleanup
@@ -98,7 +98,7 @@ gh api /user/packages/container/$PACKAGE/versions --paginate | jq '.[] | select(
 
 - [ ] Wait for builds to complete
 - [ ] Delete ALL `docker-*` packages from the list above (35 total)
-- [ ] Delete `homelabarr-dockupdate` package
+- [ ] Delete `homelabarr-hlupdater` package
 - [ ] For `homelabarr-*` packages: ONLY delete SHA tags (v-xxxxxxx)
 - [ ] Keep all version tags (latest, v1.0.0, v1.0, v1)
 - [ ] Don't touch ANY other packages not listed here

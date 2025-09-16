@@ -20,7 +20,9 @@
       "mcp__MCP_DOCKER__confluence_search",
       "WebFetch(domain:github.com)",
       "Bash(git log:*)",
-      "Read(//mnt/f/**)"
+      "Read(//mnt/f/**)",
+      "mcp__discord__discord_read_messages",
+      "Bash(cd:*)"
     ],
     "deny": [],
     "ask": []

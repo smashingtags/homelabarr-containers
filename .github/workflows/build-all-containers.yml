@@ -31,7 +31,7 @@ jobs:
           - homelabarr-backup
           - homelabarr-crunchy
           - homelabarr-crunchydl
-          - homelabarr-hlupdater
+          - homelabarr-dockupdate
           - homelabarr-gdsa
           - homelabarr-gui
           - homelabarr-local-persist

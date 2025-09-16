@@ -80,4 +80,4 @@ while true; do
 done
 #<">#
 
-##~# $(command -v docker) run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro ghcr.io/smashingtags/homelabarr-hlupdater:latest DS=WEBHOOKId
+##~# $(command -v docker) run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro ghcr.io/smashingtags/homelabarr-dockupdate:latest DS=WEBHOOKId

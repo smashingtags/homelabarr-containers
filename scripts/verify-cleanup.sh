@@ -41,7 +41,7 @@ NEW_PACKAGES=(
     "homelabarr-gdsa"
     "homelabarr-gui"
     "homelabarr-mount"
-    "homelabarr-hlupdater"
+    "homelabarr-dockupdate"
 )
 
 for pkg in "${NEW_PACKAGES[@]}"; do
@@ -55,10 +55,10 @@ done
 echo ""
 echo "Checking renamed package is gone:"
 echo "-----------------------------------------"
-if docker pull ghcr.io/smashingtags/homelabarr-dockupdate:latest >/dev/null 2>&1; then
-    echo -e "${RED}✗ homelabarr-dockupdate still exists (should be deleted)${NC}"
+if docker pull ghcr.io/smashingtags/homelabarr-hlupdater:latest >/dev/null 2>&1; then
+    echo -e "${RED}✗ homelabarr-hlupdater still exists (should be deleted)${NC}"
 else
-    echo -e "${GREEN}✓ homelabarr-dockupdate removed (replaced by homelabarr-hlupdater)${NC}"
+    echo -e "${GREEN}✓ homelabarr-hlupdater removed (renamed back to homelabarr-dockupdate)${NC}"
 fi
 
 echo ""
@@ -67,7 +67,7 @@ echo "Cleanup Summary:"
 echo "==========================================="
 echo "1. All docker-* packages should be GONE"
 echo "2. All homelabarr-* packages should EXIST"
-echo "3. homelabarr-dockupdate should be GONE"
+echo "3. homelabarr-hlupdater should be GONE"
 echo ""
 echo -e "${YELLOW}Note: Some containers may not exist if they haven't been built yet${NC}"
 echo ""

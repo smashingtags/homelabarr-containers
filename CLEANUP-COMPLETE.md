@@ -2,7 +2,7 @@
 
 ## What Was Cleaned
 ✅ **35 old docker-* packages** removed
-✅ **homelabarr-dockupdate** removed (replaced by homelabarr-hlupdater)
+✅ **homelabarr-hlupdater** removed (renamed back to homelabarr-dockupdate)
 ✅ **SHA-based tags** cleaned from homelabarr-* packages
 
 ## Current State
