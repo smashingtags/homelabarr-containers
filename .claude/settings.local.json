@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__MCP_DOCKER__list_pull_requests",
+      "mcp__MCP_DOCKER__list_branches",
+      "mcp__MCP_DOCKER__list_commits"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

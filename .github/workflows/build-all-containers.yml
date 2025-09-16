@@ -37,7 +37,6 @@ jobs:
           - homelabarr-local-persist
           - homelabarr-mount
           - homelabarr-mount-enhanced
-          - homelabarr-n8n-mcp
           - homelabarr-newznab
           - homelabarr-restic
           - homelabarr-spotweb
