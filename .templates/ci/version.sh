@@ -2,8 +2,8 @@
 ####################################
 # All rights reserved.              #
 # started from Zero                 #
-# HomelabARR Container Bot           #
-# Maintainer HomelabARR CLI          #
+# HomelabARR Containers              #
+# Maintainer smashingtags            #
 #####################################
 #####################################
 # MIT LICENSE                       #
