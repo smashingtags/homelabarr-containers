@@ -15,7 +15,12 @@
       "Bash(docker stop:*)",
       "Bash(docker rm:*)",
       "mcp__MCP_DOCKER__jira_create_issue",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(find:*)",
+      "mcp__MCP_DOCKER__confluence_search",
+      "WebFetch(domain:github.com)",
+      "Bash(git log:*)",
+      "Read(//mnt/f/**)"
     ],
     "deny": [],
     "ask": []

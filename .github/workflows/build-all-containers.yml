@@ -170,7 +170,6 @@ jobs:
           # Build problematic containers first for easier debugging
           - homelabarr-ubuntu-focal
           - homelabarr-ubuntu-jammy
-          - homelabarr-ui
           # Then the rest
           - alpine
           - homelabarr-ui-legacy
