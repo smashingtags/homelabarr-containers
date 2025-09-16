@@ -5,6 +5,12 @@ on:
     branches:
       - main
       - dev
+    paths:
+      - 'apps/**'
+      - 'base/**'
+      - 'mod/**'
+      - 'nightly/**'
+      - '.github/workflows/build-all-containers.yml'
 
 permissions:
   contents: write
@@ -24,7 +30,7 @@ jobs:
     steps:
       - name: Release Please
         id: release
-        uses: google-github-actions/release-please-action@v4
+        uses: googleapis/release-please-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: simple
