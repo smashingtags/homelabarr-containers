@@ -2,14 +2,14 @@
 ####################################
 # All rights reserved.              #
 # started from Zero                 #
-# Docker owned dockserver           #
-# Docker Maintainer dockserver      #
+# HomelabARR Container Bot           #
+# Maintainer HomelabARR CLI          #
 #####################################
 #####################################
-# THIS DOCKER IS UNDER LICENSE      #
-# NO CUSTOMIZING IS ALLOWED         #
-# NO REBRANDING IS ALLOWED          #
-# NO CODE MIRRORING IS ALLOWED      #
+# MIT LICENSE                       #
+# CUSTOMIZING IS ALLOWED             #
+# REBRANDING IS ALLOWED              #
+# CODE MIRRORING IS ALLOWED          #
 #####################################
 # shellcheck disable=SC2086
 # shellcheck disable=SC204
@@ -26,7 +26,7 @@ for i in ${folder[@]}; do
                --entrypoint /bin/sh \
                -v ${PWD}/$i/${app}:/tmp \
                -v ${PWD}/.templates/ci/pipeline.sh:/pipeline.sh \
-               ghcr.io/dockserver/${app}:latest -c 'apk add --quiet bash || apt install bash -yqq && chmod -cR 755 /pipeline.sh && bash /pipeline.sh'
+               ghcr.io/smashingtags/${app}:latest -c 'apk add --quiet bash || apt install bash -yqq && chmod -cR 755 /pipeline.sh && bash /pipeline.sh'
                docker stop CI-RUN-${app} && docker rmi CI-RUN-${app}
           fi
        fi
