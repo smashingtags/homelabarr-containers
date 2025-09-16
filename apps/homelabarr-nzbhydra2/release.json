@@ -1,0 +1,9 @@
+{
+  "appname": "homelabarr-nzbhydra2",
+  "apppic": "./images/homelabarr-nzbhydra2.png",
+  "appfolder": "./apps/homelabarr-nzbhydra2",
+  "newversion": "latest",
+  "description": "Meta search for NZB indexers",
+  "body": "Upgrading homelabarr-nzbhydra2 to latest",
+  "user": "github-actions[bot]"
+}

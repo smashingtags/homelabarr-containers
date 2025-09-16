@@ -1,0 +1,9 @@
+{
+  "appname": "homelabarr-duplicati",
+  "apppic": "./images/homelabarr-duplicati.png",
+  "appfolder": "./apps/homelabarr-duplicati",
+  "newversion": "latest",
+  "description": "Cross-platform backup software",
+  "body": "Upgrading homelabarr-duplicati to latest",
+  "user": "github-actions[bot]"
+}

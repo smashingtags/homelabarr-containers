@@ -1,5 +1,5 @@
 ## HomelabARR - CF-Companion Container
 ## Maintainer: smashingtags
-FROM lscr.io/linuxserver/cf-companion:latest
+FROM linuxserver/cf-companion:latest
 COPY --chown=abc ./apps/homelabarr-cf-companion/root/ /
 ##EOF

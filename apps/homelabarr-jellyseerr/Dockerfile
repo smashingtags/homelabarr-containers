@@ -1,5 +1,5 @@
 ## HomelabARR - Jellyseerr Container
 ## Maintainer: smashingtags
-FROM lscr.io/linuxserver/jellyseerr:1.9.2-ls72
+FROM linuxserver/jellyseerr:latest
 COPY --chown=abc ./apps/homelabarr-jellyseerr/root/ /
 ##EOF

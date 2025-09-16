@@ -1,0 +1,9 @@
+{
+  "appname": "homelabarr-embystat",
+  "apppic": "./images/homelabarr-embystat.png",
+  "appfolder": "./apps/homelabarr-embystat",
+  "newversion": "latest",
+  "description": "Statistics for Emby media server",
+  "body": "Upgrading homelabarr-embystat to latest",
+  "user": "github-actions[bot]"
+}

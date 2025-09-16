@@ -1,5 +1,5 @@
 ## HomelabARR - Emby Container
 ## Maintainer: smashingtags
-FROM lscr.io/linuxserver/emby:4.8.8.0-ls165
+FROM linuxserver/emby:latest
 COPY --chown=abc ./apps/homelabarr-emby/root/ /
 ##EOF

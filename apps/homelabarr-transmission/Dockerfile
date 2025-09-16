@@ -1,5 +1,5 @@
 ## HomelabARR - Transmission Container
 ## Maintainer: smashingtags
-FROM lscr.io/linuxserver/transmission:4.0.6-r1-ls166
+FROM linuxserver/transmission:latest
 COPY --chown=abc ./apps/homelabarr-transmission/root/ /
 ##EOF

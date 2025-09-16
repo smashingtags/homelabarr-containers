@@ -1,0 +1,9 @@
+{
+  "appname": "homelabarr-petio",
+  "apppic": "./images/homelabarr-petio.png",
+  "appfolder": "./apps/homelabarr-petio",
+  "newversion": "latest",
+  "description": "Request management and discovery platform",
+  "body": "Upgrading homelabarr-petio to latest",
+  "user": "github-actions[bot]"
+}
