@@ -1,250 +1,3 @@
-apps docker-auto-replyarr
-{
-   "appname": "docker-auto-replyarr",
-   "apppic": "",
-   "appfolder": "./apps/docker-auto-replyarr",
-   "newversion": "3.22.1",
-   "baseimage": "alpine",
-   "description": "Official Alpine Linux Docker image. Win at minimalism!",
-   "body": "Upgrading docker-auto-replyarr to 3.22.1",
-   "user": "github-actions[bot]"
-}
-
-apps docker-backup
-{
-   "appname": "docker-backup",
-   "apppic": "./images/docker-backup.png",
-   "appfolder": "./apps/docker-backup",
-   "newversion": "3.22.1",
-   "baseimage": "alpine",
-   "description": "Official Alpine Linux Docker image. Win at minimalism!",
-   "body": "Upgrading docker-backup to 3.22.1",
-   "user": "github-actions[bot]"
-}
-
-apps docker-crunchy
-{
-   "appname": "docker-crunchy",
-   "apppic": "./images/docker-crunchy.png",
-   "appfolder": "./apps/docker-crunchy",
-   "newversion": "25.10",
-   "baseimage": "ubuntu",
-   "description": "Docker image  for docker-crunchy",
-   "body": "Upgrading docker-crunchy to baseimage: ubuntu:25.10",
-   "user": "dockserver image update[bot]"
-}
-
-apps docker-crunchydl
-{
-   "appname": "docker-crunchydl",
-   "apppic": "./images/docker-crunchydl.png",
-   "appfolder": "./apps/docker-crunchydl",
-   "newversion": "null",
-   "appbranch": "master",
-   "baseimage": "alpine:latest",
-   "description": "Docker Container for crunchyroll download client",
-   "body": "Upgrading docker-crunchydl to null",
-   "user": "dockserver-image[bot]"
-}
-
-apps docker-dockupdate
-{
-   "appname": "docker-dockupdate",
-   "apppic": "./images/docker-dockupdate.png",
-   "appfolder": "./apps/docker-dockupdate",
-   "newversion": "3.22.1",
-   "baseimage": "alpine",
-   "description": "null",
-   "body": "Upgrading docker-dockupdate to 3.22.1",
-   "user": "github-actions[bot]"
-}
-
-apps docker-gdsa
-{
-   "appname": "docker-gdsa",
-   "apppic": "./images/docker-gdsa.png",
-   "appfolder": "./apps/docker-gdsa",
-   "newversion": "535.0.0-alpine",
-   "baseimage": "gcr.io/google.com/cloudsdktool/cloud-sdk",
-   "description": "Docker for Creating GDSA keys",
-   "body": "Upgrading docker-gdsa to 535.0.0-alpine",
-   "user": "dockserver-actions[bot]"
-}
-
-apps docker-local-persist
-  {
-    "appname": "docker-local-persist",
-    "baseversion": "3.22-6a2f7be2-ls7",
-    "s6stage": "v3.2.1.0"
-  }
-  EOF
-
-  Create package.txt:
-
-  cat > apps/docker-local-persist/package.txt << 'EOF'
-  bash
-  curl
-  jq
-  local-persist
-  EOF
-
-  Create root directory structure:
-
-  mkdir -p apps/docker-local-persist/root/donate.txt
-  mkdir -p apps/docker-local-persist/root/etc/s6-overlay/s6-rc.d/svc-local-persist
-
-  Create donate.txt:
-
-  cat > apps/docker-local-persist/root/donate.txt << 'EOF'
-  #####################################
-  # All rights reserved.              #
-  # started from Zero                 #
-  # Docker owned dockserver           #
-  # Docker Maintainer dockserver      #
-  #####################################
-  # Visit: https://dockserver.io      #
-  # Discord: discord.gg/dockserver    #
-  # Donate: paypal.me/dockserver      #
-  #####################################
-  EOF
-
-apps docker-mount
-{
-   "appname": "docker-mount",
-   "apppic": "./images/docker-mount.png",
-   "appfolder": "./apps/docker-mount",
-   "newversion": "3.22.1",
-   "mergerfs": "2.40.2",
-   "rclone": "v1.70.3",
-   "baseimage": "alpine",
-   "buildimage": "alpine",
-   "finalimage": "ghcr.io/linuxserver/baseimage-alpine",
-   "baseversion": "3.22-6a2f7be2-ls7",
-   "s6stage": "v3.2.1.0",
-   "description": "Docker docker-mount with mergerfs version 2.40.2 and rclone version v1.70.3 include s6-overlay: v3.2.1.0",
-   "body": "Upgrading docker-mount to baseimage: alpine:3.22-6a2f7be2-ls7 with mergerfs: 2.40.2 and rclone: v1.70.3 include s6-overlay: v3.2.1.0",
-   "user": "dockserver image update[bot]"
-}
-
-apps homelabarr-mount-enhanced
-{
-   "appname": "homelabarr-mount-enhanced",
-   "apppic": "./images/homelabarr-mount-enhanced.png",
-   "appfolder": "./apps/homelabarr-mount-enhanced",
-   "newversion": "2.0.0",
-   "baseimage": "node:18-alpine",
-   "buildimage": "node:18-alpine",
-   "finalimage": "node:18-alpine",
-   "baseversion": "18-alpine",
-   "description": "Enhanced HomelabARR mount container with multi-provider cloud storage, cost tracking, web interface, and enterprise monitoring features",
-   "body": "HomelabARR Mount Enhanced v2.0.0 with multi-provider cloud storage (Google Drive, Backblaze, OneDrive, pCloud), cost optimization, web UI, and enterprise monitoring",
-   "user": "homelabarr-enhanced[bot]"
-}
-
-apps docker-newznab
-{
-   "appname": "docker-newznab",
-   "apppic": "./images/docker-newznab.png",
-   "appfolder": "./apps/docker-newznab",
-   "newversion": "20.04",
-   "baseimage": "ubuntu",
-   "description": "Docker image  for docker-newznab",
-   "body": "Upgrading docker-newznab to baseimage: ubuntu:20.04",
-   "user": "dockserver image update[bot]"
-}
-
-apps docker-restic
-{
-   "appname": "docker-restic",
-   "apppic": "./images/docker-restic.png",
-   "appfolder": "./apps/docker-restic",
-   "newversion": "3.22.1",
-   "rclone": "v1.70.3",
-   "baseimage": "alpine",
-   "buildimage": "alpine",
-   "finalimage": "ghcr.io/linuxserver/baseimage-alpine",
-   "baseversion": "3.22-6a2f7be2-ls7",
-   "s6stage": "v3.2.1.0",
-   "description": "Docker docker-restic with rclone version v1.70.3 include s6-overlay: v3.2.1.0",
-   "body": "Upgrading docker-restic to baseimage: alpine:3.22-6a2f7be2-ls7 with rclone: v1.70.3 include s6-overlay: v3.2.1.0",
-   "user": "dockserver image update[bot]"
-}
-
-apps docker-rollarr
-{
-   "appname": "docker-rollarr",
-   "apppic": "./images/docker-rollarr.png",
-   "appfolder": "./apps/docker-rollarr",
-   "newversion": "25.10",
-   "baseimage": "ubuntu",
-   "description": "This is the new and improved Automatic Pre-roll script with a GUI for Plex now called Rollarr!",
-   "body": "Upgrading docker-rollarr to 25.10",
-   "user": "github-actions[bot]"
-}
-
-apps docker-spotweb
-{
-   "appname": "docker-spotweb",
-   "apppic": "",
-   "appfolder": "./apps/docker-spotweb",
-   "newversion": "1.5.8",
-   "baseimage": "ubuntu:latest",
-   "description": "Decentralized community",
-   "body": "Upgrading docker-spotweb to 1.5.8",
-   "user": "dockserver[bot]"
-}
-
-apps docker-traktarr
-{
-   "appname": "docker-traktarr",
-   "apppic": "./images/docker-traktarr.png",
-   "appfolder": "./apps/docker-traktarr",
-   "newversion": "3.22.1",
-   "baseimage": "ghcr.io/linuxserver/baseimage-alpine",
-   "baseversion": "3.22-6a2f7be2-ls7",
-   "body": "Upgrading docker-traktarr to ",
-   "user": "dockserver image update[bot]"
-}
-
-apps docker-uploader
-{
-   "appname": "docker-uploader",
-   "apppic": "./images/docker-uploader.png",
-   "appfolder": "./apps/docker-uploader",
-   "newversion": "3.22.1",
-   "baseimage": "ghcr.io/linuxserver/baseimage-alpine",
-   "baseversion": "3.22-6a2f7be2-ls7",
-   "body": "Upgrading docker-uploader to ",
-   "user": "dockserver image update[bot]"
-}
-
-apps docker-vnstat
-{
-   "appname": "docker-vnstat",
-   "apppic": "./images/docker-vnstat.png",
-   "appfolder": "./apps/docker-vnstat",
-   "newversion": "8-apache",
-   "baseimage": "php",
-   "description": "Docker image  for docker-vnstat",
-   "body": "Upgrading docker-vnstat to baseimage: php:8-apache",
-   "user": "dockserver image update[bot]"
-}
-
-apps docker-wiki
-{
-   "appname": "docker-wiki",
-   "apppic": "./images/docker-wiki.png",
-   "appfolder": "./apps/docker-wiki",
-   "appbranch": "master",
-   "newversion": "3.22.1",
-   "appversion": "1.4.72",
-   "wikiversion": "9.6.17",
-   "baseimage": "alpine",
-   "description": "Docker + Traefik with Authelia and Cloudflare Protection",
-   "body": "Upgrading docker-wiki to 3.22.1",
-   "user": "github-actions[bot]"
-}
-
 apps homelabarr-auto-replyarr
 {
    "appname": "docker-auto-replyarr",
@@ -269,6 +22,37 @@ apps homelabarr-backup
    "user": "github-actions[bot]"
 }
 
+apps homelabarr-bazarr
+{
+   "appname": "homelabarr-bazarr",
+   "apppic": "./images/homelabarr-bazarr.png",
+   "appfolder": "./apps/homelabarr-bazarr",
+   "newversion": "1.4.5-ls251",
+   "appbranch": "master",
+   "description": "Subtitle companion application for Sonarr and Radarr.",
+   "body": "Upgrading homelabarr-bazarr to 1.4.5-ls251",
+   "user": "github-actions[bot]"
+}
+apps homelabarr-cf-companion
+{
+   "appname": "homelabarr-cf-companion",
+   "apppic": "./images/homelabarr-cf-companion.png",
+   "appfolder": "./apps/homelabarr-cf-companion",
+   "newversion": "latest",
+   "description": "Cloudflare companion for automatic DNS updates",
+   "body": "Upgrading homelabarr-cf-companion to latest",
+   "user": "github-actions[bot]"
+}
+apps homelabarr-cloudflared
+{
+   "appname": "homelabarr-cloudflared",
+   "apppic": "./images/homelabarr-cloudflared.png",
+   "appfolder": "./apps/homelabarr-cloudflared",
+   "newversion": "latest",
+   "description": "Cloudflare tunnel client for secure connections",
+   "body": "Upgrading homelabarr-cloudflared to latest",
+   "user": "github-actions[bot]"
+}
 apps homelabarr-crunchy
 {
    "appname": "docker-crunchy",
@@ -294,18 +78,78 @@ apps homelabarr-crunchydl
    "user": "dockserver-image[bot]"
 }
 
+apps homelabarr-dash
+{
+   "appname": "homelabarr-dash",
+   "apppic": "./images/homelabarr-dash.png",
+   "appfolder": "./apps/homelabarr-dash",
+   "newversion": "latest",
+   "description": "Modern server monitoring dashboard",
+   "body": "Upgrading homelabarr-dash to latest",
+   "user": "github-actions[bot]"
+}
+apps homelabarr-deluge
+{
+   "appname": "homelabarr-deluge",
+   "apppic": "./images/homelabarr-deluge.png",
+   "appfolder": "./apps/homelabarr-deluge",
+   "newversion": "2.1.1-r6-ls130",
+   "description": "Deluge is a lightweight, Free Software, cross-platform BitTorrent client.",
+   "body": "Upgrading homelabarr-deluge to 2.1.1-r6-ls130",
+   "user": "github-actions[bot]"
+}
 apps homelabarr-dockupdate
 {
-   "appname": "docker-dockupdate",
-   "apppic": "./images/docker-dockupdate.png",
-   "appfolder": "./apps/docker-dockupdate",
+   "appname": "homelabarr-dockupdate",
+   "apppic": "./images/homelabarr-dockupdate.png",
+   "appfolder": "./apps/homelabarr-dockupdate",
    "newversion": "3.22.1",
    "baseimage": "alpine",
-   "description": "null",
-   "body": "Upgrading docker-dockupdate to 3.22.1",
+   "description": "HomelabARR container update checker - monitors Docker containers for available updates",
+   "body": "Upgrading homelabarr-dockupdate to 3.22.1",
    "user": "github-actions[bot]"
 }
 
+apps homelabarr-duplicati
+{
+  "appname": "homelabarr-duplicati",
+  "apppic": "./images/homelabarr-duplicati.png",
+  "appfolder": "./apps/homelabarr-duplicati",
+  "newversion": "latest",
+  "description": "Cross-platform backup software",
+  "body": "Upgrading homelabarr-duplicati to latest",
+  "user": "github-actions[bot]"
+}
+apps homelabarr-emby
+{
+   "appname": "homelabarr-emby",
+   "apppic": "./images/homelabarr-emby.png",
+   "appfolder": "./apps/homelabarr-emby",
+   "newversion": "4.8.8.0-ls165",
+   "description": "Emby Server brings all your home videos, music, and photos together.",
+   "body": "Upgrading homelabarr-emby to 4.8.8.0-ls165",
+   "user": "github-actions[bot]"
+}
+apps homelabarr-embystat
+{
+  "appname": "homelabarr-embystat",
+  "apppic": "./images/homelabarr-embystat.png",
+  "appfolder": "./apps/homelabarr-embystat",
+  "newversion": "latest",
+  "description": "Statistics for Emby media server",
+  "body": "Upgrading homelabarr-embystat to latest",
+  "user": "github-actions[bot]"
+}
+apps homelabarr-fenrus
+{
+   "appname": "homelabarr-fenrus",
+   "apppic": "./images/homelabarr-fenrus.png",
+   "appfolder": "./apps/homelabarr-fenrus",
+   "newversion": "latest",
+   "description": "Customizable browser home page and application dashboard",
+   "body": "Upgrading homelabarr-fenrus to latest",
+   "user": "github-actions[bot]"
+}
 apps homelabarr-gdsa
 {
    "appname": "docker-gdsa",
@@ -318,6 +162,100 @@ apps homelabarr-gdsa
    "user": "dockserver-actions[bot]"
 }
 
+apps homelabarr-gui
+{
+  "appname": "homelabarr-gui",
+  "apppic": "./images/homelabarr-gui.png",
+  "appfolder": "./apps/homelabarr-gui",
+  "newversion": "latest",
+  "description": "HomelabARR web interface",
+  "body": "Upgrading homelabarr-gui to latest",
+  "user": "github-actions[bot]"
+}
+apps homelabarr-haproxy
+{
+   "appname": "homelabarr-haproxy",
+   "apppic": "./images/homelabarr-haproxy.png",
+   "appfolder": "./apps/homelabarr-haproxy",
+   "newversion": "latest",
+   "description": "High availability load balancer and proxy server",
+   "body": "Upgrading homelabarr-haproxy to latest",
+   "user": "github-actions[bot]"
+}
+apps homelabarr-hyperhdr
+{
+   "appname": "homelabarr-hyperhdr",
+   "apppic": "./images/homelabarr-hyperhdr.png",
+   "appfolder": "./apps/homelabarr-hyperhdr",
+   "newversion": "latest",
+   "description": "Ambient lighting software for TVs and monitors",
+   "body": "Upgrading homelabarr-hyperhdr to latest",
+   "user": "github-actions[bot]"
+}
+apps homelabarr-jackett
+{
+   "appname": "homelabarr-jackett",
+   "apppic": "./images/homelabarr-jackett.png",
+   "appfolder": "./apps/homelabarr-jackett",
+   "newversion": "0.21.3109-ls82",
+   "appbranch": "master",
+   "description": "API Support for your favorite torrent trackers.",
+   "body": "Upgrading homelabarr-jackett to 0.21.3109-ls82",
+   "user": "github-actions[bot]"
+}
+apps homelabarr-jdownloader
+{
+   "appname": "homelabarr-jdownloader",
+   "apppic": "./images/homelabarr-jdownloader.png",
+   "appfolder": "./apps/homelabarr-jdownloader",
+   "newversion": "latest",
+   "description": "Download manager for file hosting services",
+   "body": "Upgrading homelabarr-jdownloader to latest",
+   "user": "github-actions[bot]"
+}
+apps homelabarr-jellyfin
+{
+   "appname": "homelabarr-jellyfin",
+   "apppic": "./images/homelabarr-jellyfin.png",
+   "appfolder": "./apps/homelabarr-jellyfin",
+   "newversion": "10.8.13-ls130",
+   "appbranch": "master",
+   "description": "The Free Software Media System.",
+   "body": "Upgrading homelabarr-jellyfin to 10.8.13-ls130",
+   "user": "github-actions[bot]"
+}
+apps homelabarr-jellyseerr
+{
+   "appname": "homelabarr-jellyseerr",
+   "apppic": "./images/homelabarr-jellyseerr.png",
+   "appfolder": "./apps/homelabarr-jellyseerr",
+   "newversion": "1.9.2-ls72",
+   "description": "Request management and media discovery tool for Jellyfin ecosystem.",
+   "body": "Upgrading homelabarr-jellyseerr to 1.9.2-ls72",
+   "user": "github-actions[bot]"
+}
+apps homelabarr-librespeed
+{
+   "appname": "homelabarr-librespeed",
+   "apppic": "./images/homelabarr-librespeed.png",
+   "appfolder": "./apps/homelabarr-librespeed",
+   "newversion": "latest",
+   "description": "Self-hosted network speed test tool",
+   "body": "Upgrading homelabarr-librespeed to latest",
+   "user": "github-actions[bot]"
+}
+apps homelabarr-lidarr
+{
+   "appname": "homelabarr-lidarr",
+   "apppic": "./images/homelabarr-lidarr.png",
+   "appfolder": "./apps/homelabarr-lidarr",
+   "newversion": "1.1.4.3027",
+   "appbranch": "master",
+   "baseimage": "ghcr.io/smashingtags/homelabarr-alpine:latest",
+   "description": "Looks and smells like Sonarr but made for music.",
+   "body": "Upgrading homelabarr-lidarr to 1.1.4.3027",
+   "user": "github-actions[bot]"
+}
 apps homelabarr-local-persist
 {
    "appname": "docker-local-persist",
@@ -351,6 +289,16 @@ apps homelabarr-mount
    "user": "dockserver image update[bot]"
 }
 
+apps homelabarr-multitautulli
+{
+   "appname": "homelabarr-multitautulli",
+   "apppic": "./images/homelabarr-multitautulli.png",
+   "appfolder": "./apps/homelabarr-multitautulli",
+   "newversion": "latest",
+   "description": "Multiple Tautulli instances for monitoring multiple Plex servers",
+   "body": "Upgrading homelabarr-multitautulli to latest",
+   "user": "github-actions[bot]"
+}
 apps homelabarr-newznab
 {
    "appname": "docker-newznab",
@@ -363,6 +311,123 @@ apps homelabarr-newznab
    "user": "dockserver image update[bot]"
 }
 
+apps homelabarr-nzbget
+{
+   "appname": "homelabarr-nzbget",
+   "apppic": "./images/homelabarr-nzbget.png",
+   "appfolder": "./apps/homelabarr-nzbget",
+   "newversion": "21.0-ls100",
+   "description": "NZBGet is a binary downloader, which downloads files from Usenet.",
+   "body": "Upgrading homelabarr-nzbget to 21.0-ls100",
+   "user": "github-actions[bot]"
+}
+apps homelabarr-nzbhydra2
+{
+  "appname": "homelabarr-nzbhydra2",
+  "apppic": "./images/homelabarr-nzbhydra2.png",
+  "appfolder": "./apps/homelabarr-nzbhydra2",
+  "newversion": "latest",
+  "description": "Meta search for NZB indexers",
+  "body": "Upgrading homelabarr-nzbhydra2 to latest",
+  "user": "github-actions[bot]"
+}
+apps homelabarr-overseerr
+{
+   "appname": "homelabarr-overseerr",
+   "apppic": "./images/homelabarr-overseerr.png",
+   "appfolder": "./apps/homelabarr-overseerr",
+   "newversion": "1.33.2-ls145",
+   "appbranch": "master",
+   "description": "Request management and media discovery tool for the Plex ecosystem.",
+   "body": "Upgrading homelabarr-overseerr to 1.33.2-ls145",
+   "user": "github-actions[bot]"
+}
+apps homelabarr-petio
+{
+  "appname": "homelabarr-petio",
+  "apppic": "./images/homelabarr-petio.png",
+  "appfolder": "./apps/homelabarr-petio",
+  "newversion": "latest",
+  "description": "Request management and discovery platform",
+  "body": "Upgrading homelabarr-petio to latest",
+  "user": "github-actions[bot]"
+}
+apps homelabarr-plex
+{
+   "appname": "homelabarr-plex",
+   "apppic": "./images/homelabarr-plex.png",
+   "appfolder": "./apps/homelabarr-plex",
+   "newversion": "1.40.4.8679-424562606-ls200",
+   "description": "Plex organizes video, music and photos from personal media libraries.",
+   "body": "Upgrading homelabarr-plex to 1.40.4.8679-424562606-ls200",
+   "user": "github-actions[bot]"
+}
+apps homelabarr-prowlarr
+{
+   "appname": "homelabarr-prowlarr",
+   "apppic": "./images/homelabarr-prowlarr.png",
+   "appfolder": "./apps/homelabarr-prowlarr",
+   "newversion": "1.3.3.3154",
+   "appbranch": "nightly",
+   "baseimage": "ghcr.io/smashingtags/homelabarr-alpine:latest",
+   "description": "Prowlarr is an indexer manager/proxy built on the popular *arr .net/reactjs base stack.",
+   "body": "Upgrading homelabarr-prowlarr to 1.3.3.3154",
+   "user": "github-actions[bot]"
+}
+apps homelabarr-qbittorrent
+{
+   "appname": "homelabarr-qbittorrent",
+   "apppic": "./images/homelabarr-qbittorrent.png",
+   "appfolder": "./apps/homelabarr-qbittorrent",
+   "newversion": "4.6.7-r0-ls318",
+   "appbranch": "master",
+   "description": "The qBittorrent BitTorrent client.",
+   "body": "Upgrading homelabarr-qbittorrent to 4.6.7-r0-ls318",
+   "user": "github-actions[bot]"
+}
+apps homelabarr-radarr
+{
+   "appname": "homelabarr-radarr",
+   "apppic": "./images/homelabarr-radarr.png",
+   "appfolder": "./apps/homelabarr-radarr",
+   "newversion": "4.3.2.6857-ls167",
+   "appbranch": "master",
+   "baseimage": "",
+   "description": "A fork of Sonarr to work with movies à la Couchpotato.",
+   "body": "Upgrading homelabarr-radarr to 4.3.2.6857-ls167",
+   "user": "github-actions[bot]"
+}
+apps homelabarr-rclone
+{
+   "appname": "homelabarr-rclone",
+   "apppic": "./images/homelabarr-rclone.png",
+   "appfolder": "./apps/homelabarr-rclone",
+   "newversion": "latest",
+   "description": "Cloud storage sync and mount utility",
+   "body": "Upgrading homelabarr-rclone to latest",
+   "user": "github-actions[bot]"
+}
+apps homelabarr-readarr
+{
+   "appname": "homelabarr-readarr",
+   "apppic": "./images/homelabarr-readarr.png",
+   "appfolder": "./apps/homelabarr-readarr",
+   "newversion": "0.3.32.2587-ls137",
+   "appbranch": "master",
+   "description": "Book Manager and Automation (Sonarr for Ebooks).",
+   "body": "Upgrading homelabarr-readarr to 0.3.32.2587-ls137",
+   "user": "github-actions[bot]"
+}
+apps homelabarr-requestrr
+{
+  "appname": "homelabarr-requestrr",
+  "apppic": "./images/homelabarr-requestrr.png",
+  "appfolder": "./apps/homelabarr-requestrr",
+  "newversion": "latest",
+  "description": "Discord bot for handling media requests",
+  "body": "Upgrading homelabarr-requestrr to latest",
+  "user": "github-actions[bot]"
+}
 apps homelabarr-restic
 {
    "appname": "docker-restic",
@@ -392,6 +457,38 @@ apps homelabarr-rollarr
    "user": "github-actions[bot]"
 }
 
+apps homelabarr-rutorrent
+{
+   "appname": "homelabarr-rutorrent",
+   "apppic": "./images/homelabarr-rutorrent.png",
+   "appfolder": "./apps/homelabarr-rutorrent",
+   "newversion": "latest",
+   "description": "Web interface for rTorrent BitTorrent client",
+   "body": "Upgrading homelabarr-rutorrent to latest",
+   "user": "github-actions[bot]"
+}
+apps homelabarr-sabnzbd
+{
+   "appname": "homelabarr-sabnzbd",
+   "apppic": "./images/homelabarr-sabnzbd.png",
+   "appfolder": "./apps/homelabarr-sabnzbd",
+   "newversion": "4.3.3-ls84",
+   "appbranch": "master",
+   "description": "The automated Usenet download tool.",
+   "body": "Upgrading homelabarr-sabnzbd to 4.3.3-ls84",
+   "user": "github-actions[bot]"
+}
+apps homelabarr-sonarr
+{
+   "appname": "homelabarr-sonarr",
+   "apppic": "./images/homelabarr-sonarr.png",
+   "appfolder": "./apps/homelabarr-sonarr",
+   "newversion": "3.0.10.1567-ls187",
+   "appbranch": "main",
+   "description": "Smart PVR for newsgroup and bittorrent users.",
+   "body": "Upgrading homelabarr-sonarr to 3.0.10.1567-ls187",
+   "user": "github-actions[bot]"
+}
 apps homelabarr-spotweb
 {
    "appname": "docker-spotweb",
@@ -404,6 +501,17 @@ apps homelabarr-spotweb
    "user": "dockserver[bot]"
 }
 
+apps homelabarr-tautulli
+{
+   "appname": "homelabarr-tautulli",
+   "apppic": "./images/homelabarr-tautulli.png",
+   "appfolder": "./apps/homelabarr-tautulli",
+   "newversion": "2.14.6-ls165",
+   "appbranch": "master",
+   "description": "A Python based monitoring and tracking tool for Plex Media Server.",
+   "body": "Upgrading homelabarr-tautulli to 2.14.6-ls165",
+   "user": "github-actions[bot]"
+}
 apps homelabarr-traktarr
 {
    "appname": "docker-traktarr",
@@ -416,6 +524,16 @@ apps homelabarr-traktarr
    "user": "dockserver image update[bot]"
 }
 
+apps homelabarr-transmission
+{
+   "appname": "homelabarr-transmission",
+   "apppic": "./images/homelabarr-transmission.png",
+   "appfolder": "./apps/homelabarr-transmission",
+   "newversion": "4.0.6-r1-ls166",
+   "description": "Transmission is a BitTorrent client which features a variety of user interfaces.",
+   "body": "Upgrading homelabarr-transmission to 4.0.6-r1-ls166",
+   "user": "github-actions[bot]"
+}
 apps homelabarr-uploader
 {
    "appname": "docker-uploader",
@@ -440,6 +558,16 @@ apps homelabarr-vnstat
    "user": "dockserver image update[bot]"
 }
 
+apps homelabarr-whisparr
+{
+   "appname": "homelabarr-whisparr",
+   "apppic": "./images/homelabarr-whisparr.png",
+   "appfolder": "./apps/homelabarr-whisparr",
+   "newversion": "3.0.0.560-ls46",
+   "description": "Whisparr is an adult movie collection manager for Usenet and BitTorrent users.",
+   "body": "Upgrading homelabarr-whisparr to 3.0.0.560-ls46",
+   "user": "github-actions[bot]"
+}
 apps homelabarr-wiki
 {
    "appname": "docker-wiki",
@@ -455,6 +583,26 @@ apps homelabarr-wiki
    "user": "github-actions[bot]"
 }
 
+apps homelabarr-wireguard
+{
+   "appname": "homelabarr-wireguard",
+   "apppic": "./images/homelabarr-wireguard.png",
+   "appfolder": "./apps/homelabarr-wireguard",
+   "newversion": "latest",
+   "description": "Fast and secure VPN tunnel using WireGuard protocol",
+   "body": "Upgrading homelabarr-wireguard to latest",
+   "user": "github-actions[bot]"
+}
+apps homelabarr-xteve
+{
+   "appname": "homelabarr-xteve",
+   "apppic": "./images/homelabarr-xteve.png",
+   "appfolder": "./apps/homelabarr-xteve",
+   "newversion": "latest",
+   "description": "M3U proxy server for Plex DVR and Emby Live TV",
+   "body": "Upgrading homelabarr-xteve to latest",
+   "user": "github-actions[bot]"
+}
 base alpine
 {
    "appname": "alpine",
@@ -465,120 +613,6 @@ base alpine
    "description": "Official Alpine Linux Docker image. Win at minimalism!",
    "body": "Upgrading alpine to 3.22.1",
    "user": "github-actions[bot]"
-}
-
-base docker-alpine
-{
-   "appname": "docker-alpine",
-   "apppic": "./images/docker-alpine.png",
-   "appfolder": "./base/docker-alpine",
-   "newversion": "3.15.0-rc.4",
-   "baseimage": "null",
-   "packages": "null",
-   "description": "Official Alpine Linux Docker image. Win at minimalism!",
-   "body": "Upgrading docker-alpine to 3.15.0-rc.4",
-   "user": "github-actions[bot]"
-}
-
-base docker-alpine-v3
-{
-   "appname": "docker-alpine-v3",
-   "apppic": "./images/docker-alpine-v3.png",
-   "appfolder": "./base/docker-alpine-v3",
-   "newversion": "3.22.1",
-   "baseimage": "alpine",
-   "baseversion": "3.22.1",
-   "s6stage": "v3.2.1.0",
-   "description": "Docker docker-alpine-v3 with include s6-overlay: v3.2.1.0",
-   "body": "Upgrading docker-alpine-v3 to baseimage: alpine:3.22.1  with include s6-overlay: v3.2.1.0",
-   "user": "dockserver image update[bot]"
-}
-
-base docker-config
-{
-   "appname": "docker-config",
-   "apppic": "./images/docker-config.png",
-   "appfolder": "./base/docker-config",
-   "newversion": "3.22.1",
-   "baseimage": "alpine",
-   "description": " !!! DEVERLOP STATUS !!! DO NOT TRY TO PULL THE IMAGE YOU NEED ACCESS TO THE REPOSITORY",
-   "body": "Upgrading docker-config to 3.22.1",
-   "user": "github-actions[bot]"
-}
-
-base docker-create
-{
-   "appname": "docker-create",
-   "apppic": "./images/docker-create.png",
-   "appfolder": "./base/docker-create",
-   "newversion": "3.22.1",
-   "baseimage": "alpine",
-   "description": " !!! DEVERLOP STATUS !!! DO NOT TRY TO PULL THE IMAGE YOU NEED ACCESS TO THE REPOSITORY",
-   "body": "Upgrading docker-create to 3.22.1",
-   "user": "github-actions[bot]"
-}
-
-base docker-dockserver
-{
-   "appname": "docker-dockserver",
-   "apppic": "",
-   "appfolder": "./base/docker-dockserver",
-   "newversion": "3.22.1",
-   "appversion": "3.22.1",
-   "baseimage": "alpine",
-   "description": "Docker + Traefik with Authelia and Cloudflare Protection",
-   "body": "Upgrading docker-dockserver to 3.22.1",
-   "user": "github-actions[bot]"
-}
-
-base docker-ubuntu-focal
-{
-   "appname": "docker-ubuntu-focal",
-   "apppic": "./images/docker-ubuntu-focal.png",
-   "appfolder": "./base/docker-ubuntu-focal",
-   "newversion": "3.22.1",
-   "baseimage": "alpine",
-   "description": "Docker image  for docker-ubuntu-focal",
-   "body": "Upgrading docker-ubuntu-focal to baseimage: alpine:3.22.1",
-   "user": "dockserver image update[bot]"
-}
-
-base docker-ubuntu-jammy
-{
-   "appname": "docker-ubuntu-jammy",
-   "apppic": "./images/docker-ubuntu-jammy.png",
-   "appfolder": "./base/docker-ubuntu-jammy",
-   "newversion": "3.22.1",
-   "baseimage": "alpine",
-   "description": "Docker image  for docker-ubuntu-jammy",
-   "body": "Upgrading docker-ubuntu-jammy to baseimage: alpine:3.22.1",
-   "user": "dockserver image update[bot]"
-}
-
-base docker-ui
-{
-   "appname": "docker-ui",
-   "apppic": "",
-   "appfolder": "./base/docker-ui",
-   "newversion": "3.22.1",
-   "appversion": "3.22.1",
-   "baseimage": "alpine",
-   "description": " !!! DEVERLOP STATUS !!! DO NOT TRY TO PULL THE IMAGE YOU NEED ACCESS TO THE REPOSITORY",
-   "body": "Upgrading docker-ui to 3.22.1",
-   "user": "github-actions[bot]"
-}
-
-base dockserver-ui
-{
-   "appname": "docker-ui",
-   "apppic": "",
-   "appfolder": "./base/dockserver-ui",
-   "newversion": "0.0.1",
-   "appversion": "0.0.1",
-   "baseimage": "pyrhon-alpine",
-   "description": " !!! DEVERLOP STATUS !!! DO NOT TRY TO PULL THE IMAGE | YOU NEED ACCESS TO THE REPOSITORY",
-   "body": "Upgrading dockserver-ui to 0.0.1",
-   "user": "dockserver image update[bot]"
 }
 
 base homelabarr-alpine
@@ -632,7 +666,7 @@ base homelabarr-create
    "user": "github-actions[bot]"
 }
 
-base homelabarr-dockserver
+base homelabarr-legacy-base
 {
    "appname": "docker-dockserver",
    "apppic": "",
@@ -669,17 +703,17 @@ base homelabarr-ubuntu-jammy
    "user": "dockserver image update[bot]"
 }
 
-base homelabarr-ui
+base homelabarr-ui-legacy
 {
    "appname": "docker-ui",
    "apppic": "",
-   "appfolder": "./base/docker-ui",
-   "newversion": "3.22.1",
-   "appversion": "3.22.1",
-   "baseimage": "alpine",
-   "description": " !!! DEVERLOP STATUS !!! DO NOT TRY TO PULL THE IMAGE YOU NEED ACCESS TO THE REPOSITORY",
-   "body": "Upgrading docker-ui to 3.22.1",
-   "user": "github-actions[bot]"
+   "appfolder": "./base/dockserver-ui",
+   "newversion": "0.0.1",
+   "appversion": "0.0.1",
+   "baseimage": "pyrhon-alpine",
+   "description": " !!! DEVERLOP STATUS !!! DO NOT TRY TO PULL THE IMAGE | YOU NEED ACCESS TO THE REPOSITORY",
+   "body": "Upgrading dockserver-ui to 0.0.1",
+   "user": "dockserver image update[bot]"
 }
 
 base ubuntu
@@ -692,62 +726,6 @@ base ubuntu
    "packages": "null",
    "description": "Dockerbase Image with Ubuntu",
    "body": "Upgrading ubuntu to focal-20220113",
-   "user": "github-actions[bot]"
-}
-
-mod docker-mod-healthcheck
-{
-   "appname": "docker-mod-healthcheck",
-   "apppic": "./images/docker-mod-healthcheck.png",
-   "appfolder": "./mod/docker-mod-healthcheck",
-   "user": "github-actions[bot]"
-}
-
-mod docker-mod-nzbget
-{
-   "appname": "docker-mod-nzbget",
-   "apppic": "./images/docker-mod-nzbget.png",
-   "appfolder": "./mod/docker-mod-nzbget",
-   "user": "github-actions[bot]"
-}
-
-mod docker-mod-qbittorrent
-{
-   "appname": "docker-mod-qbittorrent",
-   "apppic": "./images/docker-mod-qbittorrent.png",
-   "appfolder": "./mod/docker-mod-qbittorrent",
-   "user": "github-actions[bot]"
-}
-
-mod docker-mod-rclone
-{
-   "appname": "docker-mod-rclone",
-   "apppic": "./images/docker-mod-rclone.png",
-   "appfolder": "./mod/docker-mod-rclone",
-   "user": "github-actions[bot]"
-}
-
-mod docker-mod-sabnzbd
-{
-   "appname": "docker-mod-sabnzbd",
-   "apppic": "./images/docker-mod-sabnzbd.png",
-   "appfolder": "./mod/docker-mod-sabnzbd",
-   "user": "github-actions[bot]"
-}
-
-mod docker-mod-storagecheck
-{
-   "appname": "docker-mod-storagecheck",
-   "apppic": "./images/docker-mod-storagecheck.png",
-   "appfolder": "./mod/docker-mod-storagecheck",
-   "user": "github-actions[bot]"
-}
-
-mod docker-mod-tautulli
-{
-   "appname": "docker-mod-tautulli",
-   "apppic": "./images/docker-mod-tautulli.png",
-   "appfolder": "./mod/docker-mod-tautulli",
    "user": "github-actions[bot]"
 }
 
@@ -812,12 +790,12 @@ nightly docker-whisparr-nightly
    "appname": "docker-whisparr-nightly",
    "apppic": "./images/docker-whisparr-nightly.png",
    "appfolder": "./nightly/docker-whisparr-nightly",
-   "newversion": "2.0.0.1250",
+   "newversion": "2.0.0.1278",
    "appbranch": "nightly",
    "baseimage": "ghcr.io/linuxserver/baseimage-alpine",
-   "baseversion": "3.22-6a2f7be2-ls7",
+   "baseversion": "3.22-25712cc1-ls9",
    "description": "Whisparr is an adult movie collection manager for Usenet and BitTorrent users.",
-   "body": "Upgrading docker-whisparr-nightly to 2.0.0.1250",
+   "body": "Upgrading docker-whisparr-nightly to 2.0.0.1278",
    "user": "dockserver image update[bot]"
 }
 
