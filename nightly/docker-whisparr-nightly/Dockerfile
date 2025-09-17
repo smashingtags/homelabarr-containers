@@ -16,11 +16,7 @@
 #####################################
 # shellcheck disable=SC2086
 # shellcheck disable=SC2046
-<<<<<<< HEAD
-FROM lscr.io/linuxserver/baseimage-alpine:3.22-6a2f7be2-ls7
-=======
-FROM ghcr.io/linuxserver/baseimage-alpine:3.22-25712cc1-ls9
->>>>>>> 1295dc074c0c0f3d1235ee76f6ddf724b8bdc398
+FROM lscr.io/linuxserver/baseimage-alpine:3.22-25712cc1-ls9
 LABEL org.opencontainers.image.source="https://github.com/dockserver/container"
 
 ARG TARGETPLATFORM
