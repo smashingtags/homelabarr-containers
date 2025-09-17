@@ -1,7 +1,7 @@
 {
-   "appname": "docker-backup",
-   "apppic": "./images/docker-backup.png",
-   "appfolder": "./apps/docker-backup",
+   "appname": "homelabarr-backup",
+   "apppic": "./images/homelabarr-backup.png",
+   "appfolder": "./apps/homelabarr-backup",
    "newversion": "3.22.1",
    "baseimage": "alpine",
    "description": "Official Alpine Linux Docker image. Win at minimalism!",
