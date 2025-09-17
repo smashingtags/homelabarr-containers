@@ -8,7 +8,7 @@
 #####################################
 # shellcheck disable=SC2086
 # shellcheck disable=SC2046
-FROM ghcr.io/smashingtags/docker-alpine-v3:latest
+FROM ghcr.io/smashingtags/homelabarr-alpine-v3:latest
 
 LABEL org.opencontainers.image.source="https://github.com/smashingtags/homelabarr-containers"
 
