@@ -38,7 +38,11 @@
       "mcp__MCP_DOCKER__list_workflow_jobs",
       "WebFetch(domain:docs.linuxserver.io)",
       "Bash(git add:*)",
-      "WebFetch(domain:hub.docker.com)"
+      "WebFetch(domain:hub.docker.com)",
+      "Bash(for d in apps/*)",
+      "Bash(do [ -d \"$d/root\" ])",
+      "Bash(xargs sed:*)",
+      "WebFetch(domain:lscr.io)"
     ],
     "deny": [],
     "ask": []

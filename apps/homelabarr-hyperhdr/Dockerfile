@@ -1,5 +1,5 @@
 ## HomelabARR - HyperHDR Container
 ## Maintainer: smashingtags
-FROM ghcr.io/awawa-dev/hyperhdr:latest
+FROM nocturno/hyper-hdr:latest
 COPY --chown=abc ./apps/homelabarr-hyperhdr/root/ /
 ##EOF

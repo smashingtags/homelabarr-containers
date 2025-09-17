@@ -43,7 +43,7 @@ RUN \
     apk del --quiet --clean-protected --no-progress && \
     rm -rf /var/cache/apk/* /tmp/*
 
-FROM ghcr.io/linuxserver/baseimage-alpine:3.22-6a2f7be2-ls7
+FROM lscr.io/linuxserver/baseimage-alpine:3.22-6a2f7be2-ls7
 
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM

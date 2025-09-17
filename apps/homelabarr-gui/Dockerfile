@@ -91,7 +91,7 @@ RUN \
  npm install
 
 # runtime stage
-FROM ghcr.io/linuxserver/baseimage-rdesktop:alpine
+FROM lscr.io/linuxserver/baseimage-rdesktop:alpine
 
 # Copy build outputs
 COPY --from=nodebuilder /gclient /gclient

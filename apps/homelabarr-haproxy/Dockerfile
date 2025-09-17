@@ -1,5 +1,5 @@
 ## HomelabARR - HAProxy Container
 ## Maintainer: smashingtags
-FROM ghcr.io/linuxserver/haproxy:latest
+FROM haproxy:alpine
 COPY --chown=abc ./apps/homelabarr-haproxy/root/ /
 ##EOF
