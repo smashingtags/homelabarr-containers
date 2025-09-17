@@ -20,27 +20,33 @@ USERNAME=$3
 TOKEN=$4
 
 ### APP SETTINGS ###
-APPLINK="https://api.github.com/repos/dockserver/dockserver"
-BUILDVERSION=20.04
-BUILDVERSION="${BUILDVERSION#*v}"
-BUILDVERSION="${BUILDVERSION#*release-}"
-BUILDVERSION="${BUILDVERSION}"
 
-BUILDIMAGE="ubuntu"
+APPBRANCH=""
+APPLINK="https://api.github.com/repos/Dusk-Labs/dim"
+
+NEWVERSION=$(curl -u $USERNAME:$TOKEN -sX GET "https://api.github.com/repos/Dusk-Labs/dim/releases/latest" | jq --raw-output '.tag_name')
+
+NEWVERSION="${NEWVERSION#*v}"
+NEWVERSION="${NEWVERSION#*release-}"
+NEWVERSION="${NEWVERSION}"
+
+HEADLINE="$(cat ./.templates/headline.txt)"
+DESCRIPTION="$(curl -u $USERNAME:$TOKEN -sX GET "$APPLINK" | jq -r '.description')"
+BASEIMAGE="multi-stages"
 
 PICTURE="./images/$APP.png"
 APPFOLDER="./$FOLDER/$APP"
 
-## RELEASE SETTINGS ###
+### RELEASE SETTINGS ###
 
 echo '{
    "appname": "'${APP}'",
    "apppic": "'${PICTURE}'",
    "appfolder": "./'$FOLDER'/'$APP'",
-   "newversion": "'${BUILDVERSION}'",
-   "baseimage": "'${BUILDIMAGE}'",
-   "description": "Docker image  for '${APP}'",
-   "body": "Upgrading '${APP}' to baseimage: '${BUILDIMAGE}':'${BUILDVERSION}'",
-   "user": "dockserver image update[bot]"
+   "newversion": "'${NEWVERSION}'",
+   "appbranch": "'${APPBRANCH}'",
+   "baseimage": "'${BASEIMAGE}'",
+   "description": "'${DESCRIPTION}'",
+   "body": "Upgrading '${APP}' to '${NEWVERSION}'",
+   "user": "github-actions[bot]"
 }' > "./$FOLDER/$APP/release.json"
-

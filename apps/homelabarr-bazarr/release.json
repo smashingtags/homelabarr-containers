@@ -2,9 +2,10 @@
    "appname": "homelabarr-bazarr",
    "apppic": "./images/homelabarr-bazarr.png",
    "appfolder": "./apps/homelabarr-bazarr",
-   "newversion": "1.4.5-ls251",
+   "newversion": "1.2.1",
    "appbranch": "master",
-   "description": "Subtitle companion application for Sonarr and Radarr.",
-   "body": "Upgrading homelabarr-bazarr to 1.4.5-ls251",
+   "baseimage": "ghcr.io/smashingtags/homelabarr-alpine-v3:latest",
+   "description": "Bazarr is a companion application to Sonarr and Radarr. It manages and downloads subtitles based on your requirements. You define your preferences by TV show or movie and Bazarr takes care of everything for you.",
+   "body": "Upgrading homelabarr-bazarr to 1.2.1",
    "user": "github-actions[bot]"
 }
