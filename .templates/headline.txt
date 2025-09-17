@@ -1,8 +1,8 @@
 ####################################
 # All rights reserved.              #
 # started from Zero                 #
-# Docker owned dockserver           #
-# Docker Maintainer dockserver      #
+# Docker owned homelabarr           #
+# Docker Maintainer homelabarr      #
 #####################################
 #####################################
 # THIS DOCKER IS UNDER LICENSE      #
