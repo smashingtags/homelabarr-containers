@@ -21,7 +21,7 @@ TOKEN=$4
 
 ### APP SETTINGS ###
 
-APPLINK="https://api.github.com/repos/alpinelinux/docker-alpine"
+APPLINK="https://api.github.com/repos/dockserver/dockserver"
 NEWVERSION=$(curl -sX GET "https://registry.hub.docker.com/v2/repositories/library/alpine/tags" \
    | jq -r 'select(.results != null) | .results[]["name"]' \
    | sort -t "." -k1,1n -k2,2n -k3,3n | grep "\." | tail -n1)
@@ -29,13 +29,19 @@ NEWVERSION="${NEWVERSION#*v}"
 NEWVERSION="${NEWVERSION#*release-}"
 NEWVERSION="${NEWVERSION}"
 
+## APP VERSION
+APPVERSION=$(curl -sX GET "https://api.github.com/repos/dockserver/dockserver/releases/latest" | awk '/tag_name/{print $4;exit}' FS='[""]' | sed -e 's_^v__')
+APPVERSION="${NEWVERSION#*v}"
+APPVERSION="${NEWVERSION#*release-}"
+APPVERSION="${NEWVERSION}"
+
 HEADLINE="$(cat ./.templates/headline.txt)"
 APPFOLDER="./$FOLDER/$APP"
 DESCRIPTION="$(curl -u $USERNAME:$TOKEN -sX GET "$APPLINK" | jq -r '.description')"
 BASEIMAGE="alpine"
 
 INSTCOMMAND="apk add -U --update --no-cache"
-PACKAGES="bash jq musl ca-certificates shadow"
+PACKAGES="bash ca-certificates shadow"
 
 ### RELEASE SETTINGS ###
 
@@ -44,11 +50,13 @@ echo '{
    "apppic": "'${PICTURE}'",
    "appfolder": "./'$FOLDER'/'$APP'",
    "newversion": "'${NEWVERSION}'",
+   "appversion": "'${APPVERSION}'",
    "baseimage": "'${BASEIMAGE}'",
    "description": "'${DESCRIPTION}'",
    "body": "Upgrading '${APP}' to '${NEWVERSION}'",
    "user": "github-actions[bot]"
 }' > "./$FOLDER/$APP/release.json"
+
 
 ### DOCKER BUILD ###
 ### GENERATE Dockerfile based on release.json
@@ -65,11 +73,11 @@ ARG TARGETPLATFORM
 ARG BUILDPLATFORM
 ARG VERSION="'"${NEWVERSION}"'"
 
-RUN \
+RUN  \
   echo "'"**** install packages ****"'" && \
     '"${INSTCOMMAND}"' '"${PACKAGES}"'
 
-ENTRYPOINT ["'"/bin/bash"'"]
+COPY '"${APPFOLDER}"'/root/start.sh /start.sh
 
-CMD ["'"echo"'", "'No can haz support yet. Chek bak l8r!'", "'exit'", "'1337'" ]
+ENTRYPOINT ["'"/bin/bash"'", "'"/start.sh"'"]
 ##EOF' > ./$FOLDER/$APP/Dockerfile
