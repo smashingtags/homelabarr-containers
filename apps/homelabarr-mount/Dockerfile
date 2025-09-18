@@ -3,22 +3,14 @@
 ## Do not changes any lines here
 ##
 ####################################
-# All rights reserved.              #
-# started from Zero                 #
-# Docker owned dockserver           #
-# Docker Maintainer dockserver      #
-#####################################
-#####################################
-# THIS DOCKER IS UNDER LICENSE      #
-# NO CUSTOMIZING IS ALLOWED         #
-# NO REBRANDING IS ALLOWED          #
-# NO CODE MIRRORING IS ALLOWED      #
-#####################################
+# Docker owned by homelabarr       #
+# Docker Maintainer smashingtags   #
+####################################
 # shellcheck disable=SC2086
 # shellcheck disable=SC2046
 FROM alpine:3.22.1 as builder
 
-LABEL org.opencontainers.image.source="https://github.com/dockserver/container"
+LABEL org.opencontainers.image.source="https://github.com/smashingtags/homelabarr-containers"
 
 ### BUILD STAGE
 ARG TARGETPLATFORM
@@ -45,15 +37,15 @@ RUN \
     apk del --quiet --clean-protected --no-progress && \
     rm -rf /var/cache/apk/* /tmp/*
 
-FROM lscr.io/linuxserver/baseimage-alpine:3.22-6a2f7be2-ls7
+FROM ghcr.io/linuxserver/baseimage-alpine:3.22-25712cc1-ls9
 
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
 
 ARG BASE_VERSION=3.22.1
-ARG ALPINE_VERSION=3.22-6a2f7be2-ls7
+ARG ALPINE_VERSION=3.22-25712cc1-ls9
 ARG MERGERFS_VERSION=2.40.2
-ARG RCLONE_VERSION=v1.70.3
+ARG RCLONE_VERSION=v1.71.0
 
 RUN \
   echo "**** update packages ****" && \

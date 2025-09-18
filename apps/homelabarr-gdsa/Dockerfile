@@ -3,33 +3,26 @@
 ## Do not changes any lines here
 ##
 ####################################
-# All rights reserved.              #
-# started from Zero                 #
-# Docker owned dockserver           #
-# Docker Maintainer dockserver      #
-#####################################
-#####################################
-# THIS DOCKER IS UNDER LICENSE      #
-# NO CUSTOMIZING IS ALLOWED         #
-# NO REBRANDING IS ALLOWED          #
-# NO CODE MIRRORING IS ALLOWED      #
-#####################################
+# Docker owned by homelabarr       #
+# Docker Maintainer smashingtags   #
+####################################
 # shellcheck disable=SC2086
 # shellcheck disable=SC2046
 FROM gcr.io/google.com/cloudsdktool/cloud-sdk:alpine
-LABEL org.opencontainers.image.source="https://github.com/dockserver/container"
+LABEL org.opencontainers.image.source="https://github.com/smashingtags/homelabarr-containers"
 
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
-ARG VERSION="534.0.0-alpine"
+ARG VERSION="539.0.0-alpine"
 
 RUN \
   echo "**** update packages ****" && \
     apk --quiet --no-cache --no-progress update && \
   apk --quiet --no-cache --no-progress upgrade && \
   echo "**** install build packages ****" && \
-    apk add -U --update --no-cache bash curl shadow findutils coreutils ca-certificates && \
+    apk add -U --update --no-cache bash curl shadow musl findutils coreutils ca-certificates musl && \
   echo "*** cleanup system ****" && \
+    apk del --quiet --clean-protected --no-progress && \
   rm -f /var/cache/apk/*
 
 COPY ./apps/homelabarr-gdsa/root/ /

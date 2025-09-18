@@ -1,6 +1,6 @@
 {
-   "appname": "docker-mod-sabnzbd",
-   "apppic": "./images/docker-mod-sabnzbd.png",
-   "appfolder": "./mod/docker-mod-sabnzbd",
+   "appname": "homelabarr-mod-sabnzbd",
+   "apppic": "./images/homelabarr-mod-sabnzbd.png",
+   "appfolder": "./mod/homelabarr-mod-sabnzbd",
    "user": "github-actions[bot]"
 }

@@ -2,9 +2,11 @@
    "appname": "homelabarr-qbittorrent",
    "apppic": "./images/homelabarr-qbittorrent.png",
    "appfolder": "./apps/homelabarr-qbittorrent",
-   "newversion": "4.6.7-r0-ls318",
+   "newversion": "5.1.2-r2",
+   "appversion": "1.7",
    "appbranch": "master",
-   "description": "The qBittorrent BitTorrent client.",
-   "body": "Upgrading homelabarr-qbittorrent to 4.6.7-r0-ls318",
+   "baseimage": "ghcr.io/linuxserver/baseimage-alpine:edge",
+   "description": "Cli to manage qBittorrent",
+   "body": "Upgrading homelabarr-qbittorrent to 5.1.2-r2 with 1.7",
    "user": "github-actions[bot]"
 }

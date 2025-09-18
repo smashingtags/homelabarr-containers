@@ -2,8 +2,10 @@
    "appname": "homelabarr-emby",
    "apppic": "./images/homelabarr-emby.png",
    "appfolder": "./apps/homelabarr-emby",
-   "newversion": "4.8.8.0-ls165",
-   "description": "Emby Server brings all your home videos, music, and photos together.",
-   "body": "Upgrading homelabarr-emby to 4.8.8.0-ls165",
+   "newversion": "4.8.11.0",
+   "appbranch": "master",
+   "baseimage": "",
+   "description": "Docker Container for Emby Server",
+   "body": "Upgrading homelabarr-emby to 4.8.11.0",
    "user": "github-actions[bot]"
 }

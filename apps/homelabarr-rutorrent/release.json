@@ -1,9 +1,10 @@
 {
    "appname": "homelabarr-rutorrent",
-   "apppic": "./images/homelabarr-rutorrent.png",
+   "apppic": "",
    "appfolder": "./apps/homelabarr-rutorrent",
-   "newversion": "latest",
-   "description": "Web interface for rTorrent BitTorrent client",
-   "body": "Upgrading homelabarr-rutorrent to latest",
-   "user": "github-actions[bot]"
+   "newversion": "5.2.10",
+   "baseimage": "alpine",
+   "description": "Yet another web front-end for rTorrent",
+   "body": "Upgrading homelabarr-rutorrent to 5.2.10",
+   "user": "homelabarr[bot]"
 }

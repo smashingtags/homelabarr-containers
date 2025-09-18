@@ -1,6 +1,6 @@
 {
-   "appname": "docker-mod-storagecheck",
-   "apppic": "./images/docker-mod-storagecheck.png",
-   "appfolder": "./mod/docker-mod-storagecheck",
+   "appname": "homelabarr-mod-storagecheck",
+   "apppic": "./images/homelabarr-mod-storagecheck.png",
+   "appfolder": "./mod/homelabarr-mod-storagecheck",
    "user": "github-actions[bot]"
 }

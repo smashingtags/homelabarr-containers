@@ -1,6 +1,6 @@
 {
-   "appname": "docker-mod-tautulli",
-   "apppic": "./images/docker-mod-tautulli.png",
-   "appfolder": "./mod/docker-mod-tautulli",
+   "appname": "homelabarr-mod-tautulli",
+   "apppic": "./images/homelabarr-mod-tautulli.png",
+   "appfolder": "./mod/homelabarr-mod-tautulli",
    "user": "github-actions[bot]"
 }
