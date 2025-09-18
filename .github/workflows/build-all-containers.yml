@@ -75,7 +75,6 @@ jobs:
           - homelabarr-transmission
           - homelabarr-uploader
           - homelabarr-vnstat
-          - homelabarr-whisparr
           - homelabarr-wiki
           - homelabarr-wireguard
           - homelabarr-xteve
@@ -465,7 +464,7 @@ jobs:
       fail-fast: false
       matrix:
         container:
-          - homelabarr-whisparr-nightly
+          - homelabarr-overseerr-nightly
     
     steps:
       - name: Checkout repository

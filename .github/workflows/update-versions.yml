@@ -48,11 +48,5 @@ jobs:
 
       - name: Push changes
         run: |
-          if [[ -n $(git status --porcelain) ]]; then
-            git add -A
-            LOG=$(git status --porcelain | sed s/^...//)
-            git commit -m "[Auto Generation] Version Updates: $LOG" || exit 0
-            git push origin HEAD:${{ github.ref_name }}
-          else
-            echo "No changes to commit"
-          fi
+          chmod +x ./upstream.sh
+          ./upstream.sh "Auto Generation" "Version Updates"
