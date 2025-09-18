@@ -136,8 +136,14 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           CONTAINER: ${{ matrix.container }}
         run: |
-          # Get the latest version tag
-          LATEST_VERSION=$(git describe --tags --abbrev=0 2>/dev/null || echo "v1.0.0")
+          # Get version from release.json if it exists
+          if [ -f "./apps/${{ matrix.container }}/release.json" ]; then
+            LATEST_VERSION=$(jq -r '.newversion' ./apps/${{ matrix.container }}/release.json)
+            DESCRIPTION=$(jq -r '.description' ./apps/${{ matrix.container }}/release.json)
+          else
+            LATEST_VERSION="latest"
+            DESCRIPTION="HomelabARR Application Container"
+          fi
           TIMESTAMP=$(date -u +'%FT%T.%3NZ')
           json='{
             "username": "HomelabARR Container Bot",
@@ -157,7 +163,7 @@ jobs:
                 },
                 {
                   "name": "Description",
-                  "value": "HomelabARR Application Container"
+                  "value": "'"${DESCRIPTION}"'"
                 },
                 {
                   "name": "Version",
@@ -204,11 +210,11 @@ jobs:
           - homelabarr-legacy-base
           - homelabarr-ubuntu-noble
           - ubuntu
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
         with:
@@ -229,7 +235,7 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: smashingtags
           password: ${{ secrets.GITHUB_TOKEN }}
-      
+
       - name: Extract metadata
         id: meta
         uses: docker/metadata-action@v5
@@ -247,7 +253,7 @@ jobs:
             org.opencontainers.image.description=HomelabARR Base Image - ${{ matrix.container }}
             org.opencontainers.image.vendor=HomelabARR CLI
             org.opencontainers.image.licenses=MIT
-      
+
       - name: Build and push Docker image
         id: build
         uses: docker/build-push-action@v5
@@ -260,15 +266,21 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
             VERSION=22.04
-      
+
       - name: Send Discord notification
         if: always() && (steps.build.outcome == 'success')
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           CONTAINER: ${{ matrix.container }}
         run: |
-          # Get the latest version tag
-          LATEST_VERSION=$(git describe --tags --abbrev=0 2>/dev/null || echo "v1.0.0")
+          # Get version from release.json if it exists
+          if [ -f "./base/${{ matrix.container }}/release.json" ]; then
+            LATEST_VERSION=$(jq -r '.newversion' ./base/${{ matrix.container }}/release.json)
+            DESCRIPTION=$(jq -r '.description' ./base/${{ matrix.container }}/release.json)
+          else
+            LATEST_VERSION="latest"
+            DESCRIPTION="HomelabARR Base Image"
+          fi
           TIMESTAMP=$(date -u +'%FT%T.%3NZ')
           json='{
             "username": "HomelabARR Container Bot",
@@ -392,8 +404,14 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           CONTAINER: ${{ matrix.container }}
         run: |
-          # Get the latest version tag
-          LATEST_VERSION=$(git describe --tags --abbrev=0 2>/dev/null || echo "v1.0.0")
+          # Get version from release.json if it exists
+          if [ -f "./mod/${{ matrix.container }}/release.json" ]; then
+            LATEST_VERSION=$(jq -r '.newversion' ./mod/${{ matrix.container }}/release.json)
+            DESCRIPTION=$(jq -r '.description' ./mod/${{ matrix.container }}/release.json)
+          else
+            LATEST_VERSION="latest"
+            DESCRIPTION="HomelabARR Docker Modification"
+          fi
           TIMESTAMP=$(date -u +'%FT%T.%3NZ')
           json='{
             "username": "HomelabARR Container Bot",
@@ -413,7 +431,7 @@ jobs:
                 },
                 {
                   "name": "Description",
-                  "value": "HomelabARR Docker Modification"
+                  "value": "'"${DESCRIPTION}"'"
                 },
                 {
                   "name": "Version",
