@@ -8,17 +8,17 @@ ARG OVERLAY_VERSION="v3.1.5.0"
 ARG TARGETPLATFORM
 
 # add s6 overlay - use ADD to download directly
-ADD https://github.com/just-containers/s6-overlay/releases/download/${OVERLAY_VERSION}/s6-overlay-noarch.tar.xz /tmp/
-ADD https://github.com/just-containers/s6-overlay/releases/download/${OVERLAY_VERSION}/s6-overlay-x86_64.tar.xz /tmp/s6-overlay-amd64.tar.xz
-ADD https://github.com/just-containers/s6-overlay/releases/download/${OVERLAY_VERSION}/s6-overlay-aarch64.tar.xz /tmp/s6-overlay-arm64.tar.xz
+ADD https://github.com/just-containers/s6-overlay/releases/download/${OVERLAY_VERSION}/s6-overlay-noarch.tar.xz /tmp/s6-overlay-noarch.tar.xz
+ADD https://github.com/just-containers/s6-overlay/releases/download/${OVERLAY_VERSION}/s6-overlay-x86_64.tar.xz /tmp/s6-overlay-x86_64.tar.xz
+ADD https://github.com/just-containers/s6-overlay/releases/download/${OVERLAY_VERSION}/s6-overlay-aarch64.tar.xz /tmp/s6-overlay-aarch64.tar.xz
 RUN \
   DEBIAN_FRONTEND=noninteractive apt-get update && \
   DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends xz-utils && \
   tar -C / -Jxpf /tmp/s6-overlay-noarch.tar.xz && \
   if [ "${TARGETPLATFORM}" = "linux/arm64" ]; then \
-    tar -C / -Jxpf /tmp/s6-overlay-arm64.tar.xz; \
+    tar -C / -Jxpf /tmp/s6-overlay-aarch64.tar.xz; \
   else \
-    tar -C / -Jxpf /tmp/s6-overlay-amd64.tar.xz; \
+    tar -C / -Jxpf /tmp/s6-overlay-x86_64.tar.xz; \
   fi && \
   rm /tmp/s6-overlay-*.tar.xz
 # set environment variables

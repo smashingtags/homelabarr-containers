@@ -15,7 +15,19 @@ LABEL org.opencontainers.image.source="https://github.com/smashingtags/homelabar
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
 
-v3.1.5.0
+# Install s6-overlay
+ADD https://github.com/just-containers/s6-overlay/releases/download/v3.1.5.0/s6-overlay-noarch.tar.xz /tmp
+ADD https://github.com/just-containers/s6-overlay/releases/download/v3.1.5.0/s6-overlay-x86_64.tar.xz /tmp
+ADD https://github.com/just-containers/s6-overlay/releases/download/v3.1.5.0/s6-overlay-aarch64.tar.xz /tmp
+
+RUN apk add --no-cache --virtual=build-dependencies tar xz && \
+    tar -C / -Jxpf /tmp/s6-overlay-noarch.tar.xz && \
+    case "${TARGETPLATFORM}" in \
+        "linux/amd64") tar -C / -Jxpf /tmp/s6-overlay-x86_64.tar.xz ;; \
+        "linux/arm64") tar -C / -Jxpf /tmp/s6-overlay-aarch64.tar.xz ;; \
+    esac && \
+    apk del --purge build-dependencies && \
+    rm -rf /tmp/*.tar.xz
 
 ENTRYPOINT [ "/init" ]
 ##EOF
