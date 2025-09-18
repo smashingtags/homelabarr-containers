@@ -85,22 +85,12 @@ ENV LANG en_US.UTF-8
 # hadolint ignore=DL3008,DL3015
 RUN \
   apt-get update -yq \
-  && apt-get install -yq wget \
+  && apt-get install -yq gettext-base \
   && \
-  # Download and install envsubst binary directly
-  case "${TARGETPLATFORM}" in \
-    'linux/amd64') export ENVSUBST_ARCH='Linux-x86_64' ;; \
-    'linux/arm64') export ENVSUBST_ARCH='Linux-arm64' ;; \
-    'linux/arm/v7') export ENVSUBST_ARCH='Linux-armhf' ;; \
-  esac \
-  && wget -qO /usr/local/bin/envsubst "https://github.com/a8m/envsubst/releases/download/v1.4.2/envsubst-${ENVSUBST_ARCH}" \
-  && chmod +x /usr/local/bin/envsubst \
-  && envsubst --version \
+  # Test that envsubst works
+  echo 'test' | envsubst \
   && \
-  apt-get remove -y wget \
-  && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
-  && apt-get autoremove -y \
-  && apt-get clean \
+  apt-get clean \
   && \
   rm -rf \
     /tmp/* \
