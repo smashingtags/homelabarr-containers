@@ -1,9 +1,0 @@
-{
-  "appname": "homelabarr-gui",
-  "apppic": "./images/homelabarr-gui.png",
-  "appfolder": "./apps/homelabarr-gui",
-  "newversion": "latest",
-  "description": "HomelabARR web interface",
-  "body": "Upgrading homelabarr-gui to latest",
-  "user": "github-actions[bot]"
-}

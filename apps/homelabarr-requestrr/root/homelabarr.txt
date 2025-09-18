@@ -1,5 +1,0 @@
-HomelabARR CLI - Self-Hosted Media Server Stack
-Visit: https://github.com/smashingtags/homelabarr-cli
-Support: https://ko-fi.com/smashingtags
-
-Container built with ❤️ by the HomelabARR Community

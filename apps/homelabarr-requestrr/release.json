@@ -1,9 +1,0 @@
-{
-  "appname": "homelabarr-requestrr",
-  "apppic": "./images/homelabarr-requestrr.png",
-  "appfolder": "./apps/homelabarr-requestrr",
-  "newversion": "latest",
-  "description": "Discord bot for handling media requests",
-  "body": "Upgrading homelabarr-requestrr to latest",
-  "user": "github-actions[bot]"
-}

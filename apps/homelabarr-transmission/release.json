@@ -1,9 +1,0 @@
-{
-   "appname": "homelabarr-transmission",
-   "apppic": "./images/homelabarr-transmission.png",
-   "appfolder": "./apps/homelabarr-transmission",
-   "newversion": "4.0.6-r1-ls166",
-   "description": "Transmission is a BitTorrent client which features a variety of user interfaces.",
-   "body": "Upgrading homelabarr-transmission to 4.0.6-r1-ls166",
-   "user": "github-actions[bot]"
-}
