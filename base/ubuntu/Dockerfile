@@ -84,34 +84,25 @@ ENV LANG en_US.UTF-8
 
 # hadolint ignore=DL3008,DL3015
 RUN \
-  export GO_VERSION=1.16 \
-  && export GOPATH=/go \
-  && export DISTRO="$(lsb_release -s -c)" \
-  && \
   apt-get update -yq \
-  && apt-get install -yq \
-    gnupg \
-  && apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 52B59B1571A79DBC054901C0F6BC817356A3D45E \
-  && echo "deb http://ppa.launchpad.net/longsleep/golang-backports/ubuntu $DISTRO main" | tee /etc/apt/sources.list.d/gosource.list \
-  && echo "deb-src http://ppa.launchpad.net/longsleep/golang-backports/ubuntu $DISTRO main" | tee -a /etc/apt/sources.list.d/gosource.list \
-  && apt-get update -yq \
-  && apt-get install -yq \
-    golang-${GO_VERSION} \
+  && apt-get install -yq wget \
   && \
-  /usr/lib/go-${GO_VERSION}/bin/go install github.com/drone/envsubst/cmd/envsubst@latest \
-  && mv /go/bin/envsubst /usr/local/bin/envsubst \
+  # Download and install envsubst binary directly
+  case "${TARGETPLATFORM}" in \
+    'linux/amd64') export ENVSUBST_ARCH='Linux-x86_64' ;; \
+    'linux/arm64') export ENVSUBST_ARCH='Linux-arm64' ;; \
+    'linux/arm/v7') export ENVSUBST_ARCH='Linux-armhf' ;; \
+  esac \
+  && wget -qO /usr/local/bin/envsubst "https://github.com/a8m/envsubst/releases/download/v1.4.2/envsubst-${ENVSUBST_ARCH}" \
+  && chmod +x /usr/local/bin/envsubst \
   && envsubst --version \
   && \
-  apt-get remove -y gnupg golang-${GO_VERSION} \
+  apt-get remove -y wget \
   && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
   && apt-get autoremove -y \
   && apt-get clean \
-  && unset GO_VERSION \
-  && unset GOPATH \
-  && unset DISTRO \
   && \
   rm -rf \
-    /go \
     /tmp/* \
     /var/lib/apt/lists/* \
     /var/cache/apt/* \
