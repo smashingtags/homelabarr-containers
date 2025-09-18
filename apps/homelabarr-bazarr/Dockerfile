@@ -25,7 +25,7 @@ RUN \
     apk add -U --update --no-cache curl jq ffmpeg libxml2 libxslt py3-pip python3 unzip && \
     apk add -U --update --no-cache --virtual=build-dependencies build-base cargo g++ gcc jq libffi-dev libxml2-dev libxslt-dev python3-dev && \
     apk add -U --update --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.14/main unrar && \
-  echo "**** install 'docker-bazarr' ****" && \
+  echo "**** install 'homelabarr-bazarr' ****" && \
     curl -o /tmp/bazarr.zip -L "https://github.com/morpheus65535/bazarr/releases/download/v${VERSION}/bazarr.zip" && \
     mkdir -p /app/bazarr/bin && \
     unzip /tmp/bazarr.zip -d /app/bazarr/bin && \
@@ -40,7 +40,7 @@ RUN \
     apk del --purge build-dependencies && \
    rm -rf /root/.cache /root/.cargo /tmp/
 
-COPY --chown=abc ./apps/docker-bazarr/root/ /
+COPY --chown=abc ./apps/homelabarr-bazarr/root/ /
 
 EXPOSE 6767
 

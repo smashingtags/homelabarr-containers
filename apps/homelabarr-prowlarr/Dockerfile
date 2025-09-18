@@ -18,7 +18,7 @@ RUN \
     curl -fsSL "https://prowlarr.servarr.com/v1/update/${BRANCH}/updatefile?version=${VERSION}&os=linuxmusl&runtime=netcore&arch=x64" | tar xzf - -C /app/prowlarr/bin --strip-components=1 && \
   echo -e "UpdateMethod=docker\nBranch=${BRANCH}\nPackageVersion=${VERSION}\nPackageAuthor=[homelabarr.io](https://homelabarr.io)" > /app/prowlarr/package_info && \
   echo "**** cleanup ****" && \
-    rm -rf /app/prowlarr/bin/prowlarr.Update /app/lidarr/bin/fpcalc
+    rm -rf /app/prowlarr/bin/prowlarr.Update
 
 COPY --chown=abc ./apps/homelabarr-prowlarr/root/ /
 EXPOSE 9696

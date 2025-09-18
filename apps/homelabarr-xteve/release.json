@@ -1,9 +1,0 @@
-{
-   "appname": "homelabarr-xteve",
-   "apppic": "./images/homelabarr-xteve.png",
-   "appfolder": "./apps/homelabarr-xteve",
-   "newversion": "latest",
-   "description": "M3U proxy server for Plex DVR and Emby Live TV",
-   "body": "Upgrading homelabarr-xteve to latest",
-   "user": "github-actions[bot]"
-}

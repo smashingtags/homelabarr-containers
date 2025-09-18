@@ -17,7 +17,6 @@ ARG BUILDPLATFORM
 
 RUN \
   echo "**** install build packages ****" && \
-  rm -rf /etc/apt/sources.list && \
   echo "deb http://ftp.debian.org/debian experimental main" >>/etc/apt/sources.list && \
   echo "deb http://ftp.debian.org/debian sid main" >>/etc/apt/sources.list && \
   apt-get update -yqq && \

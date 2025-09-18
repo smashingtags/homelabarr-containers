@@ -41,8 +41,6 @@ jobs:
           - homelabarr-fenrus
           - homelabarr-gdsa
           - homelabarr-gui
-          - homelabarr-haproxy
-          - homelabarr-hyperhdr
           - homelabarr-jackett
           - homelabarr-jdownloader
           - homelabarr-jellyfin
@@ -56,7 +54,6 @@ jobs:
           - homelabarr-nzbget
           - homelabarr-nzbhydra2
           - homelabarr-overseerr
-          - homelabarr-petio
           - homelabarr-plex
           - homelabarr-prowlarr
           - homelabarr-qbittorrent
@@ -74,9 +71,7 @@ jobs:
           - homelabarr-transmission
           - homelabarr-uploader
           - homelabarr-vnstat
-          - homelabarr-wiki
           - homelabarr-wireguard
-          - homelabarr-xteve
           # Rollarr last due to potential build issues
           - homelabarr-rollarr
     

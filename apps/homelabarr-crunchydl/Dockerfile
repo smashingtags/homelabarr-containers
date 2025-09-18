@@ -13,7 +13,7 @@ LABEL org.opencontainers.image.source="https://github.com/smashingtags/homelabar
 
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
-ARG VERSION=null
+ARG VERSION=v1.1.1
 
 RUN apk --quiet --no-cache --no-progress update && \
     apk --quiet --no-cache --no-progress upgrade && \
@@ -33,7 +33,7 @@ RUN apk --quiet --no-cache --no-progress update && \
 FROM debian:bullseye-slim
 
 RUN apt-get update -y && apt-get upgrade -y && \
-    apt-get install -y --no-install-recommends ffmpeg mkvtoolnix && \
+    apt-get install -y --no-install-recommends ffmpeg mkvtoolnix python3 && \
      apt-get autoremove -y && apt-get clean -y && \
      rm -rf /var/lib/apt/lists/*
 

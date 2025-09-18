@@ -1,9 +1,0 @@
-{
-   "appname": "homelabarr-hyperhdr",
-   "apppic": "./images/homelabarr-hyperhdr.png",
-   "appfolder": "./apps/homelabarr-hyperhdr",
-   "newversion": "latest",
-   "description": "Ambient lighting software for TVs and monitors",
-   "body": "Upgrading homelabarr-hyperhdr to latest",
-   "user": "github-actions[bot]"
-}
