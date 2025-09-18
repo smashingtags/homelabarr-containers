@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.1](https://github.com/smashingtags/homelabarr-containers/compare/v2.0.0...v2.0.1) (2025-09-18)
+
+
+### Bug Fixes
+
+* added more missed package.txt files ([2e62b3f](https://github.com/smashingtags/homelabarr-containers/commit/2e62b3f3332317d6e982c5aa9722c224f8781226))
+* Remove nightly builds and fix base container errors ([43649ab](https://github.com/smashingtags/homelabarr-containers/commit/43649ab4a3fa315754cce18336e68b022d827404))
+* Remove Whisparr containers and integrate upstream.sh ([779ac99](https://github.com/smashingtags/homelabarr-containers/commit/779ac9906428f73f1e7f134a289c959025749871))
+* removed additional whsparr nightly ([4c22b4d](https://github.com/smashingtags/homelabarr-containers/commit/4c22b4d33a84b3f74e27c20ecf3ea9223ab067f2))
+* rename all template scripts and update container references ([99f84a3](https://github.com/smashingtags/homelabarr-containers/commit/99f84a384be8c30765f07b7a76ea0c43a2a01dbe))
+* update template headers and branding references ([25e8431](https://github.com/smashingtags/homelabarr-containers/commit/25e84313c4aea4dc91ab1631ad5eb3510388bc60))
+
 ## [2.0.0](https://github.com/smashingtags/homelabarr-containers/compare/v1.1.0...v2.0.0) (2025-09-17)
 
 
