@@ -3,7 +3,7 @@
 ## Do not changes any lines here
 ##
 FROM ubuntu:latest
-LABEL org.opencontainers.image.source="https://github.com/dockserver/container"
+LABEL org.opencontainers.image.source="https://github.com/smashingtags/homelabarr-containers"
 
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM

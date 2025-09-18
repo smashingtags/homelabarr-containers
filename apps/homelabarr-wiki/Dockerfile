@@ -3,28 +3,20 @@
 ## Do not changes any lines here
 ##
 ####################################
-# All rights reserved.              #
-# started from Zero                 #
-# Docker owned dockserver           #
-# Docker Maintainer dockserver      #
-#####################################
-#####################################
-# THIS DOCKER IS UNDER LICENSE      #
-# NO CUSTOMIZING IS ALLOWED         #
-# NO REBRANDING IS ALLOWED          #
-# NO CODE MIRRORING IS ALLOWED      #
-#####################################
+# Docker owned by homelabarr       #
+# Docker Maintainer smashingtags   #
+####################################
 # shellcheck disable=SC2086
 # shellcheck disable=SC2046
 FROM alpine:3.22.1 as buildstage
-LABEL org.opencontainers.image.source="https://github.com/dockserver/container"
+LABEL org.opencontainers.image.source="https://github.com/smashingtags/homelabarr-containers"
 
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
 
 ARG BASEVERSION="3.22.1"
-ARG APPVERSION="1.4.72"
-ARG WIKIVERSION="9.6.16"
+ARG APPVERSION=""
+ARG WIKIVERSION="9.6.20"
 ARG BRANCH="master"
 
 ## BUILDSTAGE
@@ -36,14 +28,14 @@ RUN \
   echo "**** install build packages ****" && \
     apk add -U --update --no-cache bash git && \
   echo "**** install wiki ****" && \
-    mkdir -p /app && git clone --quiet https://github.com/dockserver/dockserver.git /app && \
+    mkdir -p /app && git clone --quiet https://github.com/smashingtags/homelabarr-cli.git /app && \
   echo "*** cleanup system ****" && \
     apk del --quiet --clean-protected --no-progress && \
     rm -f /var/cache/apk/*
 
 ## FINALSTAGE
 
-FROM ghcr.io/squidfunk/mkdocs-material:9.6.16
+FROM ghcr.io/squidfunk/mkdocs-material:9.6.20
 
 COPY --from=buildstage /app/wiki /docs
 

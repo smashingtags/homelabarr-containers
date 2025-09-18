@@ -2,8 +2,10 @@
    "appname": "homelabarr-plex",
    "apppic": "./images/homelabarr-plex.png",
    "appfolder": "./apps/homelabarr-plex",
-   "newversion": "1.40.4.8679-424562606-ls200",
-   "description": "Plex organizes video, music and photos from personal media libraries.",
-   "body": "Upgrading homelabarr-plex to 1.40.4.8679-424562606-ls200",
+   "newversion": "1.42.1.10060-4e8b05daf-ls279",
+   "appbranch": "master",
+   "baseimage": "",
+   "description": "Plex Media Server Docker repo, for all your PMS docker needs.",
+   "body": "Upgrading homelabarr-plex to 1.42.1.10060-4e8b05daf-ls279",
    "user": "github-actions[bot]"
 }

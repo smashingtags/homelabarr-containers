@@ -3,22 +3,14 @@
 ## Do not changes any lines here
 ##
 ####################################
-# All rights reserved.              #
-# started from Zero                 #
-# Docker owned dockserver           #
-# Docker Maintainer dockserver      #
-#####################################
-#####################################
-# THIS DOCKER IS UNDER LICENSE      #
-# NO CUSTOMIZING IS ALLOWED         #
-# NO REBRANDING IS ALLOWED          #
-# NO CODE MIRRORING IS ALLOWED      #
-#####################################
+# Docker owned by homelabarr       #
+# Docker Maintainer smashingtags   #
+####################################
 # shellcheck disable=SC2086
 # shellcheck disable=SC2046
-FROM python:3.10-slim
+FROM ubuntu:25.04
 
-LABEL org.opencontainers.image.source="https://github.com/dockserver/container"
+LABEL org.opencontainers.image.source="https://github.com/smashingtags/homelabarr-containers"
 
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
@@ -32,18 +24,9 @@ ENV LANG=C.UTF-8 \
 
 CMD [ "bash" ]
 COPY ./apps/homelabarr-rollarr/root/ /
-
-# Skip the massive install.sh since python:3.10-slim already has Python
-# Just install the required packages and pip dependencies
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-        git \
-        curl \
-        ca-certificates \
-        cron && \
-    rm -rf /var/lib/apt/lists/* && \
+RUN \
     chmod -R 755 /rollarr/* && \
-    pip install --no-cache-dir -r /rollarr/requirements.txt || true
+    bash /rollarr/install.sh
 
 RUN crontab /crontab
 

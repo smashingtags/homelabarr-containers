@@ -2,8 +2,10 @@
    "appname": "homelabarr-librespeed",
    "apppic": "./images/homelabarr-librespeed.png",
    "appfolder": "./apps/homelabarr-librespeed",
-   "newversion": "latest",
-   "description": "Self-hosted network speed test tool",
-   "body": "Upgrading homelabarr-librespeed to latest",
+   "newversion": "5.4.1",
+   "appbranch": "master",
+   "baseimage": "ghcr.io/linuxserver/baseimage-alpine-nginx:3.15",
+   "description": "Self-hosted Speed Test for HTML5 and more. Easy setup, examples, configurable, mobile friendly. Supports PHP, Node, Multiple servers, and more",
+   "body": "Upgrading homelabarr-librespeed to 5.4.1",
    "user": "github-actions[bot]"
 }

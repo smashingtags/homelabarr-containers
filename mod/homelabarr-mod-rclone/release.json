@@ -1,6 +1,6 @@
 {
-   "appname": "docker-mod-rclone",
-   "apppic": "./images/docker-mod-rclone.png",
-   "appfolder": "./mod/docker-mod-rclone",
+   "appname": "homelabarr-mod-rclone",
+   "apppic": "./images/homelabarr-mod-rclone.png",
+   "appfolder": "./mod/homelabarr-mod-rclone",
    "user": "github-actions[bot]"
 }

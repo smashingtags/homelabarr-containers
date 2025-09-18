@@ -2,9 +2,10 @@
    "appname": "homelabarr-jellyfin",
    "apppic": "./images/homelabarr-jellyfin.png",
    "appfolder": "./apps/homelabarr-jellyfin",
-   "newversion": "10.8.13-ls130",
+   "newversion": "10.10.7+ubu2004",
    "appbranch": "master",
-   "description": "The Free Software Media System.",
-   "body": "Upgrading homelabarr-jellyfin to 10.8.13-ls130",
+   "baseimage": "ghcr.io/linuxserver/baseimage-ubuntu:focal",
+   "description": "The Free Software Media System - Server Backend & API",
+   "body": "Upgrading homelabarr-jellyfin to 10.10.7+ubu2004",
    "user": "github-actions[bot]"
 }

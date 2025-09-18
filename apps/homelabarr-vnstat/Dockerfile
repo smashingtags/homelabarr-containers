@@ -3,30 +3,29 @@
 ## Do not changes any lines here
 ##
 ####################################
-# All rights reserved.              #
-# started from Zero                 #
-# Docker owned dockserver           #
-# Docker Maintainer dockserver      #
-#####################################
-#####################################
-# THIS DOCKER IS UNDER LICENSE      #
-# NO CUSTOMIZING IS ALLOWED         #
-# NO REBRANDING IS ALLOWED          #
-# NO CODE MIRRORING IS ALLOWED      #
-#####################################
+# Docker owned by homelabarr       #
+# Docker Maintainer smashingtags   #
+####################################
 # shellcheck disable=SC2086
 # shellcheck disable=SC2046
 FROM php:8-apache
 
-LABEL org.opencontainers.image.source="https://github.com/dockserver/container"
+LABEL org.opencontainers.image.source="https://github.com/smashingtags/homelabarr-containers"
 
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
 
 RUN \
   echo "**** install build packages ****" && \
+  rm -rf /etc/apt/sources.list && \
+  echo "deb http://ftp.debian.org/debian experimental main" >>/etc/apt/sources.list && \
+  echo "deb http://ftp.debian.org/debian sid main" >>/etc/apt/sources.list && \
   apt-get update -yqq && \
   apt-get install -yqq git unzip apt-utils && \
+  apt-get purge libgcc-8-dev -yqq && \
+  apt-get autoremove -yqq && \
+  apt-get autoclean -yqq && \
+  apt-get -t experimental install libc6-dev -yqq && \
   apt-get autoremove -yqq && \
   apt-get autoclean -yqq
 
