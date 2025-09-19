@@ -1,15 +1,7 @@
-#####################################
-# All rights reserved.              #
-# started from Zero                 #
-# Docker owned dockserver           #
-# Docker Maintainer dockserver      #
-#####################################
-#####################################
-# THIS DOCKER IS UNDER LICENSE      #
-# NO CUSTOMIZING IS ALLOWED         #
-# NO REBRANDING IS ALLOWED          #
-# NO CODE MIRRORING IS ALLOWED      #
-#####################################
+####################################
+# Docker owned by homelabarr       #
+# Docker Maintainer smashingtags   #
+####################################
 FROM alpine:3.17
 
 ARG TARGETPLATFORM

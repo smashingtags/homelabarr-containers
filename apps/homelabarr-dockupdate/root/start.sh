@@ -1,20 +1,9 @@
 #!/usr/bin/with-contenv bash
 # shellcheck shell=bash
-#####################################
-# All rights reserved.              #
-# started from Zero                 #
-# Docker owned homelabarr           #
-# Docker Maintainer homelabarr      #
-#####################################
-# CODE OWNER
-# USER : methatronc
-# LINK : https://github.com/methatronc/checker
-#####################################
-# THIS DOCKER IS UNDER LICENSE      #
-# NO CUSTOMIZING IS ALLOWED         #
-# NO REBRANDING IS ALLOWED          #
-# NO CODE MIRRORING IS ALLOWED      #
-#####################################
+####################################
+# Docker owned by homelabarr       #
+# Docker Maintainer smashingtags   #
+####################################
 # shellcheck disable=SC2003
 # shellcheck disable=SC2006
 # shellcheck disable=SC2207

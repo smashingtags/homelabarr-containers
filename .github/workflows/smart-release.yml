@@ -106,7 +106,10 @@ jobs:
             echo "has_changes=false" >> $GITHUB_OUTPUT
           else
             echo "Changed containers: ${changed_containers[@]}"
-            matrix_json=$(printf '%s\n' "${changed_containers[@]}" | jq -s '{"include": .}')
+            # Create proper JSON array from the changed_containers
+            matrix_json=$(printf '%s,' "${changed_containers[@]}" | sed 's/,$//')
+            matrix_json="{\"include\":[$matrix_json]}"
+            echo "Matrix JSON: $matrix_json"
             echo "matrix=$matrix_json" >> $GITHUB_OUTPUT
             echo "has_changes=true" >> $GITHUB_OUTPUT
           fi

@@ -1,10 +1,8 @@
 #!/bin/bash
 ####################################
-# All rights reserved.              #
-# started from Zero                 #
-# Docker owned dockserver           #
-# Docker Maintainer dockserver      #
-#####################################
+# Docker owned by homelabarr       #
+# Docker Maintainer smashingtags   #
+####################################
 #####################################
 # THE DOCKER ARE UNDER LICENSE      #
 # NO CUSTOMIZING IS ALLOWED         #

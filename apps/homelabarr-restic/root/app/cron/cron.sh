@@ -1,11 +1,9 @@
 #!/command/with-contenv bash
 # shellcheck shell=bash
-#####################################
-# All rights reserved.              #
-# started from Zero                 #
-# Docker owned dockserver           #
-# Docker Maintainer dockserver      #
-#####################################
+####################################
+# Docker owned by homelabarr       #
+# Docker Maintainer smashingtags   #
+####################################
 # THIS DOCKER IS UNDER LICENSE      #
 # NO CUSTOMIZING IS ALLOWED         #
 # NO REBRANDING IS ALLOWED          #

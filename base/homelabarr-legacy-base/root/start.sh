@@ -1,11 +1,9 @@
 #!/usr/bin/bash
 # shellcheck shell=bash
-#####################################
-# All rights reserved.              #
-# started from Zero                 #
-# Docker owned dockserver           #
-# Docker Maintainer dockserver      #
-#####################################
+####################################
+# Docker owned by homelabarr       #
+# Docker Maintainer smashingtags   #
+####################################
 # shellcheck disable=SC2003
 # shellcheck disable=SC2006
 # shellcheck disable=SC2207
