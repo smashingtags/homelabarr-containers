@@ -27,16 +27,13 @@ RUN \
     apk --quiet --no-cache --no-progress update && \
     apk --quiet --no-cache --no-progress upgrade && \
   echo "**** install packages ****" && \
-    apk add -U --update --no-cache bash jq tar curl icu-libs libstdc++ openssl p7zip python3 make g++ gcc qbittorrent-nox && \
+    apk add -U --update --no-cache bash jq tar curl icu-libs libstdc++ openssl p7zip python3 make g++ gcc qbittorrent-nox==5.1.2-r2 && \
   echo "**** symlink python3 for compatibility ****" && \
-    ln -sf /usr/bin/python3 /usr/bin/python && \
-  echo "**** install 'homelabarr-qbittorrent' vuetorrent ****" && \
-    mkdir -p /qbt && \
-    curl -o /tmp/qbt.tar.gz -L "https://github.com/linuxserver/docker-qbittorrent/releases/download/qbt-${QBT_VERSION}/qbt.tar.gz" && \
-    tar xzf /tmp/qbt.tar.gz -C /qbt && \
-    rm /tmp/qbt.tar.gz && \
+    ln -s /usr/bin/python3 /usr/bin/python && \
+  echo "**** install 'homelabarr-qbittorrent' ****" && \
+    mkdir /qbt && \
+    curl -fsSL "https://github.com/linuxserver/docker-qbittorrent/releases/download/qbt-${QBT_VERSION}/qbt.tar.gz" | tar xzf - -C /qbt && \
   echo "**** cleanup ****" && \
-    apk del --purge make g++ gcc && \
     rm -rf /tmp/* /var/cache/apk/*
 
 COPY --chown=abc ./apps/homelabarr-qbittorrent/root/ /

@@ -41,10 +41,10 @@
    "appname": "homelabarr-cloudflared",
    "apppic": "./images/homelabarr-cloudflared.png",
    "appfolder": "./apps/homelabarr-cloudflared",
-   "newversion": "2025.8.1",
+   "newversion": "2025.9.0",
    "baseimage": "alpine",
    "description": "Cloudflare Tunnel client (formerly Argo Tunnel)",
-   "body": "Upgrading homelabarr-cloudflared to 2025.8.1",
+   "body": "Upgrading homelabarr-cloudflared to 2025.9.0",
    "user": "github-actions[bot]"
 }
 {
@@ -143,48 +143,14 @@
    "user": "github-actions[bot]"
 }
 {
-   "appname": "homelabarr-gdsa",
-   "apppic": "./images/homelabarr-gdsa.png",
-   "appfolder": "./apps/homelabarr-gdsa",
-   "newversion": "539.0.0-alpine",
-   "baseimage": "gcr.io/google.com/cloudsdktool/cloud-sdk",
-   "description": "Docker for Creating GDSA keys",
-   "body": "Upgrading homelabarr-gdsa to 539.0.0-alpine",
-   "user": "homelabarr-actions[bot]"
-}
-{
-  "appname": "homelabarr-gui",
-  "apppic": "./images/homelabarr-gui.png",
-  "appfolder": "./apps/homelabarr-gui",
-  "newversion": "latest",
-  "description": "HomelabARR web interface",
-  "body": "Upgrading homelabarr-gui to latest",
-  "user": "github-actions[bot]"
-}{
-   "appname": "homelabarr-haproxy",
-   "apppic": "./images/homelabarr-haproxy.png",
-   "appfolder": "./apps/homelabarr-haproxy",
-   "newversion": "latest",
-   "description": "High availability load balancer and proxy server",
-   "body": "Upgrading homelabarr-haproxy to latest",
-   "user": "github-actions[bot]"
-}{
-   "appname": "homelabarr-hyperhdr",
-   "apppic": "./images/homelabarr-hyperhdr.png",
-   "appfolder": "./apps/homelabarr-hyperhdr",
-   "newversion": "latest",
-   "description": "Ambient lighting software for TVs and monitors",
-   "body": "Upgrading homelabarr-hyperhdr to latest",
-   "user": "github-actions[bot]"
-}{
    "appname": "homelabarr-jackett",
    "apppic": "./images/homelabarr-jackett.png",
    "appfolder": "./apps/homelabarr-jackett",
-   "newversion": "0.23.32",
+   "newversion": "0.23.38",
    "appbranch": "master",
    "baseimage": "ghcr.io/linuxserver/baseimage-ubuntu:bionic",
    "description": "API Support for your favorite torrent trackers",
-   "body": "Upgrading homelabarr-jackett to 0.23.32",
+   "body": "Upgrading homelabarr-jackett to 0.23.38",
    "user": "github-actions[bot]"
 }
 {
@@ -360,31 +326,6 @@
    "user": "github-actions[bot]"
 }
 {
-   "appname": "homelabarr-rclone",
-   "apppic": "./images/homelabarr-rclone.png",
-   "appfolder": "./apps/homelabarr-rclone",
-   "newversion": "latest",
-   "description": "Cloud storage sync and mount utility",
-   "body": "Upgrading homelabarr-rclone to latest",
-   "user": "github-actions[bot]"
-}{
-   "appname": "homelabarr-readarr",
-   "apppic": "./images/homelabarr-readarr.png",
-   "appfolder": "./apps/homelabarr-readarr",
-   "newversion": "0.3.32.2587-ls137",
-   "appbranch": "master",
-   "description": "Book Manager and Automation (Sonarr for Ebooks).",
-   "body": "Upgrading homelabarr-readarr to 0.3.32.2587-ls137",
-   "user": "github-actions[bot]"
-}{
-  "appname": "homelabarr-requestrr",
-  "apppic": "./images/homelabarr-requestrr.png",
-  "appfolder": "./apps/homelabarr-requestrr",
-  "newversion": "latest",
-  "description": "Discord bot for handling media requests",
-  "body": "Upgrading homelabarr-requestrr to latest",
-  "user": "github-actions[bot]"
-}{
    "appname": "homelabarr-restic",
    "apppic": "./images/homelabarr-restic.png",
    "appfolder": "./apps/homelabarr-restic",
@@ -468,14 +409,6 @@
    "user": "homelabarr image update[bot]"
 }
 {
-   "appname": "homelabarr-transmission",
-   "apppic": "./images/homelabarr-transmission.png",
-   "appfolder": "./apps/homelabarr-transmission",
-   "newversion": "4.0.6-r1-ls166",
-   "description": "Transmission is a BitTorrent client which features a variety of user interfaces.",
-   "body": "Upgrading homelabarr-transmission to 4.0.6-r1-ls166",
-   "user": "github-actions[bot]"
-}{
    "appname": "homelabarr-uploader",
    "apppic": "./images/homelabarr-uploader.png",
    "appfolder": "./apps/homelabarr-uploader",
@@ -496,33 +429,12 @@
    "user": "homelabarr image update[bot]"
 }
 {
-   "appname": "homelabarr-wiki",
-   "apppic": "./images/homelabarr-wiki.png",
-   "appfolder": "./apps/homelabarr-wiki",
-   "appbranch": "master",
-   "newversion": "3.22.1",
-   "appversion": "",
-   "wikiversion": "9.6.20",
-   "baseimage": "alpine",
-   "description": "null",
-   "body": "Upgrading homelabarr-wiki to 3.22.1",
-   "user": "github-actions[bot]"
-}
-{
    "appname": "homelabarr-wireguard",
    "apppic": "./images/homelabarr-wireguard.png",
    "appfolder": "./apps/homelabarr-wireguard",
    "newversion": "latest",
    "description": "Fast and secure VPN tunnel using WireGuard protocol",
    "body": "Upgrading homelabarr-wireguard to latest",
-   "user": "github-actions[bot]"
-}{
-   "appname": "homelabarr-xteve",
-   "apppic": "./images/homelabarr-xteve.png",
-   "appfolder": "./apps/homelabarr-xteve",
-   "newversion": "latest",
-   "description": "M3U proxy server for Plex DVR and Emby Live TV",
-   "body": "Upgrading homelabarr-xteve to latest",
    "user": "github-actions[bot]"
 }{
    "appname": "alpine",
@@ -671,15 +583,4 @@
    "apppic": "./images/homelabarr-mod-tautulli.png",
    "appfolder": "./mod/homelabarr-mod-tautulli",
    "user": "github-actions[bot]"
-}
-{
-   "appname": "homelabarr-overseerr-nightly",
-   "apppic": "./images/homelabarr-overseerr-nightly.png",
-   "appfolder": "./nightly/homelabarr-overseerr-nightly",
-   "newversion": "e051b1dfea9c9320cc9dd420c475ae74cff0d901",
-   "appbranch": "develop",
-   "baseimage": "ghcr.io/homelabarr/docker-alpine-v3:latest",
-   "description": "Request management and media discovery tool for the Plex ecosystem",
-   "body": "Upgrading docker-overseerr-nightly to e051b1dfea9c9320cc9dd420c475ae74cff0d901",
-   "user": "dockserver image update[bot]"
 }
