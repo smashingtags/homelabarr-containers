@@ -22,7 +22,7 @@ RUN apk --quiet --no-cache --no-progress update && \
     apk add -U --update --no-cache --no-progress \
       p7zip bash ca-certificates shadow musl \
       findutils linux-headers coreutils apk-tools busybox && \
-    wget https://github.com/anidl/multi-downloader-nx/releases/download/$VERSION/multi-downloader-nx-ubuntu-cli.7z -O /app/crunchy.7z && \
+    wget https://github.com/anidl/multi-downloader-nx/releases/download/${VERSION}/multi-downloader-nx-ubuntu-cli.7z -O /app/crunchy.7z && \
     cd /app && \
     7z e crunchy.7z && \
     rm -rf \

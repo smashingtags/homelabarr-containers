@@ -6,11 +6,13 @@ ENV NNUSER="svnplus" \
     NNPASS="svnplu5"
     
 # Install required packages
-RUN apt update -yqq && apt upgrade -yqq && \
+RUN apt-get update -yqq && apt-get upgrade -yqq && \
     apt-get install -yq \
-       ssh screen tmux apache2 php php-fpm php-dev \
-       php-pear php-gd php-mysql php-memcache php-curl php-json php-mbstring \
-       unrar lame mediainfo subversion ffmpeg memcached nano
+       openssh-client screen tmux apache2 php php-fpm php-dev \
+       php-pear php-gd php-mysql php-memcached php-curl php-json php-mbstring \
+       unrar lame mediainfo subversion ffmpeg memcached nano && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
     
 # Creating Newznab Folders from SVN
 RUN mkdir /var/www/newznab/ \

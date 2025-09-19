@@ -56,7 +56,6 @@ jobs:
           - homelabarr-prowlarr
           - homelabarr-qbittorrent
           - homelabarr-radarr
-          - homelabarr-readarr
           - homelabarr-restic
           - homelabarr-rutorrent
           - homelabarr-sabnzbd

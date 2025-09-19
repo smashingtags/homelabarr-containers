@@ -15,8 +15,16 @@ RUN \
     apk add -U --update --no-cache jq curl openssl tar sqlite-libs libintl icu-libs && \
   echo "**** install 'homelabarr-prowlarr' ****" && \
     mkdir -p /app/prowlarr/bin && \
-    curl -fsSL "https://prowlarr.servarr.com/v1/update/${BRANCH}/updatefile?version=${VERSION}&os=linuxmusl&runtime=netcore&arch=x64" | tar xzf - -C /app/prowlarr/bin --strip-components=1 && \
-  echo -e "UpdateMethod=docker\nBranch=${BRANCH}\nPackageVersion=${VERSION}\nPackageAuthor=[homelabarr.io](https://homelabarr.io)" > /app/prowlarr/package_info && \
+    if [ "$TARGETPLATFORM" = "linux/arm64" ]; then \
+      ARCH="arm64"; \
+    else \
+      ARCH="x64"; \
+    fi && \
+    echo "Downloading Prowlarr ${VERSION} for ${ARCH}" && \
+    curl -o /tmp/prowlarr.tar.gz -L "https://prowlarr.servarr.com/v1/update/${BRANCH}/updatefile?version=${VERSION}&os=linuxmusl&runtime=netcore&arch=${ARCH}" && \
+    tar xzf /tmp/prowlarr.tar.gz -C /app/prowlarr/bin --strip-components=1 && \
+    rm /tmp/prowlarr.tar.gz && \
+  printf "UpdateMethod=docker\nBranch=${BRANCH}\nPackageVersion=${VERSION}\nPackageAuthor=[homelabarr.io](https://homelabarr.io)" > /app/prowlarr/package_info && \
   echo "**** cleanup ****" && \
     rm -rf /app/prowlarr/bin/prowlarr.Update
 

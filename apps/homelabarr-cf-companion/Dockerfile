@@ -1,5 +1,5 @@
 ## HomelabARR - CF-Companion Container
 ## Maintainer: smashingtags
-FROM lscr.io/linuxserver/cf-companion:latest
+FROM tiredofit/traefik-cloudflare-companion:latest
 COPY --chown=abc ./apps/homelabarr-cf-companion/root/ /
 ##EOF

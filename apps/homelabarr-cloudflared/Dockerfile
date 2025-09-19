@@ -8,7 +8,7 @@
 ####################################
 # shellcheck disable=SC2086
 # shellcheck disable=SC2046
-FROM alpine: as stage
+FROM alpine:latest AS stage
 
 LABEL org.opencontainers.image.source="https://github.com/smashingtags/homelabarr-containers"
 
@@ -28,7 +28,7 @@ ARG VERSION
 
 ## BUILDER STAGE
 
-FROM golang:1.17.2 as builder
+FROM golang:1.17.2 AS builder
 ENV GO111MODULE=on \
     CGO_ENABLED=0 \
     TARGET_GOOS="$TARGET_GOOS" \
@@ -45,6 +45,6 @@ COPY --from=stage /tmp/cloudflared /go/src/github.com/cloudflare/cloudflared/
 COPY --from=builder --chown=nonroot /go/src/github.com/cloudflare/cloudflared/cloudflared /usr/local/bin/
 
 USER nonroot
-ENTRYPOINT ["/cloudflared"/, "/--no-autoupdate"/]
-CMD ["/version"]
+ENTRYPOINT ["cloudflared", "--no-autoupdate"]
+CMD ["version"]
 ##EOF

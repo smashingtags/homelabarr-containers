@@ -17,16 +17,11 @@ ARG BUILDPLATFORM
 
 RUN \
   echo "**** install build packages ****" && \
-  echo "deb http://ftp.debian.org/debian experimental main" >>/etc/apt/sources.list && \
-  echo "deb http://ftp.debian.org/debian sid main" >>/etc/apt/sources.list && \
   apt-get update -yqq && \
-  apt-get install -yqq git unzip apt-utils && \
-  apt-get purge libgcc-8-dev -yqq && \
+  apt-get install -yqq git unzip apt-utils vnstat && \
   apt-get autoremove -yqq && \
   apt-get autoclean -yqq && \
-  apt-get -t experimental install libc6-dev -yqq && \
-  apt-get autoremove -yqq && \
-  apt-get autoclean -yqq
+  rm -rf /var/lib/apt/lists/*
 
 RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
 
