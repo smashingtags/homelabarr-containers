@@ -2,6 +2,6 @@
 ##
 ## Do not changes any lines here
 ##
-FROM lscr.io/linuxserver/sonarr:4.0.15.2941-ls291
+FROM lscr.io/linuxserver/sonarr:4.0.15.2941-ls292
 COPY --chown=abc ./apps/homelabarr-sonarr/root/ /
 ##EOF
