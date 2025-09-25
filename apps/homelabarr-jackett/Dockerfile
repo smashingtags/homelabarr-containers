@@ -13,7 +13,7 @@ LABEL org.opencontainers.image.source="https://github.com/smashingtags/homelabar
 
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
-ARG VERSION="0.23.56"
+ARG VERSION="0.23.59"
 ARG BRANCH="master"
 
 ARG DEBIAN_FRONTEND="noninteractive"
@@ -30,7 +30,7 @@ RUN \
      curl -fsSL "https://github.com/Jackett/Jackett/releases/download/v${VERSION}/Jackett.Binaries.LinuxAMDx64.tar.gz" | tar xzf - -C /app/Jackett --strip-components=1 && \
    echo "**** fix for host id mapping error ****" && \
      chown -R root:root /app/Jackett && \
-   echo "v0.23.56" > /etc/docker-image && \
+   echo "v0.23.59" > /etc/docker-image && \
    echo "**** cleanup ****" && \
      apt-get remove -yqq software-properties-common gpg-agent && \
      apt-get autoremove -yqq && apt-get clean -yqq && \

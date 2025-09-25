@@ -175,11 +175,11 @@ apps homelabarr-jackett
    "appname": "homelabarr-jackett",
    "apppic": "./images/homelabarr-jackett.png",
    "appfolder": "./apps/homelabarr-jackett",
-   "newversion": "0.23.56",
+   "newversion": "0.23.59",
    "appbranch": "master",
    "baseimage": "ghcr.io/linuxserver/baseimage-ubuntu:bionic",
    "description": "API Support for your favorite torrent trackers",
-   "body": "Upgrading homelabarr-jackett to 0.23.56",
+   "body": "Upgrading homelabarr-jackett to 0.23.59",
    "user": "github-actions[bot]"
 }
 
@@ -263,14 +263,14 @@ apps homelabarr-mount
    "appfolder": "./apps/homelabarr-mount",
    "newversion": "3.22.1",
    "mergerfs": "2.40.2",
-   "rclone": "v1.71.0",
+   "rclone": "v1.71.1",
    "baseimage": "alpine",
    "buildimage": "alpine",
    "finalimage": "ghcr.io/linuxserver/baseimage-alpine",
-   "baseversion": "3.22-25712cc1-ls9",
+   "baseversion": "3.22-02acf855-ls10",
    "s6stage": "v3.2.1.0",
-   "description": "Docker homelabarr-mount with mergerfs version 2.40.2 and rclone version v1.71.0 include s6-overlay: v3.2.1.0",
-   "body": "Upgrading homelabarr-mount to baseimage: alpine:3.22-25712cc1-ls9 with mergerfs: 2.40.2 and rclone: v1.71.0 include s6-overlay: v3.2.1.0",
+   "description": "Docker homelabarr-mount with mergerfs version 2.40.2 and rclone version v1.71.1 include s6-overlay: v3.2.1.0",
+   "body": "Upgrading homelabarr-mount to baseimage: alpine:3.22-02acf855-ls10 with mergerfs: 2.40.2 and rclone: v1.71.1 include s6-overlay: v3.2.1.0",
    "user": "homelabarr image update[bot]"
 }
 
@@ -395,14 +395,14 @@ apps homelabarr-restic
    "apppic": "./images/homelabarr-restic.png",
    "appfolder": "./apps/homelabarr-restic",
    "newversion": "3.22.1",
-   "rclone": "v1.71.0",
+   "rclone": "v1.71.1",
    "baseimage": "alpine",
    "buildimage": "alpine",
    "finalimage": "ghcr.io/linuxserver/baseimage-alpine",
-   "baseversion": "3.22-25712cc1-ls9",
+   "baseversion": "3.22-02acf855-ls10",
    "s6stage": "v3.2.1.0",
-   "description": "Docker homelabarr-restic with rclone version v1.71.0 include s6-overlay: v3.2.1.0",
-   "body": "Upgrading homelabarr-restic to baseimage: alpine:3.22-25712cc1-ls9 with rclone: v1.71.0 include s6-overlay: v3.2.1.0",
+   "description": "Docker homelabarr-restic with rclone version v1.71.1 include s6-overlay: v3.2.1.0",
+   "body": "Upgrading homelabarr-restic to baseimage: alpine:3.22-02acf855-ls10 with rclone: v1.71.1 include s6-overlay: v3.2.1.0",
    "user": "homelabarr image update[bot]"
 }
 
@@ -483,7 +483,7 @@ apps homelabarr-traktarr
    "appfolder": "./apps/homelabarr-traktarr",
    "newversion": "3.22.1",
    "baseimage": "ghcr.io/linuxserver/baseimage-alpine",
-   "baseversion": "3.22-25712cc1-ls9",
+   "baseversion": "3.22-02acf855-ls10",
    "body": "Upgrading homelabarr-traktarr to ",
    "user": "homelabarr image update[bot]"
 }
@@ -495,7 +495,7 @@ apps homelabarr-uploader
    "appfolder": "./apps/homelabarr-uploader",
    "newversion": "3.22.1",
    "baseimage": "ghcr.io/linuxserver/baseimage-alpine",
-   "baseversion": "3.22-25712cc1-ls9",
+   "baseversion": "3.22-02acf855-ls10",
    "body": "Upgrading homelabarr-uploader to ",
    "user": "homelabarr image update[bot]"
 }
