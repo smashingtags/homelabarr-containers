@@ -135,11 +135,11 @@ apps homelabarr-emby
    "appname": "homelabarr-emby",
    "apppic": "./images/homelabarr-emby.png",
    "appfolder": "./apps/homelabarr-emby",
-   "newversion": "4.8.11.0",
+   "newversion": "4.9.1.80",
    "appbranch": "master",
    "baseimage": "",
    "description": "Docker Container for Emby Server",
-   "body": "Upgrading homelabarr-emby to 4.8.11.0",
+   "body": "Upgrading homelabarr-emby to 4.9.1.80",
    "user": "github-actions[bot]"
 }
 
@@ -175,11 +175,11 @@ apps homelabarr-jackett
    "appname": "homelabarr-jackett",
    "apppic": "./images/homelabarr-jackett.png",
    "appfolder": "./apps/homelabarr-jackett",
-   "newversion": "0.23.87",
+   "newversion": "0.24.7",
    "appbranch": "master",
    "baseimage": "ghcr.io/linuxserver/baseimage-ubuntu:bionic",
    "description": "API Support for your favorite torrent trackers",
-   "body": "Upgrading homelabarr-jackett to 0.23.87",
+   "body": "Upgrading homelabarr-jackett to 0.24.7",
    "user": "github-actions[bot]"
 }
 

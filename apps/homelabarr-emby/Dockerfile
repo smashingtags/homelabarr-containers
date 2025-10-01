@@ -13,7 +13,7 @@ LABEL org.opencontainers.image.source="https://github.com/smashingtags/homelabar
 
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
-ARG VERSION="4.8.11.0"
+ARG VERSION="4.9.1.80"
 ARG BRANCH="master"
 
 ENV DEBIAN_FRONTEND="noninteractive"
