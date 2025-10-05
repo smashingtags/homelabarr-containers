@@ -87,11 +87,11 @@ apps homelabarr-dash
    "appname": "homelabarr-dash",
    "apppic": "",
    "appfolder": "./apps/homelabarr-dash",
-   "newversion": "6.2.0",
+   "newversion": "null",
    "baseimage": "alpine",
    "baseversion": "3.22.1",
    "description": "A simple, modern server dashboard, primarily used by smaller private servers",
-   "body": "Upgrading homelabarr-dash to 6.2.0",
+   "body": "Upgrading homelabarr-dash to null",
    "user": "homelabarr-image[bot]"
 }
 
@@ -164,9 +164,9 @@ apps homelabarr-fenrus
    "newversion": "3.22.1",
    "appbranch": "master",
    "baseimage": "alpine",
-   "appversion": "4a346afd0e5c1b189d26c02a10cb983ae4f48acb",
+   "appversion": "",
    "description": "A personal home page for quick access to all your personal apps/sites.",
-   "body": "Upgrading homelabarr-fenrus to 4a346afd0e5c1b189d26c02a10cb983ae4f48acb",
+   "body": "Upgrading homelabarr-fenrus to ",
    "user": "github-actions[bot]"
 }
 
@@ -175,11 +175,11 @@ apps homelabarr-jackett
    "appname": "homelabarr-jackett",
    "apppic": "./images/homelabarr-jackett.png",
    "appfolder": "./apps/homelabarr-jackett",
-   "newversion": "0.24.31",
+   "newversion": "0.24.37",
    "appbranch": "master",
    "baseimage": "ghcr.io/linuxserver/baseimage-ubuntu:bionic",
    "description": "API Support for your favorite torrent trackers",
-   "body": "Upgrading homelabarr-jackett to 0.24.31",
+   "body": "Upgrading homelabarr-jackett to 0.24.37",
    "user": "github-actions[bot]"
 }
 
@@ -267,10 +267,10 @@ apps homelabarr-mount
    "baseimage": "alpine",
    "buildimage": "alpine",
    "finalimage": "ghcr.io/linuxserver/baseimage-alpine",
-   "baseversion": "3.22-a0dc0735-ls11",
+   "baseversion": "3.22-0e27f78e-ls12",
    "s6stage": "v3.2.1.0",
    "description": "Docker homelabarr-mount with mergerfs version 2.40.2 and rclone version v1.71.1 include s6-overlay: v3.2.1.0",
-   "body": "Upgrading homelabarr-mount to baseimage: alpine:3.22-a0dc0735-ls11 with mergerfs: 2.40.2 and rclone: v1.71.1 include s6-overlay: v3.2.1.0",
+   "body": "Upgrading homelabarr-mount to baseimage: alpine:3.22-0e27f78e-ls12 with mergerfs: 2.40.2 and rclone: v1.71.1 include s6-overlay: v3.2.1.0",
    "user": "homelabarr image update[bot]"
 }
 
@@ -399,10 +399,10 @@ apps homelabarr-restic
    "baseimage": "alpine",
    "buildimage": "alpine",
    "finalimage": "ghcr.io/linuxserver/baseimage-alpine",
-   "baseversion": "3.22-a0dc0735-ls11",
+   "baseversion": "3.22-0e27f78e-ls12",
    "s6stage": "v3.2.1.0",
    "description": "Docker homelabarr-restic with rclone version v1.71.1 include s6-overlay: v3.2.1.0",
-   "body": "Upgrading homelabarr-restic to baseimage: alpine:3.22-a0dc0735-ls11 with rclone: v1.71.1 include s6-overlay: v3.2.1.0",
+   "body": "Upgrading homelabarr-restic to baseimage: alpine:3.22-0e27f78e-ls12 with rclone: v1.71.1 include s6-overlay: v3.2.1.0",
    "user": "homelabarr image update[bot]"
 }
 
@@ -423,10 +423,10 @@ apps homelabarr-rutorrent
    "appname": "homelabarr-rutorrent",
    "apppic": "",
    "appfolder": "./apps/homelabarr-rutorrent",
-   "newversion": "5.2.10",
+   "newversion": "null",
    "baseimage": "alpine",
    "description": "Yet another web front-end for rTorrent",
-   "body": "Upgrading homelabarr-rutorrent to 5.2.10",
+   "body": "Upgrading homelabarr-rutorrent to null",
    "user": "homelabarr[bot]"
 }
 
@@ -483,7 +483,7 @@ apps homelabarr-traktarr
    "appfolder": "./apps/homelabarr-traktarr",
    "newversion": "3.22.1",
    "baseimage": "ghcr.io/linuxserver/baseimage-alpine",
-   "baseversion": "3.22-a0dc0735-ls11",
+   "baseversion": "3.22-0e27f78e-ls12",
    "body": "Upgrading homelabarr-traktarr to ",
    "user": "homelabarr image update[bot]"
 }
@@ -495,7 +495,7 @@ apps homelabarr-uploader
    "appfolder": "./apps/homelabarr-uploader",
    "newversion": "3.22.1",
    "baseimage": "ghcr.io/linuxserver/baseimage-alpine",
-   "baseversion": "3.22-a0dc0735-ls11",
+   "baseversion": "3.22-0e27f78e-ls12",
    "body": "Upgrading homelabarr-uploader to ",
    "user": "homelabarr image update[bot]"
 }
