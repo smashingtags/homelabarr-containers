@@ -72,11 +72,11 @@
    "appname": "homelabarr-dash",
    "apppic": "",
    "appfolder": "./apps/homelabarr-dash",
-   "newversion": "null",
+   "newversion": "6.2.0",
    "baseimage": "alpine",
    "baseversion": "3.22.1",
    "description": "A simple, modern server dashboard, primarily used by smaller private servers",
-   "body": "Upgrading homelabarr-dash to null",
+   "body": "Upgrading homelabarr-dash to 6.2.0",
    "user": "homelabarr-image[bot]"
 }
 {
@@ -137,20 +137,20 @@
    "newversion": "3.22.1",
    "appbranch": "master",
    "baseimage": "alpine",
-   "appversion": "",
+   "appversion": "4a346afd0e5c1b189d26c02a10cb983ae4f48acb",
    "description": "A personal home page for quick access to all your personal apps/sites.",
-   "body": "Upgrading homelabarr-fenrus to ",
+   "body": "Upgrading homelabarr-fenrus to 4a346afd0e5c1b189d26c02a10cb983ae4f48acb",
    "user": "github-actions[bot]"
 }
 {
    "appname": "homelabarr-jackett",
    "apppic": "./images/homelabarr-jackett.png",
    "appfolder": "./apps/homelabarr-jackett",
-   "newversion": "0.24.37",
+   "newversion": "0.24.72",
    "appbranch": "master",
    "baseimage": "ghcr.io/linuxserver/baseimage-ubuntu:bionic",
    "description": "API Support for your favorite torrent trackers",
-   "body": "Upgrading homelabarr-jackett to 0.24.37",
+   "body": "Upgrading homelabarr-jackett to 0.24.72",
    "user": "github-actions[bot]"
 }
 {
@@ -306,23 +306,23 @@
    "appname": "homelabarr-qbittorrent",
    "apppic": "./images/homelabarr-qbittorrent.png",
    "appfolder": "./apps/homelabarr-qbittorrent",
-   "newversion": "5.1.2-r2",
+   "newversion": "5.1.2-r3",
    "appversion": "1.7",
    "appbranch": "master",
    "baseimage": "ghcr.io/linuxserver/baseimage-alpine:edge",
    "description": "Cli to manage qBittorrent",
-   "body": "Upgrading homelabarr-qbittorrent to 5.1.2-r2 with 1.7",
+   "body": "Upgrading homelabarr-qbittorrent to 5.1.2-r3 with 1.7",
    "user": "github-actions[bot]"
 }
 {
    "appname": "homelabarr-radarr",
    "apppic": "./images/homelabarr-radarr.png",
    "appfolder": "./apps/homelabarr-radarr",
-   "newversion": "5.27.5.10198-ls283",
+   "newversion": "5.27.5.10198-ls284",
    "appbranch": "master",
    "baseimage": "",
    "description": "Movie organizer/manager for usenet and torrent users.",
-   "body": "Upgrading homelabarr-radarr to 5.27.5.10198-ls283",
+   "body": "Upgrading homelabarr-radarr to 5.27.5.10198-ls284",
    "user": "github-actions[bot]"
 }
 {
@@ -354,10 +354,10 @@
    "appname": "homelabarr-rutorrent",
    "apppic": "",
    "appfolder": "./apps/homelabarr-rutorrent",
-   "newversion": "null",
+   "newversion": "5.2.10",
    "baseimage": "alpine",
    "description": "Yet another web front-end for rTorrent",
-   "body": "Upgrading homelabarr-rutorrent to null",
+   "body": "Upgrading homelabarr-rutorrent to 5.2.10",
    "user": "homelabarr[bot]"
 }
 {
