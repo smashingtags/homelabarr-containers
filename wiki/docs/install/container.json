@@ -146,11 +146,11 @@
    "appname": "homelabarr-jackett",
    "apppic": "./images/homelabarr-jackett.png",
    "appfolder": "./apps/homelabarr-jackett",
-   "newversion": "0.24.72",
+   "newversion": "0.24.82",
    "appbranch": "master",
    "baseimage": "ghcr.io/linuxserver/baseimage-ubuntu:bionic",
    "description": "API Support for your favorite torrent trackers",
-   "body": "Upgrading homelabarr-jackett to 0.24.72",
+   "body": "Upgrading homelabarr-jackett to 0.24.82",
    "user": "github-actions[bot]"
 }
 {
@@ -285,11 +285,11 @@
    "appname": "homelabarr-plex",
    "apppic": "./images/homelabarr-plex.png",
    "appfolder": "./apps/homelabarr-plex",
-   "newversion": "1.42.2.10156-f737b826c-ls281",
+   "newversion": "1.42.2.10156-f737b826c-ls282",
    "appbranch": "master",
    "baseimage": "",
    "description": "Plex Media Server Docker repo, for all your PMS docker needs.",
-   "body": "Upgrading homelabarr-plex to 1.42.2.10156-f737b826c-ls281",
+   "body": "Upgrading homelabarr-plex to 1.42.2.10156-f737b826c-ls282",
    "user": "github-actions[bot]"
 }
 {
