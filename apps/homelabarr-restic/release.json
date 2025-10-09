@@ -2,7 +2,7 @@
    "appname": "homelabarr-restic",
    "apppic": "./images/homelabarr-restic.png",
    "appfolder": "./apps/homelabarr-restic",
-   "newversion": "3.22.1",
+   "newversion": "3.22.2",
    "rclone": "v1.71.1",
    "baseimage": "alpine",
    "buildimage": "alpine",

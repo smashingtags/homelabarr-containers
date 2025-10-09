@@ -2,9 +2,9 @@
    "appname": "homelabarr-auto-replyarr",
    "apppic": "",
    "appfolder": "./apps/homelabarr-auto-replyarr",
-   "newversion": "3.22.1",
+   "newversion": "3.22.2",
    "baseimage": "alpine",
    "description": "Official Alpine Linux Docker image. Win at minimalism!",
-   "body": "Upgrading homelabarr-auto-replyarr to 3.22.1",
+   "body": "Upgrading homelabarr-auto-replyarr to 3.22.2",
    "user": "github-actions[bot]"
 }
