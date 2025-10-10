@@ -8,7 +8,7 @@
 ####################################
 # shellcheck disable=SC2086
 # shellcheck disable=SC2046
-FROM ubuntu:25.04
+FROM ubuntu:25.10
 
 LABEL org.opencontainers.image.source="https://github.com/smashingtags/homelabarr-containers"
 

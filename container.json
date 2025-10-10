@@ -62,10 +62,10 @@ apps homelabarr-crunchy
    "appname": "homelabarr-crunchy",
    "apppic": "./images/homelabarr-crunchy.png",
    "appfolder": "./apps/homelabarr-crunchy",
-   "newversion": "25.04",
+   "newversion": "25.10",
    "baseimage": "ubuntu",
    "description": "Docker image  for homelabarr-crunchy",
-   "body": "Upgrading homelabarr-crunchy to baseimage: ubuntu:25.04",
+   "body": "Upgrading homelabarr-crunchy to baseimage: ubuntu:25.10",
    "user": "homelabarr image update[bot]"
 }
 
@@ -175,11 +175,11 @@ apps homelabarr-jackett
    "appname": "homelabarr-jackett",
    "apppic": "./images/homelabarr-jackett.png",
    "appfolder": "./apps/homelabarr-jackett",
-   "newversion": "0.24.90",
+   "newversion": "0.24.95",
    "appbranch": "master",
    "baseimage": "ghcr.io/linuxserver/baseimage-ubuntu:bionic",
    "description": "API Support for your favorite torrent trackers",
-   "body": "Upgrading homelabarr-jackett to 0.24.90",
+   "body": "Upgrading homelabarr-jackett to 0.24.95",
    "user": "github-actions[bot]"
 }
 
@@ -411,10 +411,10 @@ apps homelabarr-rollarr
    "appname": "homelabarr-rollarr",
    "apppic": "./images/homelabarr-rollarr.png",
    "appfolder": "./apps/homelabarr-rollarr",
-   "newversion": "25.04",
+   "newversion": "25.10",
    "baseimage": "ubuntu",
    "description": "This is the new and improved Automatic Pre-roll script with a GUI for Plex now called Rollarr!",
-   "body": "Upgrading homelabarr-rollarr to 25.04",
+   "body": "Upgrading homelabarr-rollarr to 25.10",
    "user": "github-actions[bot]"
 }
 
