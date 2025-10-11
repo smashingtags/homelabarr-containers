@@ -2,9 +2,9 @@
    "appname": "homelabarr-sonarr",
    "apppic": "./images/homelabarr-sonarr.png",
    "appfolder": "./apps/homelabarr-sonarr",
-   "newversion": "4.0.15.2941-ls293",
+   "newversion": "4.0.15.2941-ls294",
    "appbranch": "main",
    "description": "Smart PVR for newsgroup and bittorrent users.",
-   "body": "Upgrading homelabarr-sonarr to 4.0.15.2941-ls293",
+   "body": "Upgrading homelabarr-sonarr to 4.0.15.2941-ls294",
    "user": "github-actions[bot]"
 }
