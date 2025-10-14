@@ -2,6 +2,6 @@
 ##
 ## Do not changes any lines here
 ##
-FROM ghcr.io/linuxserver/plex:1.42.2.10156-f737b826c-ls282
+FROM ghcr.io/linuxserver/plex:1.42.2.10156-f737b826c-ls283
 COPY --chown=abc ./apps/homelabarr-plex/root/ /
 ##EOF
