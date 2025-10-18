@@ -175,11 +175,11 @@ apps homelabarr-jackett
    "appname": "homelabarr-jackett",
    "apppic": "./images/homelabarr-jackett.png",
    "appfolder": "./apps/homelabarr-jackett",
-   "newversion": "0.24.141",
+   "newversion": "0.24.145",
    "appbranch": "master",
    "baseimage": "ghcr.io/linuxserver/baseimage-ubuntu:bionic",
    "description": "API Support for your favorite torrent trackers",
-   "body": "Upgrading homelabarr-jackett to 0.24.141",
+   "body": "Upgrading homelabarr-jackett to 0.24.145",
    "user": "github-actions[bot]"
 }
 
@@ -381,11 +381,11 @@ apps homelabarr-radarr
    "appname": "homelabarr-radarr",
    "apppic": "./images/homelabarr-radarr.png",
    "appfolder": "./apps/homelabarr-radarr",
-   "newversion": "5.27.5.10198-ls285",
+   "newversion": "5.28.0.10274-ls285",
    "appbranch": "master",
    "baseimage": "",
    "description": "Movie organizer/manager for usenet and torrent users.",
-   "body": "Upgrading homelabarr-radarr to 5.27.5.10198-ls285",
+   "body": "Upgrading homelabarr-radarr to 5.28.0.10274-ls285",
    "user": "github-actions[bot]"
 }
 
@@ -446,10 +446,10 @@ apps homelabarr-sonarr
    "appname": "homelabarr-sonarr",
    "apppic": "./images/homelabarr-sonarr.png",
    "appfolder": "./apps/homelabarr-sonarr",
-   "newversion": "4.0.15.2941-ls294",
+   "newversion": "4.0.15.2941-ls295",
    "appbranch": "main",
    "description": "Smart PVR for newsgroup and bittorrent users.",
-   "body": "Upgrading homelabarr-sonarr to 4.0.15.2941-ls294",
+   "body": "Upgrading homelabarr-sonarr to 4.0.15.2941-ls295",
    "user": "github-actions[bot]"
 }
 
