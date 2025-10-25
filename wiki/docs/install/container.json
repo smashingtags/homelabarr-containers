@@ -146,11 +146,11 @@
    "appname": "homelabarr-jackett",
    "apppic": "./images/homelabarr-jackett.png",
    "appfolder": "./apps/homelabarr-jackett",
-   "newversion": "0.24.175",
+   "newversion": "0.24.179",
    "appbranch": "master",
    "baseimage": "ghcr.io/linuxserver/baseimage-ubuntu:bionic",
    "description": "API Support for your favorite torrent trackers",
-   "body": "Upgrading homelabarr-jackett to 0.24.175",
+   "body": "Upgrading homelabarr-jackett to 0.24.179",
    "user": "github-actions[bot]"
 }
 {
@@ -373,10 +373,10 @@
    "appname": "homelabarr-sonarr",
    "apppic": "./images/homelabarr-sonarr.png",
    "appfolder": "./apps/homelabarr-sonarr",
-   "newversion": "4.0.15.2941-ls295",
+   "newversion": "4.0.15.2941-ls296",
    "appbranch": "main",
    "description": "Smart PVR for newsgroup and bittorrent users.",
-   "body": "Upgrading homelabarr-sonarr to 4.0.15.2941-ls295",
+   "body": "Upgrading homelabarr-sonarr to 4.0.15.2941-ls296",
    "user": "github-actions[bot]"
 }
 {
