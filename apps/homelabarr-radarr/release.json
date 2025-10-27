@@ -2,10 +2,10 @@
    "appname": "homelabarr-radarr",
    "apppic": "./images/homelabarr-radarr.png",
    "appfolder": "./apps/homelabarr-radarr",
-   "newversion": "5.28.0.10274-ls285",
+   "newversion": "5.28.0.10274-ls286",
    "appbranch": "master",
    "baseimage": "",
    "description": "Movie organizer/manager for usenet and torrent users.",
-   "body": "Upgrading homelabarr-radarr to 5.28.0.10274-ls285",
+   "body": "Upgrading homelabarr-radarr to 5.28.0.10274-ls286",
    "user": "github-actions[bot]"
 }
