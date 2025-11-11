@@ -2,10 +2,10 @@
    "appname": "homelabarr-emby",
    "apppic": "./images/homelabarr-emby.png",
    "appfolder": "./apps/homelabarr-emby",
-   "newversion": "4.9.1.80",
+   "newversion": "4.9.1.90",
    "appbranch": "master",
    "baseimage": "",
    "description": "Docker Container for Emby Server",
-   "body": "Upgrading homelabarr-emby to 4.9.1.80",
+   "body": "Upgrading homelabarr-emby to 4.9.1.90",
    "user": "github-actions[bot]"
 }

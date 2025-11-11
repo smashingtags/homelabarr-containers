@@ -135,11 +135,11 @@ apps homelabarr-emby
    "appname": "homelabarr-emby",
    "apppic": "./images/homelabarr-emby.png",
    "appfolder": "./apps/homelabarr-emby",
-   "newversion": "4.9.1.80",
+   "newversion": "4.9.1.90",
    "appbranch": "master",
    "baseimage": "",
    "description": "Docker Container for Emby Server",
-   "body": "Upgrading homelabarr-emby to 4.9.1.80",
+   "body": "Upgrading homelabarr-emby to 4.9.1.90",
    "user": "github-actions[bot]"
 }
 
@@ -175,11 +175,11 @@ apps homelabarr-jackett
    "appname": "homelabarr-jackett",
    "apppic": "./images/homelabarr-jackett.png",
    "appfolder": "./apps/homelabarr-jackett",
-   "newversion": "0.24.268",
+   "newversion": "0.24.270",
    "appbranch": "master",
    "baseimage": "ghcr.io/linuxserver/baseimage-ubuntu:bionic",
    "description": "API Support for your favorite torrent trackers",
-   "body": "Upgrading homelabarr-jackett to 0.24.268",
+   "body": "Upgrading homelabarr-jackett to 0.24.270",
    "user": "github-actions[bot]"
 }
 
@@ -342,11 +342,11 @@ apps homelabarr-plex
    "appname": "homelabarr-plex",
    "apppic": "./images/homelabarr-plex.png",
    "appfolder": "./apps/homelabarr-plex",
-   "newversion": "1.42.2.10156-f737b826c-ls284",
+   "newversion": "1.42.2.10156-f737b826c-ls285",
    "appbranch": "master",
    "baseimage": "",
    "description": "Plex Media Server Docker repo, for all your PMS docker needs.",
-   "body": "Upgrading homelabarr-plex to 1.42.2.10156-f737b826c-ls284",
+   "body": "Upgrading homelabarr-plex to 1.42.2.10156-f737b826c-ls285",
    "user": "github-actions[bot]"
 }
 
