@@ -2,9 +2,9 @@
    "appname": "homelabarr-dockupdate",
    "apppic": "./images/homelabarr-dockupdate.png",
    "appfolder": "./apps/homelabarr-dockupdate",
-   "newversion": "3.22.2",
+   "newversion": "3.23.0",
    "baseimage": "alpine",
    "description": "null",
-   "body": "Upgrading homelabarr-dockupdate to 3.22.2",
+   "body": "Upgrading homelabarr-dockupdate to 3.23.0",
    "user": "github-actions[bot]"
 }

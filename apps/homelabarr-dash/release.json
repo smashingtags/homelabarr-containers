@@ -4,7 +4,7 @@
    "appfolder": "./apps/homelabarr-dash",
    "newversion": "6.2.0",
    "baseimage": "alpine",
-   "baseversion": "3.22.2",
+   "baseversion": "3.23.0",
    "description": "A simple, modern server dashboard, primarily used by smaller private servers",
    "body": "Upgrading homelabarr-dash to 6.2.0",
    "user": "homelabarr-image[bot]"

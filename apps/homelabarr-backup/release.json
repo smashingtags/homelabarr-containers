@@ -2,9 +2,9 @@
    "appname": "homelabarr-backup",
    "apppic": "./images/homelabarr-backup.png",
    "appfolder": "./apps/homelabarr-backup",
-   "newversion": "3.22.2",
+   "newversion": "3.23.0",
    "baseimage": "alpine",
    "description": "Official Alpine Linux Docker image. Win at minimalism!",
-   "body": "Upgrading homelabarr-backup to 3.22.2",
+   "body": "Upgrading homelabarr-backup to 3.23.0",
    "user": "github-actions[bot]"
 }

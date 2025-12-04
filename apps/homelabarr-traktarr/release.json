@@ -2,7 +2,7 @@
    "appname": "homelabarr-traktarr",
    "apppic": "./images/homelabarr-traktarr.png",
    "appfolder": "./apps/homelabarr-traktarr",
-   "newversion": "3.22.2",
+   "newversion": "3.23.0",
    "baseimage": "ghcr.io/linuxserver/baseimage-alpine",
    "baseversion": "3.22-4c1ed24a-ls16",
    "body": "Upgrading homelabarr-traktarr to ",

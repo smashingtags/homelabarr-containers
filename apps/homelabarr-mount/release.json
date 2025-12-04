@@ -2,7 +2,7 @@
    "appname": "homelabarr-mount",
    "apppic": "./images/homelabarr-mount.png",
    "appfolder": "./apps/homelabarr-mount",
-   "newversion": "3.22.2",
+   "newversion": "3.23.0",
    "mergerfs": "2.41.1",
    "rclone": "v1.72.0",
    "baseimage": "alpine",

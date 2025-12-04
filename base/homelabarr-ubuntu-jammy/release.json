@@ -2,9 +2,9 @@
    "appname": "homelabarr-ubuntu-jammy",
    "apppic": "./images/homelabarr-ubuntu-jammy.png",
    "appfolder": "./base/homelabarr-ubuntu-jammy",
-   "newversion": "3.22.2",
+   "newversion": "3.23.0",
    "baseimage": "alpine",
    "description": "Docker image  for homelabarr-ubuntu-jammy",
-   "body": "Upgrading homelabarr-ubuntu-jammy to baseimage: alpine:3.22.2",
+   "body": "Upgrading homelabarr-ubuntu-jammy to baseimage: alpine:3.23.0",
    "user": "dockserver image update[bot]"
 }
