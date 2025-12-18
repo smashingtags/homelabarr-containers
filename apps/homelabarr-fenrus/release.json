@@ -2,11 +2,11 @@
    "appname": "homelabarr-fenrus",
    "apppic": "./images/homelabarr-fenrus.png",
    "appfolder": "./apps/homelabarr-fenrus",
-   "newversion": "3.23.0",
+   "newversion": "3.23.2",
    "appbranch": "master",
    "baseimage": "alpine",
-   "appversion": "4a346afd0e5c1b189d26c02a10cb983ae4f48acb",
+   "appversion": "",
    "description": "A personal home page for quick access to all your personal apps/sites.",
-   "body": "Upgrading homelabarr-fenrus to 4a346afd0e5c1b189d26c02a10cb983ae4f48acb",
+   "body": "Upgrading homelabarr-fenrus to ",
    "user": "github-actions[bot]"
 }

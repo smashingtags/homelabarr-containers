@@ -8,7 +8,7 @@
 ####################################
 # shellcheck disable=SC2086
 # shellcheck disable=SC2046
-FROM alpine:3.23.0 as buildstage
+FROM alpine:3.23.2 as buildstage
 
 LABEL org.opencontainers.image.source="https://github.com/smashingtags/homelabarr-containers"
 

@@ -3,10 +3,10 @@ apps homelabarr-auto-replyarr
    "appname": "homelabarr-auto-replyarr",
    "apppic": "",
    "appfolder": "./apps/homelabarr-auto-replyarr",
-   "newversion": "3.23.0",
+   "newversion": "3.23.2",
    "baseimage": "alpine",
    "description": "Official Alpine Linux Docker image. Win at minimalism!",
-   "body": "Upgrading homelabarr-auto-replyarr to 3.23.0",
+   "body": "Upgrading homelabarr-auto-replyarr to 3.23.2",
    "user": "github-actions[bot]"
 }
 
@@ -15,10 +15,10 @@ apps homelabarr-backup
    "appname": "homelabarr-backup",
    "apppic": "./images/homelabarr-backup.png",
    "appfolder": "./apps/homelabarr-backup",
-   "newversion": "3.23.0",
+   "newversion": "3.23.2",
    "baseimage": "alpine",
    "description": "Official Alpine Linux Docker image. Win at minimalism!",
-   "body": "Upgrading homelabarr-backup to 3.23.0",
+   "body": "Upgrading homelabarr-backup to 3.23.2",
    "user": "github-actions[bot]"
 }
 
@@ -87,11 +87,11 @@ apps homelabarr-dash
    "appname": "homelabarr-dash",
    "apppic": "",
    "appfolder": "./apps/homelabarr-dash",
-   "newversion": "6.2.0",
+   "newversion": "null",
    "baseimage": "alpine",
-   "baseversion": "3.23.0",
+   "baseversion": "3.23.2",
    "description": "A simple, modern server dashboard, primarily used by smaller private servers",
-   "body": "Upgrading homelabarr-dash to 6.2.0",
+   "body": "Upgrading homelabarr-dash to null",
    "user": "homelabarr-image[bot]"
 }
 
@@ -113,10 +113,10 @@ apps homelabarr-dockupdate
    "appname": "homelabarr-dockupdate",
    "apppic": "./images/homelabarr-dockupdate.png",
    "appfolder": "./apps/homelabarr-dockupdate",
-   "newversion": "3.23.0",
+   "newversion": "3.23.2",
    "baseimage": "alpine",
    "description": "null",
-   "body": "Upgrading homelabarr-dockupdate to 3.23.0",
+   "body": "Upgrading homelabarr-dockupdate to 3.23.2",
    "user": "github-actions[bot]"
 }
 
@@ -161,12 +161,12 @@ apps homelabarr-fenrus
    "appname": "homelabarr-fenrus",
    "apppic": "./images/homelabarr-fenrus.png",
    "appfolder": "./apps/homelabarr-fenrus",
-   "newversion": "3.23.0",
+   "newversion": "3.23.2",
    "appbranch": "master",
    "baseimage": "alpine",
-   "appversion": "4a346afd0e5c1b189d26c02a10cb983ae4f48acb",
+   "appversion": "",
    "description": "A personal home page for quick access to all your personal apps/sites.",
-   "body": "Upgrading homelabarr-fenrus to 4a346afd0e5c1b189d26c02a10cb983ae4f48acb",
+   "body": "Upgrading homelabarr-fenrus to ",
    "user": "github-actions[bot]"
 }
 
@@ -175,11 +175,11 @@ apps homelabarr-jackett
    "appname": "homelabarr-jackett",
    "apppic": "./images/homelabarr-jackett.png",
    "appfolder": "./apps/homelabarr-jackett",
-   "newversion": "0.24.462",
+   "newversion": "0.24.468",
    "appbranch": "master",
    "baseimage": "ghcr.io/linuxserver/baseimage-ubuntu:bionic",
    "description": "API Support for your favorite torrent trackers",
-   "body": "Upgrading homelabarr-jackett to 0.24.462",
+   "body": "Upgrading homelabarr-jackett to 0.24.468",
    "user": "github-actions[bot]"
 }
 
@@ -261,7 +261,7 @@ apps homelabarr-mount
    "appname": "homelabarr-mount",
    "apppic": "./images/homelabarr-mount.png",
    "appfolder": "./apps/homelabarr-mount",
-   "newversion": "3.23.0",
+   "newversion": "3.23.2",
    "mergerfs": "2.41.1",
    "rclone": "v1.72.1",
    "baseimage": "alpine",
@@ -394,7 +394,7 @@ apps homelabarr-restic
    "appname": "homelabarr-restic",
    "apppic": "./images/homelabarr-restic.png",
    "appfolder": "./apps/homelabarr-restic",
-   "newversion": "3.23.0",
+   "newversion": "3.23.2",
    "rclone": "v1.72.1",
    "baseimage": "alpine",
    "buildimage": "alpine",
@@ -423,10 +423,10 @@ apps homelabarr-rutorrent
    "appname": "homelabarr-rutorrent",
    "apppic": "",
    "appfolder": "./apps/homelabarr-rutorrent",
-   "newversion": "5.2.10",
+   "newversion": "null",
    "baseimage": "alpine",
    "description": "Yet another web front-end for rTorrent",
-   "body": "Upgrading homelabarr-rutorrent to 5.2.10",
+   "body": "Upgrading homelabarr-rutorrent to null",
    "user": "homelabarr[bot]"
 }
 
@@ -481,7 +481,7 @@ apps homelabarr-traktarr
    "appname": "homelabarr-traktarr",
    "apppic": "./images/homelabarr-traktarr.png",
    "appfolder": "./apps/homelabarr-traktarr",
-   "newversion": "3.23.0",
+   "newversion": "3.23.2",
    "baseimage": "ghcr.io/linuxserver/baseimage-alpine",
    "baseversion": "3.23-6580b7f6-ls2",
    "body": "Upgrading homelabarr-traktarr to ",
@@ -493,7 +493,7 @@ apps homelabarr-uploader
    "appname": "homelabarr-uploader",
    "apppic": "./images/homelabarr-uploader.png",
    "appfolder": "./apps/homelabarr-uploader",
-   "newversion": "3.23.0",
+   "newversion": "3.23.2",
    "baseimage": "ghcr.io/linuxserver/baseimage-alpine",
    "baseversion": "3.23-6580b7f6-ls2",
    "body": "Upgrading homelabarr-uploader to ",
@@ -527,10 +527,10 @@ base alpine
    "appname": "alpine",
    "apppic": "",
    "appfolder": "./base/alpine",
-   "newversion": "3.23.0",
+   "newversion": "3.23.2",
    "baseimage": "alpine",
    "description": "Official Alpine Linux Docker image. Win at minimalism!",
-   "body": "Upgrading alpine to 3.23.0",
+   "body": "Upgrading alpine to 3.23.2",
    "user": "github-actions[bot]"
 }
 
@@ -552,12 +552,12 @@ base homelabarr-alpine-v3
    "appname": "homelabarr-alpine-v3",
    "apppic": "./images/homelabarr-alpine-v3.png",
    "appfolder": "./base/homelabarr-alpine-v3",
-   "newversion": "3.23.0",
+   "newversion": "3.23.2",
    "baseimage": "alpine",
-   "baseversion": "3.23.0",
+   "baseversion": "3.23.2",
    "s6stage": "v3.2.1.0",
    "description": "Docker homelabarr-alpine-v3 with include s6-overlay: v3.2.1.0",
-   "body": "Upgrading homelabarr-alpine-v3 to baseimage: alpine:3.23.0  with include s6-overlay: v3.2.1.0",
+   "body": "Upgrading homelabarr-alpine-v3 to baseimage: alpine:3.23.2  with include s6-overlay: v3.2.1.0",
    "user": "dockserver image update[bot]"
 }
 
@@ -566,10 +566,10 @@ base homelabarr-config
    "appname": "homelabarr-config",
    "apppic": "./images/homelabarr-config.png",
    "appfolder": "./base/homelabarr-config",
-   "newversion": "3.23.0",
+   "newversion": "3.23.2",
    "baseimage": "alpine",
    "description": " !!! DEVERLOP STATUS !!! DO NOT TRY TO PULL THE IMAGE YOU NEED ACCESS TO THE REPOSITORY",
-   "body": "Upgrading homelabarr-config to 3.23.0",
+   "body": "Upgrading homelabarr-config to 3.23.2",
    "user": "github-actions[bot]"
 }
 
@@ -578,10 +578,10 @@ base homelabarr-create
    "appname": "homelabarr-create",
    "apppic": "./images/homelabarr-create.png",
    "appfolder": "./base/homelabarr-create",
-   "newversion": "3.23.0",
+   "newversion": "3.23.2",
    "baseimage": "alpine",
    "description": " !!! DEVERLOP STATUS !!! DO NOT TRY TO PULL THE IMAGE YOU NEED ACCESS TO THE REPOSITORY",
-   "body": "Upgrading homelabarr-create to 3.23.0",
+   "body": "Upgrading homelabarr-create to 3.23.2",
    "user": "github-actions[bot]"
 }
 
@@ -603,10 +603,10 @@ base homelabarr-ubuntu-focal
    "appname": "homelabarr-ubuntu-focal",
    "apppic": "./images/homelabarr-ubuntu-focal.png",
    "appfolder": "./base/homelabarr-ubuntu-focal",
-   "newversion": "3.23.0",
+   "newversion": "3.23.2",
    "baseimage": "alpine",
    "description": "Docker image  for homelabarr-ubuntu-focal",
-   "body": "Upgrading homelabarr-ubuntu-focal to baseimage: alpine:3.23.0",
+   "body": "Upgrading homelabarr-ubuntu-focal to baseimage: alpine:3.23.2",
    "user": "dockserver image update[bot]"
 }
 
@@ -615,10 +615,10 @@ base homelabarr-ubuntu-jammy
    "appname": "homelabarr-ubuntu-jammy",
    "apppic": "./images/homelabarr-ubuntu-jammy.png",
    "appfolder": "./base/homelabarr-ubuntu-jammy",
-   "newversion": "3.23.0",
+   "newversion": "3.23.2",
    "baseimage": "alpine",
    "description": "Docker image  for homelabarr-ubuntu-jammy",
-   "body": "Upgrading homelabarr-ubuntu-jammy to baseimage: alpine:3.23.0",
+   "body": "Upgrading homelabarr-ubuntu-jammy to baseimage: alpine:3.23.2",
    "user": "dockserver image update[bot]"
 }
 
