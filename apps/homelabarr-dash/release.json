@@ -2,10 +2,10 @@
    "appname": "homelabarr-dash",
    "apppic": "",
    "appfolder": "./apps/homelabarr-dash",
-   "newversion": "null",
+   "newversion": "6.2.0",
    "baseimage": "alpine",
    "baseversion": "3.23.2",
    "description": "A simple, modern server dashboard, primarily used by smaller private servers",
-   "body": "Upgrading homelabarr-dash to null",
+   "body": "Upgrading homelabarr-dash to 6.2.0",
    "user": "homelabarr-image[bot]"
 }
