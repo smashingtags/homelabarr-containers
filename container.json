@@ -175,11 +175,11 @@ apps homelabarr-jackett
    "appname": "homelabarr-jackett",
    "apppic": "./images/homelabarr-jackett.png",
    "appfolder": "./apps/homelabarr-jackett",
-   "newversion": "0.24.590",
+   "newversion": "0.24.612",
    "appbranch": "master",
    "baseimage": "ghcr.io/linuxserver/baseimage-ubuntu:bionic",
    "description": "API Support for your favorite torrent trackers",
-   "body": "Upgrading homelabarr-jackett to 0.24.590",
+   "body": "Upgrading homelabarr-jackett to 0.24.612",
    "user": "github-actions[bot]"
 }
 
@@ -221,11 +221,11 @@ apps homelabarr-librespeed
    "appname": "homelabarr-librespeed",
    "apppic": "./images/homelabarr-librespeed.png",
    "appfolder": "./apps/homelabarr-librespeed",
-   "newversion": "5.4.1",
+   "newversion": "5.5.0",
    "appbranch": "master",
    "baseimage": "ghcr.io/linuxserver/baseimage-alpine-nginx:3.15",
    "description": "Self-hosted Speed Test for HTML5 and more. Easy setup, examples, configurable, mobile friendly. Supports PHP, Node, Multiple servers, and more",
-   "body": "Upgrading homelabarr-librespeed to 5.4.1",
+   "body": "Upgrading homelabarr-librespeed to 5.5.0",
    "user": "github-actions[bot]"
 }
 
