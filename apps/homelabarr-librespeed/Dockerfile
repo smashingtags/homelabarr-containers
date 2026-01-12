@@ -14,7 +14,7 @@ LABEL org.opencontainers.image.source="https://github.com/smashingtags/homelabar
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
 
-ARG VERSION="5.5.0"
+ARG VERSION="5.5.1"
 ARG BRANCH="master"
 
 RUN \
