@@ -2,6 +2,6 @@
 ##
 ## Do not changes any lines here
 ##
-FROM lscr.io/linuxserver/radarr:6.0.4.10291-ls289
+FROM lscr.io/linuxserver/radarr:6.0.4.10291-ls290
 COPY --chown=abc ./apps/homelabarr-radarr/root/ /
 ##EOF
