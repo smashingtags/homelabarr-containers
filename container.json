@@ -175,11 +175,11 @@ apps homelabarr-jackett
    "appname": "homelabarr-jackett",
    "apppic": "./images/homelabarr-jackett.png",
    "appfolder": "./apps/homelabarr-jackett",
-   "newversion": "0.24.868",
+   "newversion": "0.24.879",
    "appbranch": "master",
    "baseimage": "ghcr.io/linuxserver/baseimage-ubuntu:bionic",
    "description": "API Support for your favorite torrent trackers",
-   "body": "Upgrading homelabarr-jackett to 0.24.868",
+   "body": "Upgrading homelabarr-jackett to 0.24.879",
    "user": "github-actions[bot]"
 }
 
@@ -198,11 +198,11 @@ apps homelabarr-jellyfin
    "appname": "homelabarr-jellyfin",
    "apppic": "./images/homelabarr-jellyfin.png",
    "appfolder": "./apps/homelabarr-jellyfin",
-   "newversion": "10.11.5+ubu2004",
+   "newversion": "10.11.6+ubu2004",
    "appbranch": "master",
    "baseimage": "ghcr.io/linuxserver/baseimage-ubuntu:focal",
    "description": "The Free Software Media System - Server Backend & API",
-   "body": "Upgrading homelabarr-jellyfin to 10.11.5+ubu2004",
+   "body": "Upgrading homelabarr-jellyfin to 10.11.6+ubu2004",
    "user": "github-actions[bot]"
 }
 
