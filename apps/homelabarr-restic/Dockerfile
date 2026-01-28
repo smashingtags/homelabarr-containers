@@ -8,7 +8,7 @@
 ####################################
 # shellcheck disable=SC2086
 # shellcheck disable=SC2046
-FROM alpine:3.23.2 as builder
+FROM alpine:3.23.3 as builder
 
 LABEL org.opencontainers.image.source="https://github.com/smashingtags/homelabarr-containers"
 
@@ -40,7 +40,7 @@ FROM ghcr.io/linuxserver/baseimage-alpine:3.23-d34fa4d2-ls4
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
 
-ARG BASE_VERSION=3.23.2
+ARG BASE_VERSION=3.23.3
 ARG ALPINE_VERSION=3.23-d34fa4d2-ls4
 ARG RCLONE_VERSION=v1.72.1
 

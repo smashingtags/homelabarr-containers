@@ -8,12 +8,12 @@
 ####################################
 # shellcheck disable=SC2086
 # shellcheck disable=SC2046
-FROM alpine:3.23.2
+FROM alpine:3.23.3
 LABEL org.opencontainers.image.source="https://github.com/smashingtags/homelabarr-containers"
 
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
-ARG VERSION="3.23.2"
+ARG VERSION="3.23.3"
 
 RUN \
   echo "**** install packages ****" && \

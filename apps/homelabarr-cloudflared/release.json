@@ -2,9 +2,9 @@
    "appname": "homelabarr-cloudflared",
    "apppic": "./images/homelabarr-cloudflared.png",
    "appfolder": "./apps/homelabarr-cloudflared",
-   "newversion": "2026.1.1",
+   "newversion": "2026.1.2",
    "baseimage": "alpine",
    "description": "Cloudflare Tunnel client",
-   "body": "Upgrading homelabarr-cloudflared to 2026.1.1",
+   "body": "Upgrading homelabarr-cloudflared to 2026.1.2",
    "user": "github-actions[bot]"
 }

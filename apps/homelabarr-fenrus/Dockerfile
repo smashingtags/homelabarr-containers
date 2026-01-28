@@ -8,7 +8,7 @@
 ####################################
 # shellcheck disable=SC2086
 # shellcheck disable=SC2046
-FROM alpine:3.23.2 as buildstage
+FROM alpine:3.23.3 as buildstage
 LABEL org.opencontainers.image.source="https://github.com/smashingtags/homelabarr-containers"
 
 ARG TARGETPLATFORM
@@ -22,7 +22,7 @@ RUN \
     git clone https://github.com/revenz/Fenrus.git /app && \
     rm -rf /app/Dockerfile ./.git
 
-FROM alpine:3.23.2
+FROM alpine:3.23.3
 
 COPY --from=buildstage /app /app
 
