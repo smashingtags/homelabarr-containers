@@ -2,10 +2,10 @@
    "appname": "homelabarr-jackett",
    "apppic": "./images/homelabarr-jackett.png",
    "appfolder": "./apps/homelabarr-jackett",
-   "newversion": "0.24.993",
+   "newversion": "0.24.1003",
    "appbranch": "master",
    "baseimage": "ghcr.io/linuxserver/baseimage-ubuntu:bionic",
    "description": "API Support for your favorite torrent trackers",
-   "body": "Upgrading homelabarr-jackett to 0.24.993",
+   "body": "Upgrading homelabarr-jackett to 0.24.1003",
    "user": "github-actions[bot]"
 }
