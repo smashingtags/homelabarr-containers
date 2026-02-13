@@ -87,11 +87,11 @@ apps homelabarr-dash
    "appname": "homelabarr-dash",
    "apppic": "",
    "appfolder": "./apps/homelabarr-dash",
-   "newversion": "6.2.4",
+   "newversion": "null",
    "baseimage": "alpine",
    "baseversion": "3.23.3",
    "description": "A simple, modern server dashboard, primarily used by smaller private servers",
-   "body": "Upgrading homelabarr-dash to 6.2.4",
+   "body": "Upgrading homelabarr-dash to null",
    "user": "homelabarr-image[bot]"
 }
 
@@ -164,9 +164,9 @@ apps homelabarr-fenrus
    "newversion": "3.23.3",
    "appbranch": "master",
    "baseimage": "alpine",
-   "appversion": "4a346afd0e5c1b189d26c02a10cb983ae4f48acb",
+   "appversion": "",
    "description": "A personal home page for quick access to all your personal apps/sites.",
-   "body": "Upgrading homelabarr-fenrus to 4a346afd0e5c1b189d26c02a10cb983ae4f48acb",
+   "body": "Upgrading homelabarr-fenrus to ",
    "user": "github-actions[bot]"
 }
 
@@ -175,11 +175,11 @@ apps homelabarr-jackett
    "appname": "homelabarr-jackett",
    "apppic": "./images/homelabarr-jackett.png",
    "appfolder": "./apps/homelabarr-jackett",
-   "newversion": "0.24.1094",
+   "newversion": "0.24.1098",
    "appbranch": "master",
    "baseimage": "ghcr.io/linuxserver/baseimage-ubuntu:bionic",
    "description": "API Support for your favorite torrent trackers",
-   "body": "Upgrading homelabarr-jackett to 0.24.1094",
+   "body": "Upgrading homelabarr-jackett to 0.24.1098",
    "user": "github-actions[bot]"
 }
 
@@ -423,10 +423,10 @@ apps homelabarr-rutorrent
    "appname": "homelabarr-rutorrent",
    "apppic": "",
    "appfolder": "./apps/homelabarr-rutorrent",
-   "newversion": "5.2.10",
+   "newversion": "null",
    "baseimage": "alpine",
    "description": "Yet another web front-end for rTorrent",
-   "body": "Upgrading homelabarr-rutorrent to 5.2.10",
+   "body": "Upgrading homelabarr-rutorrent to null",
    "user": "homelabarr[bot]"
 }
 
