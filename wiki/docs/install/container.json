@@ -72,11 +72,11 @@
    "appname": "homelabarr-dash",
    "apppic": "",
    "appfolder": "./apps/homelabarr-dash",
-   "newversion": "null",
+   "newversion": "6.2.4",
    "baseimage": "alpine",
    "baseversion": "3.23.3",
    "description": "A simple, modern server dashboard, primarily used by smaller private servers",
-   "body": "Upgrading homelabarr-dash to null",
+   "body": "Upgrading homelabarr-dash to 6.2.4",
    "user": "homelabarr-image[bot]"
 }
 {
@@ -137,20 +137,20 @@
    "newversion": "3.23.3",
    "appbranch": "master",
    "baseimage": "alpine",
-   "appversion": "",
+   "appversion": "4a346afd0e5c1b189d26c02a10cb983ae4f48acb",
    "description": "A personal home page for quick access to all your personal apps/sites.",
-   "body": "Upgrading homelabarr-fenrus to ",
+   "body": "Upgrading homelabarr-fenrus to 4a346afd0e5c1b189d26c02a10cb983ae4f48acb",
    "user": "github-actions[bot]"
 }
 {
    "appname": "homelabarr-jackett",
    "apppic": "./images/homelabarr-jackett.png",
    "appfolder": "./apps/homelabarr-jackett",
-   "newversion": "0.24.1098",
+   "newversion": "0.24.1103",
    "appbranch": "master",
    "baseimage": "ghcr.io/linuxserver/baseimage-ubuntu:bionic",
    "description": "API Support for your favorite torrent trackers",
-   "body": "Upgrading homelabarr-jackett to 0.24.1098",
+   "body": "Upgrading homelabarr-jackett to 0.24.1103",
    "user": "github-actions[bot]"
 }
 {
@@ -354,10 +354,10 @@
    "appname": "homelabarr-rutorrent",
    "apppic": "",
    "appfolder": "./apps/homelabarr-rutorrent",
-   "newversion": "null",
+   "newversion": "5.2.10",
    "baseimage": "alpine",
    "description": "Yet another web front-end for rTorrent",
-   "body": "Upgrading homelabarr-rutorrent to null",
+   "body": "Upgrading homelabarr-rutorrent to 5.2.10",
    "user": "homelabarr[bot]"
 }
 {
@@ -373,10 +373,10 @@
    "appname": "homelabarr-sonarr",
    "apppic": "./images/homelabarr-sonarr.png",
    "appfolder": "./apps/homelabarr-sonarr",
-   "newversion": "4.0.16.2944-ls302",
+   "newversion": "4.0.16.2944-ls303",
    "appbranch": "main",
    "description": "Smart PVR for newsgroup and bittorrent users.",
-   "body": "Upgrading homelabarr-sonarr to 4.0.16.2944-ls302",
+   "body": "Upgrading homelabarr-sonarr to 4.0.16.2944-ls303",
    "user": "github-actions[bot]"
 }
 {
