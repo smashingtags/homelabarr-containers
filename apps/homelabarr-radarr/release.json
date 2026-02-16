@@ -2,10 +2,10 @@
    "appname": "homelabarr-radarr",
    "apppic": "./images/homelabarr-radarr.png",
    "appfolder": "./apps/homelabarr-radarr",
-   "newversion": "6.0.4.10291-ls292",
+   "newversion": "6.0.4.10291-ls293",
    "appbranch": "master",
    "baseimage": "",
    "description": "Movie organizer/manager for usenet and torrent users.",
-   "body": "Upgrading homelabarr-radarr to 6.0.4.10291-ls292",
+   "body": "Upgrading homelabarr-radarr to 6.0.4.10291-ls293",
    "user": "github-actions[bot]"
 }
