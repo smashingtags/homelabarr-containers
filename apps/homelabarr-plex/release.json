@@ -2,10 +2,10 @@
    "appname": "homelabarr-plex",
    "apppic": "./images/homelabarr-plex.png",
    "appfolder": "./apps/homelabarr-plex",
-   "newversion": "1.43.0.10492-121068a07-ls293",
+   "newversion": "1.43.0.10492-121068a07-ls294",
    "appbranch": "master",
    "baseimage": "",
    "description": "Plex Media Server Docker repo, for all your PMS docker needs.",
-   "body": "Upgrading homelabarr-plex to 1.43.0.10492-121068a07-ls293",
+   "body": "Upgrading homelabarr-plex to 1.43.0.10492-121068a07-ls294",
    "user": "github-actions[bot]"
 }
