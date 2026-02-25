@@ -87,11 +87,11 @@ apps homelabarr-dash
    "appname": "homelabarr-dash",
    "apppic": "",
    "appfolder": "./apps/homelabarr-dash",
-   "newversion": "6.2.4",
+   "newversion": "6.3.0",
    "baseimage": "alpine",
    "baseversion": "3.23.3",
    "description": "A simple, modern server dashboard, primarily used by smaller private servers",
-   "body": "Upgrading homelabarr-dash to 6.2.4",
+   "body": "Upgrading homelabarr-dash to 6.3.0",
    "user": "homelabarr-image[bot]"
 }
 
@@ -175,11 +175,11 @@ apps homelabarr-jackett
    "appname": "homelabarr-jackett",
    "apppic": "./images/homelabarr-jackett.png",
    "appfolder": "./apps/homelabarr-jackett",
-   "newversion": "0.24.1184",
+   "newversion": "0.24.1193",
    "appbranch": "master",
    "baseimage": "ghcr.io/linuxserver/baseimage-ubuntu:bionic",
    "description": "API Support for your favorite torrent trackers",
-   "body": "Upgrading homelabarr-jackett to 0.24.1184",
+   "body": "Upgrading homelabarr-jackett to 0.24.1193",
    "user": "github-actions[bot]"
 }
 
