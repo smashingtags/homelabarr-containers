@@ -2,10 +2,10 @@
    "appname": "homelabarr-dash",
    "apppic": "",
    "appfolder": "./apps/homelabarr-dash",
-   "newversion": "6.3.3",
+   "newversion": "6.3.4",
    "baseimage": "alpine",
    "baseversion": "3.23.3",
    "description": "A simple, modern server dashboard, primarily used by smaller private servers",
-   "body": "Upgrading homelabarr-dash to 6.3.3",
+   "body": "Upgrading homelabarr-dash to 6.3.4",
    "user": "homelabarr-image[bot]"
 }
