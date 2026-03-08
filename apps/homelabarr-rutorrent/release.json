@@ -2,9 +2,9 @@
    "appname": "homelabarr-rutorrent",
    "apppic": "",
    "appfolder": "./apps/homelabarr-rutorrent",
-   "newversion": "5.2.10",
+   "newversion": "null",
    "baseimage": "alpine",
    "description": "Yet another web front-end for rTorrent",
-   "body": "Upgrading homelabarr-rutorrent to 5.2.10",
+   "body": "Upgrading homelabarr-rutorrent to null",
    "user": "homelabarr[bot]"
 }
