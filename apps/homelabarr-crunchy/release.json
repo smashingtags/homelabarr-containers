@@ -2,9 +2,9 @@
    "appname": "homelabarr-crunchy",
    "apppic": "./images/homelabarr-crunchy.png",
    "appfolder": "./apps/homelabarr-crunchy",
-   "newversion": "26.04",
+   "newversion": "noble-20260210.1",
    "baseimage": "ubuntu",
    "description": "Docker image  for homelabarr-crunchy",
-   "body": "Upgrading homelabarr-crunchy to baseimage: ubuntu:26.04",
+   "body": "Upgrading homelabarr-crunchy to baseimage: ubuntu:noble-20260210.1",
    "user": "homelabarr image update[bot]"
 }
