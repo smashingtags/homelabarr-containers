@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.2](https://github.com/smashingtags/homelabarr-containers/compare/v2.0.1...v2.0.2) (2025-09-19)
+
+
+### Bug Fixes
+
+* misc updates naming ([0663fec](https://github.com/smashingtags/homelabarr-containers/commit/0663fec9fce48cbea4d1d1952efc1ff2650d8424))
+* resolve Docker build failures for multiple containers ([6512754](https://github.com/smashingtags/homelabarr-containers/commit/65127545fd7454ec50a561e3279d38119cb96a0c))
+
 ## [2.0.1](https://github.com/smashingtags/homelabarr-containers/compare/v2.0.0...v2.0.1) (2025-09-18)
 
 
